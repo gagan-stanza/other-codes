@@ -1,0 +1,38 @@
+name: Daily Redshift to Sheets
+
+on:
+  schedule:
+    - cron: '30 3 * * *'  # Runs daily at 9:00 AM IST (3:30 UTC)
+  workflow_dispatch:        # Allows manual trigger from GitHub
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: |
+          pip install psycopg2-binary gspread google-auth python-dotenv apscheduler
+
+      - name: Create Google key file
+        run: echo '${{ secrets.GOOGLE_KEY_JSON }}' > gagan-automation-key.json
+
+      - name: Run script
+        env:
+          RS_HOST: ${{ secrets.RS_HOST }}
+          RS_PORT: ${{ secrets.RS_PORT }}
+          RS_DBNAME: ${{ secrets.RS_DBNAME }}
+          RS_USER: ${{ secrets.RS_USER }}
+          RS_PASSWORD: ${{ secrets.RS_PASSWORD }}
+          SHEET_ID: ${{ secrets.SHEET_ID }}
+          TAB_NAME: ${{ secrets.TAB_NAME }}
+          KEY_FILE: gagan-automation-key.json
+        run: python redshift_to_sheets.py
