@@ -2,7 +2,7 @@ name: Daily Redshift to Sheets
 
 on:
   schedule:
-    - cron: '30 5 * * *'  # Runs daily at 11:00 AM IST (3:30 UTC)
+    - cron: '30 23 * * *'  # Runs daily at 5:00 AM IST (11:30PM UTC)
   workflow_dispatch:        # Allows manual trigger from GitHub
 
 jobs:
