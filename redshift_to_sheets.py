@@ -65,7 +65,7 @@ client = gspread.authorize(creds)
 sheet = client.open_by_key(SHEET_ID).worksheet(TAB_NAME)
 
 # ===== WRITE TO SHEET =====
-sheet.clear()
+sheet.batch_clear(["A:G"])
 sheet.append_row(headers)
 sheet.append_rows(rows)
 
