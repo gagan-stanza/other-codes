@@ -18,28 +18,48 @@ KEY_FILE = os.getenv("KEY_FILE")
 
 # ===== SQL QUERY =====
 QUERY = """
-SELECT 
+select 
+  id as "UUID",
   name as "SCC_Name",
-  locationtype[0].label::text as "Location_Type",
-  location[0].label::text || 
-  CASE WHEN location[1].label::text IS NOT NULL THEN ', ' || location[1].label::text ELSE '' END ||
-  CASE WHEN location[2].label::text IS NOT NULL THEN ', ' || location[2].label::text ELSE '' END ||
-  CASE WHEN location[3].label::text IS NOT NULL THEN ', ' || location[3].label::text ELSE '' END ||
-  CASE WHEN location[4].label::text IS NOT NULL THEN ', ' || location[4].label::text ELSE '' END ||
-  CASE WHEN location[5].label::text IS NOT NULL THEN ', ' || location[5].label::text ELSE '' END ||
-  CASE WHEN location[6].label::text IS NOT NULL THEN ', ' || location[6].label::text ELSE '' END
-  as "Location",
-  COALESCE(scholardistributionpercentage::text, '-') as "Scholar%",
-  COALESCE(professionaldistributionpercentage::text, '-') as "WP%",
-  COALESCE(hydradistributionpercentage::text, '-') as "Hydra%",
-  COALESCE(coachingdistributionpercentage::text, '-') as "Coaching%"
-FROM (
-  SELECT *,
-  ROW_NUMBER() OVER (PARTITION BY name ORDER BY createdat DESC) as rank
-  FROM bifrost.sales_command_center
-  WHERE entitytypeenum = 'ACTIVE'
-) ranked
-WHERE rank = 1
+  scholardistributionpercentage as "Scholar%",
+  professionaldistributionpercentage as "WP%",
+  hydradistributionpercentage as "Hydra%",
+  coachingdistributionpercentage as "Coaching%",
+  locationtype [0].label::text as "Type",
+  location as "City/MM/Residence",
+  bookingtype as "BookingType"
+from (
+  select
+    id,
+    name,
+    professionaldistributionpercentage,
+    scholardistributionpercentage,
+    coachingdistributionpercentage,
+    hydradistributionpercentage,
+    locationtype,
+    location,
+    bookingtype,
+    updatedat,
+    row_number() over (partition by name order by updatedat desc) as rn_name
+  from (
+    select
+      id,
+      name,
+      professionaldistributionpercentage,
+      scholardistributionpercentage,
+      coachingdistributionpercentage,
+      hydradistributionpercentage,
+      locationtype,
+      location,
+      bookingtype,
+      updatedat,
+      row_number() over (partition by location order by updatedat desc) as rn_location
+    from bifrost.sales_command_center
+    where entitytypeenum = 'ACTIVE'
+  ) location_dedup
+  where rn_location = 1
+) name_dedup
+where rn_name = 1
 """
 
 # ===== CONNECT TO REDSHIFT =====
