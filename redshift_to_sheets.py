@@ -19,15 +19,15 @@ KEY_FILE = os.getenv("KEY_FILE")
 # ===== SQL QUERY =====
 QUERY = """
 select 
-  id as "UUID",
-  name as "SCC_Name",
-  scholardistributionpercentage as "Scholar%",
-  professionaldistributionpercentage as "WP%",
-  hydradistributionpercentage as "Hydra%",
-  coachingdistributionpercentage as "Coaching%",
-  locationtype [0].label::text as "Type",
-  location as "City/MM/Residence",
-  bookingtype as "BookingType"
+  id as "uuid",
+  name as "scc_Name",
+  scholardistributionpercentage as "scholar%",
+  professionaldistributionpercentage as "wp%",
+  hydradistributionpercentage as "hydra%",
+  coachingdistributionpercentage as "coaching%",
+  locationtype [0].label::text as "location_type",
+  location as "location_name",
+  bookingtype as "booking_type"
 from (
   select
     id,
@@ -74,6 +74,63 @@ cursor = conn.cursor()
 cursor.execute(QUERY)
 rows = cursor.fetchall()
 headers = [desc[0] for desc in cursor.description]
+
+EXCLUDE_SCC_NAMES_City = {
+    'Gujarat - All MMs',
+    'Bangalore',
+    'Delhi'
+}
+
+EXCLUDE_SCC_NAMES_MM = {
+    'Mogilev House',
+    'Himayatnagar Ameerpet',
+    'Gota and Navrangpura',
+    'Loni Kalbhor Wagholi Kothrud',
+    'MH: Suits',
+    'Vastrapur & Thaltej and Bopal & Shilaj',
+    'Aziznagar Gandi Maisamma Narsingi'
+    'Indore - Geeta Bhawan & Bhawar Kua',
+    'KA2',
+    'Karve Nagar Wakad',
+    'Kochi Kakkanad',
+    'Vadgaon Akurdi',
+    'Phase 1 Live - Suits',
+    'Kota',
+    'Gandhinagar',
+    'Indore - Geeta Bhawan & Bhawar Kua',
+    'Aziznagar Gandi Maisamma Narsingi',
+    'Anik 17 nov'
+}
+
+EXCLUDE_SCC_NAMES_Residence = {
+    'Mogilev House',
+    'Suits: No AMC Property Level',
+    'Burbank House',
+    'Shanghai House',
+    'Canberra House',
+    'Avinashi road (Property)'
+    'Shanghai : No AMC ',
+    'Vijay Nagar (Less Mahalaxmi Main)',
+    'Vijay Nagar (Mahalaxmi)',
+    'Evanston House',
+    'Giza & Kenitra',
+    'Cordoba & Granada',
+    'Ripon & Manisa',
+    'koramangala hybrid'
+    'Kormangala WP',
+    'IND',
+    'Kormangala WP',
+    'koramangala hybrid',
+    'Avinashi road (Property) ',
+    'Boston House',
+    'Shanghai : No AMC '
+}
+
+EXCLUDE_SCC_NAMES = EXCLUDE_SCC_NAMES_City | EXCLUDE_SCC_NAMES_MM | EXCLUDE_SCC_NAMES_Residence
+
+name_index = headers.index('scc_name')
+rows = [row for row in rows if row[name_index] not in EXCLUDE_SCC_NAMES]
+
 cursor.close()
 conn.close()
 
