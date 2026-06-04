@@ -3,6 +3,7 @@ import gspread
 from google.oauth2.service_account import Credentials
 from dotenv import load_dotenv
 import os
+import json
 
 # ===== LOAD CONFIG =====
 load_dotenv()
@@ -75,61 +76,87 @@ cursor.execute(QUERY)
 rows = cursor.fetchall()
 headers = [desc[0] for desc in cursor.description]
 
+def extract_labels_from_json(value):
+    """Extract comma-separated labels from JSON array."""
+    if not value:
+        return ''
+    try:
+        if isinstance(value, str):
+            data = json.loads(value)
+        else:
+            data = value
+        
+        if isinstance(data, list):
+            labels = [item.get('label', '') for item in data if isinstance(item, dict)]
+            return ', '.join(labels)
+        return str(value)
+    except (json.JSONDecodeError, TypeError, AttributeError):
+        return str(value)
+
+location_name_index = headers.index('location_name')
+booking_type_index = headers.index('booking_type')
+
 EXCLUDE_SCC_NAMES_City = {
-    'Gujarat - All MMs',
     'Bangalore',
-    'Delhi'
+    'Delhi',
+    'Gujarat - All MMs'
 }
 
 EXCLUDE_SCC_NAMES_MM = {
-    'Mogilev House',
-    'Himayatnagar Ameerpet',
+    'Anik 17 nov',
+    'Aziznagar Gandi Maisamma Narsingi',
+    'Gandhinagar',
     'Gota and Navrangpura',
-    'Loni Kalbhor Wagholi Kothrud',
-    'MH: Suits',
-    'Vastrapur & Thaltej and Bopal & Shilaj',
-    'Aziznagar Gandi Maisamma Narsingi'
+    'Himayatnagar Ameerpet',
     'Indore - Geeta Bhawan & Bhawar Kua',
     'KA2',
     'Karve Nagar Wakad',
     'Kochi Kakkanad',
-    'Vadgaon Akurdi',
-    'Phase 1 Live - Suits',
     'Kota',
-    'Gandhinagar',
-    'Indore - Geeta Bhawan & Bhawar Kua',
-    'Aziznagar Gandi Maisamma Narsingi',
-    'Anik 17 nov'
+    'Loni Kalbhor Wagholi Kothrud',
+    'MH: Suits',
+    'Mogilev House',
+    'Phase 1 Live - Suits',
+    'Senapati Bapat Road Shivajinagar',
+    'Vadgaon Akurdi',
+    'Vastrapur & Thaltej and Bopal & Shilaj'
 }
 
 EXCLUDE_SCC_NAMES_Residence = {
-    'Mogilev House',
-    'Suits: No AMC Property Level',
-    'Burbank House',
-    'Shanghai House',
-    'Canberra House',
-    'Avinashi road (Property)'
-    'Shanghai : No AMC ',
-    'Vijay Nagar (Less Mahalaxmi Main)',
-    'Vijay Nagar (Mahalaxmi)',
-    'Evanston House',
-    'Giza & Kenitra',
-    'Cordoba & Granada',
-    'Ripon & Manisa',
-    'koramangala hybrid'
-    'Kormangala WP',
-    'IND',
-    'Kormangala WP',
-    'koramangala hybrid',
+    'Avinashi road (Property)',
     'Avinashi road (Property) ',
     'Boston House',
-    'Shanghai : No AMC '
+    'Burbank House',
+    'Canberra House',
+    'Cordoba & Granada',
+    'Evanston House',
+    'Giza & Kenitra',
+    'IND',
+    'koramangala hybrid',
+    'Kormangala WP',
+    'Mogilev House',
+    'Ripon & Manisa',
+    'Shanghai : No AMC ',
+    'Shanghai House',
+    'Suits: No AMC Property Level',
+    'Vijay Nagar (Less Mahalaxmi Main)',
+    'Vijay Nagar (Mahalaxmi)'
 }
 
 EXCLUDE_SCC_NAMES = EXCLUDE_SCC_NAMES_City | EXCLUDE_SCC_NAMES_MM | EXCLUDE_SCC_NAMES_Residence
 
 name_index = headers.index('scc_name')
 rows = [row for row in rows if row[name_index] not in EXCLUDE_SCC_NAMES]
+
+# ===== EXTRACT LABELS FROM JSON ARRAYS =====
+processed_rows = []
+for row in rows:
+    row_list = list(row)
+    row_list[location_name_index] = extract_labels_from_json(row_list[location_name_index])
+    row_list[booking_type_index] = extract_labels_from_json(row_list[booking_type_index])
+    processed_rows.append(tuple(row_list))
+
+rows = processed_rows
 
 cursor.close()
 conn.close()
