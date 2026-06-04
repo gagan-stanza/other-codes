@@ -76,22 +76,38 @@ cursor.execute(QUERY)
 rows = cursor.fetchall()
 headers = [desc[0] for desc in cursor.description]
 
-def extract_labels_from_json(value):
-    """Extract comma-separated labels from JSON array."""
-    if not value:
-        return ''
+def extract_label_list(value):
+    """Extract label values from JSON/list structures."""
+    if value is None:
+        return []
+
     try:
         if isinstance(value, str):
             data = json.loads(value)
         else:
             data = value
-        
-        if isinstance(data, list):
-            labels = [item.get('label', '') for item in data if isinstance(item, dict)]
-            return ', '.join(labels)
-        return str(value)
-    except (json.JSONDecodeError, TypeError, AttributeError):
-        return str(value)
+    except (json.JSONDecodeError, TypeError):
+        return []
+
+    labels = []
+
+    def collect(item):
+        if isinstance(item, dict):
+            label = item.get('label')
+            if label is not None:
+                labels.append(str(label))
+        elif isinstance(item, str):
+            labels.append(item)
+        elif isinstance(item, list):
+            for inner in item:
+                collect(inner)
+
+    collect(data)
+    return labels
+
+
+def extract_labels_from_json(value):
+    return ', '.join(extract_label_list(value))
 
 location_name_index = headers.index('location_name')
 booking_type_index = headers.index('booking_type')
@@ -153,10 +169,28 @@ processed_rows = []
 for row in rows:
     row_list = list(row)
     row_list[location_name_index] = extract_labels_from_json(row_list[location_name_index])
-    row_list[booking_type_index] = extract_labels_from_json(row_list[booking_type_index])
+    booking_labels = extract_label_list(row_list[booking_type_index])
+    row_list[booking_type_index] = ', '.join(booking_labels)
+
+    booking_labels_set = set(booking_labels)
+
+    s21_value = '100%' if 'S21' in booking_labels_set else '-'
+    scholar_value = row_list[headers.index('scholar%')] if 'Scholar' in booking_labels_set else '-'
+    working_professional_value = row_list[headers.index('wp%')] if 'Working Professional' in booking_labels_set else '-'
+    hydra_value = row_list[headers.index('hydra%')] if 'Hydra' in booking_labels_set else '-'
+    coaching_value = row_list[headers.index('coaching%')] if 'Coaching' in booking_labels_set else '-'
+
+    row_list.extend([
+        s21_value,
+        scholar_value,
+        working_professional_value,
+        hydra_value,
+        coaching_value,
+    ])
     processed_rows.append(tuple(row_list))
 
 rows = processed_rows
+headers.extend(['S21', 'Scholar', 'Working Professional', 'Hydra', 'Coaching'])
 
 cursor.close()
 conn.close()
