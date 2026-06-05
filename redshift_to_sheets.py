@@ -180,14 +180,23 @@ for row in rows:
     hydra_value = row_list[headers.index('hydra%')] if 'Hydra' in booking_labels_set else '-'
     coaching_value = row_list[headers.index('coaching%')] if 'Coaching' in booking_labels_set else '-'
 
-    row_list.extend([
+    final_values = [
         s21_value,
         scholar_value,
         working_professional_value,
         hydra_value,
         coaching_value,
-    ])
-    processed_rows.append(tuple(row_list))
+    ]
+
+    location_parts = [part.strip() for part in row_list[location_name_index].split(',') if part.strip()]
+    if not location_parts:
+        location_parts = ['']
+
+    for location_value in location_parts:
+        expanded_row = list(row_list)
+        expanded_row[location_name_index] = location_value
+        expanded_row.extend(final_values)
+        processed_rows.append(tuple(expanded_row))
 
 rows = processed_rows
 headers.extend(['S21', 'Scholar', 'Working Professional', 'Hydra', 'Coaching'])
