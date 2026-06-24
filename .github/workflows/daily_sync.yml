@@ -1,4 +1,4 @@
-name: Daily Redshift to Sheets
+name: Daily Redshift to Google Sheets
 
 on:
   schedule:
@@ -35,4 +35,4 @@ jobs:
           SHEET_ID: ${{ secrets.SHEET_ID }}
           TAB_NAME: ${{ secrets.TAB_NAME }}
           KEY_FILE: gagan-automation-key.json
-        run: python redshift_to_sheets.py
+        run: python SCC_Data.py
