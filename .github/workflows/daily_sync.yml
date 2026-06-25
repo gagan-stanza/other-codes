@@ -33,6 +33,6 @@ jobs:
           RS_USER: ${{ secrets.RS_USER }}
           RS_PASSWORD: ${{ secrets.RS_PASSWORD }}
           SHEET_ID: ${{ secrets.SHEET_ID }}
-          TAB_NAME: ${{ secrets.TAB_NAME }}
+          TAB_NAME_A: ${{ secrets.TAB_NAME_A }}
           KEY_FILE: gagan-automation-key.json
         run: python SCC_Data.py

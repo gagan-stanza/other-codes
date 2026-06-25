@@ -14,7 +14,7 @@ RS_DBNAME = os.getenv("RS_DBNAME")
 RS_USER = os.getenv("RS_USER")
 RS_PASSWORD = os.getenv("RS_PASSWORD")
 SHEET_ID = os.getenv("SHEET_ID")
-TAB_NAME = os.getenv("TAB_NAME")
+TAB_NAME_A = os.getenv("TAB_NAME_A")
 KEY_FILE = os.getenv("KEY_FILE")
 
 # ===== SQL QUERY =====
@@ -209,7 +209,7 @@ scopes = ["https://www.googleapis.com/auth/spreadsheets",
           "https://www.googleapis.com/auth/drive"]
 creds = Credentials.from_service_account_file(KEY_FILE, scopes=scopes)
 client = gspread.authorize(creds)
-sheet = client.open_by_key(SHEET_ID).worksheet(TAB_NAME)
+sheet = client.open_by_key(SHEET_ID).worksheet(TAB_NAME_A)
 
 # ===== WRITE TO SHEET =====
 sheet.clear()
