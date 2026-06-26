@@ -25,7 +25,7 @@ jobs:
       - name: Create Google key file
         run: echo '${{ secrets.GOOGLE_KEY_JSON }}' > gagan-automation-key.json
 
-      - name: Run script
+      - name: Run scripts
         env:
           RS_HOST: ${{ secrets.RS_HOST }}
           RS_PORT: ${{ secrets.RS_PORT }}
@@ -34,5 +34,8 @@ jobs:
           RS_PASSWORD: ${{ secrets.RS_PASSWORD }}
           SHEET_ID: ${{ secrets.SHEET_ID }}
           TAB_NAME_A: ${{ secrets.TAB_NAME_A }}
+          TAB_NAME_B: ${{ secrets.TAB_NAME_B }}
           KEY_FILE: gagan-automation-key.json
-        run: python SCC_Data.py
+        run: |
+          python SCC_Data.py
+          python Live_Properties.py
