@@ -14,6 +14,7 @@ RS_DBNAME = os.getenv("RS_DBNAME")
 RS_USER = os.getenv("RS_USER")
 RS_PASSWORD = os.getenv("RS_PASSWORD")
 SHEET_ID = os.getenv("SHEET_ID")
+TAB_NAME_A = os.getenv("TAB_NAME_A")
 TAB_NAME_B = os.getenv("TAB_NAME_B")
 KEY_FILE = os.getenv("KEY_FILE")
 
