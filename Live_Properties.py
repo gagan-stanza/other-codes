@@ -21,25 +21,27 @@ KEY_FILE = os.getenv("KEY_FILE")
 # ===== SQL QUERY =====
 QUERY = """
 SELECT
-  etmr.uuid AS "uuid",
   etmr.status AS "status",
-  etmr.bed_count AS "beds",
-  etmr.room_count AS "rooms",
-  etmr.estate_gender AS "gender",
-  etmr.micromarket_id AS "mm_id",
-  etmr.residence_name AS "name",
-  etmr.residence_type AS "type",
-  etmr.property_deal_type AS "deal_type",
-  etmr.core_residence_name AS "core_name",
-  etmr.property_entity_type AS "entity",
-  etmr.residence_category AS "category",
-  etmm.micromarket_name AS "mm_name",
+  etmr.bed_count AS "bed_count",
+  etmr.room_count AS "room_count",
+  etmr.test_house AS "test_house",
+  etmr.estate_gender AS "estategender",
+  etmr.micromarket_id AS "micromarket_id",
+  etmr.residence_name AS "residence_name",
+  etmr.residence_type AS "residence_type",
+  etmr.core_residence_id AS "core_residence_id",
+  etmr.property_deal_type AS "property_deal_type",
+  etmr.core_residence_name AS "core_residence_name",
+  etmr.property_entity_type AS "property_entit  y_type",
+  etmr.__hevo__marked_deleted AS "hevo_marked_deleted",
+  etmr.residence_category AS "residence_category",
+  etmm.micromarket_name AS "micromarket_name",
   etmc.city_name AS "city_name"
 FROM stanza.erp_transformation_master_residences etmr
 LEFT JOIN stanza.erp_transformation_master_micromarket etmm
-  ON etmm.uuid = etmr.uuid
+  ON etmm.uuid = etmr.micromarket_id
 LEFT JOIN stanza.erp_transformation_master_cities etmc
-  ON etmc.id = etmm.id
+  ON etmc.uuid = etmm.city_id
 """
 
 # ===== CONNECT TO REDSHIFT =====
