@@ -25,7 +25,7 @@ SELECT
   etmr.bed_count AS "bed_count",
   etmr.room_count AS "room_count",
   etmr.test_house AS "test_house",
-  etmr.estate_gender AS "estategender",
+  etmr.estate_gender AS "estate_gender",
   etmr.micromarket_id AS "micromarket_id",
   etmr.residence_name AS "residence_name",
   etmr.residence_type AS "residence_type",
