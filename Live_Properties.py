@@ -21,27 +21,27 @@ KEY_FILE = os.getenv("KEY_FILE")
 # ===== SQL QUERY =====
 QUERY = """
 SELECT
-  etmr.status AS "status",
-  etmr.bed_count AS "bed_count",
-  etmr.room_count AS "room_count",
-  etmr.test_house AS "test_house",
-  etmr.estate_gender AS "estate_gender",
-  etmr.micromarket_id AS "micromarket_id",
   etmr.residence_name AS "residence_name",
-  etmr.residence_type AS "residence_type",
-  etmr.core_residence_id AS "core_residence_id",
-  etmr.property_deal_type AS "property_deal_type",
   etmr.core_residence_name AS "core_residence_name",
-  etmr.property_entity_type AS "property_entit  y_type",
-  etmr.__hevo__marked_deleted AS "hevo_marked_deleted",
   etmr.residence_category AS "residence_category",
+  etmr.property_deal_type AS "property_deal_type",
+  etmr.property_entity_type AS "property_entity_type",
+  etmr.estate_gender AS "gender",
+  etmr.room_count AS "room_count",
+  etmr.bed_count AS "bed_count",
   etmm.micromarket_name AS "micromarket_name",
+  etmr.micromarket_id AS "micromarket_id",
   etmc.city_name AS "city_name"
 FROM stanza.erp_transformation_master_residences etmr
 LEFT JOIN stanza.erp_transformation_master_micromarket etmm
   ON etmm.uuid = etmr.micromarket_id
 LEFT JOIN stanza.erp_transformation_master_cities etmc
   ON etmc.uuid = etmm.city_id
+WHERE etmr.residence_name NOT ILIKE '%Dropped%'
+AND etmr.test_house = FALSE
+AND etmr.property_deal_type = 'COCO'
+AND etmr.property_entity_type = 'HOUSE'
+ORDER BY etmr.residence_name
 """
 
 # ===== CONNECT TO REDSHIFT =====
