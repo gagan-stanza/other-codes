@@ -136,7 +136,8 @@ EXCLUDE_SCC_NAMES_MM = {
     'Phase 1 Live - Suits',
     'Senapati Bapat Road Shivajinagar',
     'Vadgaon Akurdi',
-    'Vastrapur & Thaltej and Bopal & Shilaj'
+    'Vastrapur & Thaltej and Bopal & Shilaj',
+    'Kukatpally'
 }
 
 EXCLUDE_SCC_NAMES_Residence = {
