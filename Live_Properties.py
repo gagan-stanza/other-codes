@@ -24,7 +24,7 @@ SELECT
   etmr.residence_name AS "residence_name",
   etmr.core_residence_name AS "core_residence_name",
   INITCAP(etmr.residence_category) AS "residence_category",
-  etmr.estate_gender AS "estate_gender",
+  etmr.estate_gender AS "gender",
   etmr.room_count AS "room_count",
   etmr.bed_count AS "bed_count",
   etmm.micromarket_name AS "micromarket_name",
@@ -35,11 +35,8 @@ LEFT JOIN stanza.erp_transformation_master_micromarket etmm
   ON etmm.uuid = etmr.micromarket_id
 LEFT JOIN stanza.erp_transformation_master_cities etmc
   ON etmc.uuid = etmm.city_id
--- WHERE etmr.residence_name NOT LIKE '%Dropped%'
--- AND etmr.test_house = FALSE
--- AND etmr.property_deal_type = 'COCO'
--- AND etmr.property_entity_type = 'HOUSE'
--- ORDER BY etmr.residence_name
+  WHERE etmr.residence_name NOT LIKE '%Dropped%'
+  AND etmr.core_residence_name NOT LIKE '%Dropped%'
 """
 
 # ===== CONNECT TO REDSHIFT =====
@@ -70,4 +67,5 @@ sheet.clear()
 sheet.append_row(headers)
 sheet.append_rows(rows)
 
-print("Done! Data written to Google Sheet!")
+row_count = len(rows)
+print(f"Done! Data written to Google Sheet! Rows count: {row_count}")
