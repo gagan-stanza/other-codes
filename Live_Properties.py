@@ -24,7 +24,7 @@ SELECT
   etmr.residence_name AS "residence_name",
   etmr.core_residence_name AS "core_residence_name",
   INITCAP(etmr.residence_category) AS "residence_category",
-  etmr.estate_gender AS "gender",
+  etmr.estate_gender AS "estate_gender",
   etmr.room_count AS "room_count",
   etmr.bed_count AS "bed_count",
   etmm.micromarket_name AS "micromarket_name",
