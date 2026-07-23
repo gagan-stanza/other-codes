@@ -36,7 +36,7 @@ LEFT JOIN stanza.erp_transformation_master_micromarket etmm
 LEFT JOIN stanza.erp_transformation_master_cities etmc
   ON etmc.uuid = etmm.city_id
   WHERE etmr.residence_name NOT LIKE '%Dropped%'
-  AND etmr.core_residence_name NOT LIKE '%Dropped%'
+  AND etmr.core_residence_name NOT LIKE '%Dropped'
 """
 
 # ===== CONNECT TO REDSHIFT =====
