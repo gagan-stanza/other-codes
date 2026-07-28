@@ -26,7 +26,7 @@ SELECT
   INITCAP(etmr.residence_category) AS "residence_category",
   etmr.estate_gender AS "gender",
   etmr.room_count AS "room_count",
-  etmr.bed_count AS "bed_count",
+  etmr.bed_count AS "bed_counts",
   etmm.micromarket_name AS "micromarket_name",
   etmr.micromarket_id AS "micromarket_id",
   etmc.city_name AS "city_name"
@@ -36,7 +36,7 @@ LEFT JOIN stanza.erp_transformation_master_micromarket etmm
 LEFT JOIN stanza.erp_transformation_master_cities etmc
   ON etmc.uuid = etmm.city_id
   WHERE etmr.residence_name NOT LIKE '%Dropped%'
-  AND etmr.core_residence_name NOT LIKE '%Dropped'
+  AND etmr.core_residence_name NOT LIKE '%Dropped%'
 """
 
 # ===== CONNECT TO REDSHIFT =====
