@@ -20,23 +20,7 @@ KEY_FILE = os.getenv("KEY_FILE")
 
 # ===== SQL QUERY =====
 QUERY = """
-SELECT
-  etmr.residence_name AS "residence_name",
-  etmr.core_residence_name AS "core_residence_name",
-  INITCAP(etmr.residence_category) AS "residence_category",
-  etmr.estate_gender AS "gender",
-  etmr.room_count AS "room_count",
-  etmr.bed_count AS "bed_counts",
-  etmm.micromarket_name AS "micromarket_name",
-  etmr.micromarket_id AS "micromarket_id",
-  etmc.city_name AS "city_name"
-FROM stanza.erp_transformation_master_residences etmr
-LEFT JOIN stanza.erp_transformation_master_micromarket etmm
-  ON etmm.uuid = etmr.micromarket_id
-LEFT JOIN stanza.erp_transformation_master_cities etmc
-  ON etmc.uuid = etmm.city_id
-  WHERE etmr.residence_name NOT LIKE '%Dropped%'
-  AND etmr.core_residence_name NOT LIKE '%Dropped%'
+
 """
 
 # ===== CONNECT TO REDSHIFT =====
