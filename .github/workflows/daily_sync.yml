@@ -38,3 +38,4 @@ jobs:
           KEY_FILE: gagan-automation-key.json
         run: |
           python SCC_Data.py
+          python Live_Bookings.py

@@ -21,7 +21,10 @@ KEY_FILE = os.getenv("KEY_FILE")
 
 # ===== SQL QUERY =====
 QUERY = """
-
+select * FROM stanza.ims_booking_service_booking AS b
+WHERE b."__hevo__marked_deleted" != true
+  AND b.status = 1
+  AND b.test_booking = 0
 """
 
 # ===== CONNECT TO REDSHIFT =====

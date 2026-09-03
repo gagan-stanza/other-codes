@@ -16,6 +16,7 @@ RS_PASSWORD = os.getenv("RS_PASSWORD")
 SHEET_ID = os.getenv("SHEET_ID")
 TAB_NAME_A = os.getenv("TAB_NAME_A")
 TAB_NAME_B = os.getenv("TAB_NAME_B")
+TAB_NAME_C = os.getenv("TAB_NAME_C")
 KEY_FILE = os.getenv("KEY_FILE")
 
 # ===== SQL QUERY =====
