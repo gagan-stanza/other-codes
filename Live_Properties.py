@@ -14,14 +14,33 @@ RS_DBNAME = os.getenv("RS_DBNAME")
 RS_USER = os.getenv("RS_USER")
 RS_PASSWORD = os.getenv("RS_PASSWORD")
 SHEET_ID = os.getenv("SHEET_ID")
-TAB_NAME_A = os.getenv("TAB_NAME_A")
-TAB_NAME_B = os.getenv("TAB_NAME_B")
-TAB_NAME_C = os.getenv("TAB_NAME_C")
+TAB_NAME_A = os.getenv("TAB_NAME_A")  # SCC_RealTime_JOB
+TAB_NAME_B = os.getenv("TAB_NAME_B")  # ResidenceList_RealTime_JOB
+TAB_NAME_C = os.getenv("TAB_NAME_C")  # LiveBookings_RealTime_JOB
 KEY_FILE = os.getenv("KEY_FILE")
 
 # ===== SQL QUERY =====
 QUERY = """
-
+SELECT
+    etmr.*,
+    etmm.micromarket_name,
+    etmc.city_name
+FROM stanza.erp_transformation_master_residences etmr
+LEFT JOIN stanza.erp_transformation_master_micromarket etmm
+    ON etmm.uuid = etmr.micromarket_id
+LEFT JOIN stanza.erp_transformation_master_cities etmc
+    ON etmc.uuid = etmm.city_id
+WHERE etmr."__hevo__marked_deleted" IS NOT TRUE
+  AND EXISTS (
+      SELECT 1
+      FROM stanza.ims_venta_aggregation_service_residences op
+      WHERE op.residence_uuid = etmr.uuid
+        AND op.residence_status = 'Booking Enabled'
+  )
+ORDER BY
+    etmc.city_name,
+    etmm.micromarket_name,
+    etmr.residence_name;
 """
 
 # ===== CONNECT TO REDSHIFT =====
@@ -45,7 +64,7 @@ scopes = ["https://www.googleapis.com/auth/spreadsheets",
           "https://www.googleapis.com/auth/drive"]
 creds = Credentials.from_service_account_file(KEY_FILE, scopes=scopes)
 client = gspread.authorize(creds)
-sheet = client.open_by_key(SHEET_ID).worksheet(TAB_NAME_B)
+sheet = client.open_by_key(SHEET_ID).worksheet(TAB_NAME_B) # ResidenceList_RealTime_JOB
 
 # ===== WRITE TO SHEET =====
 sheet.clear()
