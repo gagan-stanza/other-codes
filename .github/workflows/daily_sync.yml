@@ -35,6 +35,7 @@ jobs:
           SHEET_ID: ${{ secrets.SHEET_ID }}
           TAB_NAME_A: ${{ secrets.TAB_NAME_A }}
           TAB_NAME_B: ${{ secrets.TAB_NAME_B }}
+          TAB_NAME_C: ${{ secrets.TAB_NAME_C }}
           KEY_FILE: gagan-automation-key.json
         run: |
           python SCC_Data.py
