@@ -71,5 +71,11 @@ sheet.clear()
 sheet.append_row(headers)
 sheet.append_rows(rows)
 
+header_count = len(headers)
 row_count = len(rows)
-print(f"Done! Data written to Google Sheet! Rows count: {row_count}")
+
+print(
+    f"Done! Data written to Google Sheet!\n"
+    f"Headers Count: {header_count}\n"
+    f"Rows Count: {row_count}"
+)
