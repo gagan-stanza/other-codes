@@ -4,6 +4,8 @@ from google.oauth2.service_account import Credentials
 from dotenv import load_dotenv
 import os
 import json
+from datetime import date, datetime
+from decimal import Decimal
 
 # ===== LOAD CONFIG =====
 load_dotenv()
@@ -36,6 +38,7 @@ WHERE etmr."__hevo__marked_deleted" IS NOT TRUE
       FROM stanza.ims_venta_aggregation_service_residences op
       WHERE op.residence_uuid = etmr.uuid
         AND op.residence_status = 'Booking Enabled'
+        AND op."__hevo__marked_deleted" IS NOT TRUE
   )
 ORDER BY
     etmc.city_name,
@@ -55,6 +58,17 @@ cursor = conn.cursor()
 cursor.execute(QUERY)
 rows = cursor.fetchall()
 headers = [desc[0] for desc in cursor.description]
+
+def serialize_value(value):
+    if isinstance(value, datetime):
+        return value.isoformat(sep=" ")
+    if isinstance(value, date):
+        return value.isoformat()
+    if isinstance(value, Decimal):
+        return float(value)
+    return value
+
+rows = [tuple(serialize_value(value) for value in row) for row in rows]
 
 cursor.close()
 conn.close()
