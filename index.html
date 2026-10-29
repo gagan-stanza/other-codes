@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Data Dashboard</title>
 
-  <!-- jQuery & DataTables CSS/JS -->
+  <!-- jQuery & DataTables CSS -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
   <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css" />
+
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -19,6 +20,24 @@
       padding: 1.5rem;
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    }
+    .filter-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1.25rem;
+    }
+    .filter-header label {
+      font-weight: 600;
+      color: #333;
+    }
+    .filter-header select {
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      min-width: 220px;
+      background-color: #fff;
     }
     thead input {
       width: 100%;
@@ -32,12 +51,20 @@
 
   <div class="container">
     <h2>Data Dashboard</h2>
+    
+    <!-- Top Left Dropdown Filter for Column C -->
+    <div class="filter-header">
+      <label for="microMarketSelect">Micro Market:</label>
+      <select id="microMarketSelect">
+        <option value="">All Micro Markets</option>
+      </select>
+    </div>
+
     <table id="dataTable" class="display" style="width:100%"></table>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-  <!-- Optional Export Buttons -->
   <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
