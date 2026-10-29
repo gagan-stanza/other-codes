@@ -1,37 +1,44 @@
 function loadData() {
   fetch('data.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
       if (data && data.length > 0) {
         renderTable(data);
-      } else {
-        document.getElementById('wrapper').innerText = 'Data file is empty.';
       }
     })
-    .catch(err => {
-      console.error('Error loading data:', err);
-      document.getElementById('wrapper').innerText = 'Failed to load data.json.';
-    });
+    .catch(err => console.error('Error:', err));
 }
 
 function renderTable(data) {
-  const columns = Object.keys(data[0]);
-  const rows = data.map(row => Object.values(row));
+  const keys = Object.keys(data[0]);
+  
+  // Format columns for DataTables
+  const columns = keys.map(key => ({ title: key, data: key, defaultContent: "" }));
 
-  new gridjs.Grid({
+  // Add individual column search inputs in table header
+  $('#dataTable').append('<thead><tr id="filterRow"></tr></thead>');
+  keys.forEach(() => {
+    $('#filterRow').append('<th><input type="text" placeholder="Filter..." /></th>');
+  });
+
+  const table = $('#dataTable').DataTable({
+    data: data,
     columns: columns,
-    data: rows,
-    search: true,
-    sort: true,
-    pagination: {
-      limit: 10
-    }
-  }).render(document.getElementById('wrapper'));
+    pageLength: 25,
+    orderCellsTop: true,
+    fixedHeader: true,
+    dom: 'Bfrtip',
+    buttons: ['copy', 'csv', 'excel']
+  });
+
+  // Apply column filter on keyup
+  $('#dataTable thead tr#filterRow th').each(function (index) {
+    $('input', this).on('keyup change', function () {
+      if (table.column(index).search() !== this.value) {
+        table.column(index).search(this.value).draw();
+      }
+    });
+  });
 }
 
 document.addEventListener('DOMContentLoaded', loadData);
