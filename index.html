@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beds Utilization</title>
+  <title>Data Dashboard</title>
 
   <!-- jQuery & DataTables CSS -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
@@ -21,22 +21,28 @@
       border-radius: 8px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     }
-    .filter-header {
+    .filter-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-bottom: 1.25rem;
+      align-items: center;
+    }
+    .filter-group {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 1.25rem;
+      gap: 8px;
     }
-    .filter-header label {
+    .filter-group label {
       font-weight: 600;
       color: #333;
     }
-    .filter-header select {
+    .filter-group select {
       padding: 6px 12px;
       border: 1px solid #ccc;
       border-radius: 4px;
       font-size: 0.95rem;
-      min-width: 220px;
+      min-width: 200px;
       background-color: #fff;
     }
     thead input {
@@ -45,6 +51,14 @@
       box-sizing: border-box;
       font-size: 0.85rem;
     }
+    tfoot tr {
+      background-color: #e9ecef;
+      font-weight: bold;
+    }
+    tfoot td {
+      border-top: 2px solid #333 !important;
+      padding: 8px !important;
+    }
   </style>
 </head>
 <body>
@@ -52,12 +66,21 @@
   <div class="container">
     <h2>Data Dashboard</h2>
     
-    <!-- Top Left Dropdown Filter for Column C -->
-    <div class="filter-header">
-      <label for="microMarketSelect">Micro Market:</label>
-      <select id="microMarketSelect">
-        <option value="">All Micro Markets</option>
-      </select>
+    <!-- Side-by-side Top Filters -->
+    <div class="filter-container">
+      <div class="filter-group">
+        <label for="citySelect">City:</label>
+        <select id="citySelect">
+          <option value="">All Cities</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="microMarketSelect">Micro Market:</label>
+        <select id="microMarketSelect">
+          <option value="">All Micro Markets</option>
+        </select>
+      </div>
     </div>
 
     <table id="dataTable" class="display" style="width:100%"></table>
