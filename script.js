@@ -30,52 +30,43 @@ function renderTable(data) {
     buttons: ['copy', 'csv', 'excel']
   });
 
-  // Dynamic dropdown updater function for nested behavior
-  function updateDropdowns() {
-    const selectedMarket = $('#microMarketSelect').val();
-    const selectedCity = $('#citySelect').val();
-
-    // Get current visible filtered rows
+  // Function to refresh available options for a target dropdown based on currently visible data
+  function updateDropdownOptions(targetId, colIdx, defaultText) {
     const visibleData = table.rows({ search: 'applied' }).data().toArray();
-
-    // Extract unique values from visible rows
-    const validMarkets = [...new Set(visibleData.map(row => row[keys[microMarketIdx]]))].filter(Boolean).sort();
-    const validCities = [...new Set(visibleData.map(row => row[keys[cityIdx]]))].filter(Boolean).sort();
-
-    // 1. Refresh Micro Market options (unless user is actively selecting it)
-    if (!selectedMarket) {
-      const marketSelect = $('#microMarketSelect');
-      marketSelect.html('<option value="">All Micro Markets</option>');
-      validMarkets.forEach(m => {
-        marketSelect.append(`<option value="${m}">${m}</option>`);
-      });
-    }
-
-    // 2. Refresh City options (unless user is actively selecting it)
-    if (!selectedCity) {
-      const citySelect = $('#citySelect');
-      citySelect.html('<option value="">All Cities</option>');
-      validCities.forEach(c => {
-        citySelect.append(`<option value="${c}">${c}</option>`);
-      });
-    }
+    const validValues = [...new Set(visibleData.map(row => row[keys[colIdx]]))].filter(Boolean).sort();
+    
+    const selectElem = $(targetId);
+    selectElem.html(`<option value="">${defaultText}</option>`);
+    validValues.forEach(val => {
+      selectElem.append(`<option value="${val}">${val}</option>`);
+    });
   }
 
-  // Initial population of options
-  updateDropdowns();
+  // Initial population of both dropdowns
+  updateDropdownOptions('#citySelect', cityIdx, 'All Cities');
+  updateDropdownOptions('#microMarketSelect', microMarketIdx, 'All Micro Markets');
 
-  // Event handler for Micro Market Selection
-  $('#microMarketSelect').on('change', function () {
-    const val = $.fn.dataTable.util.escapeRegex($(this).val());
-    table.column(microMarketIdx).search(val ? '^' + val + '$' : '', true, false).draw();
-    updateDropdowns();
-  });
-
-  // Event handler for City Selection
+  // Event handler for City Selection (First filter)
   $('#citySelect').on('change', function () {
     const val = $.fn.dataTable.util.escapeRegex($(this).val());
+    
+    // 1. Reset Micro Market search filter and dropdown selection
+    table.column(microMarketIdx).search('');
+    $('#microMarketSelect').val('');
+
+    // 2. Apply City search filter
     table.column(cityIdx).search(val ? '^' + val + '$' : '', true, false).draw();
-    updateDropdowns();
+
+    // 3. Re-populate Micro Market dropdown with valid options for the chosen City
+    updateDropdownOptions('#microMarketSelect', microMarketIdx, 'All Micro Markets');
+  });
+
+  // Event handler for Micro Market Selection (Second filter)
+  $('#microMarketSelect').on('change', function () {
+    const val = $.fn.dataTable.util.escapeRegex($(this).val());
+    
+    // Apply Micro Market search filter
+    table.column(microMarketIdx).search(val ? '^' + val + '$' : '', true, false).draw();
   });
 }
 
