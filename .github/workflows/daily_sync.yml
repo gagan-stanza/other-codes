@@ -36,7 +36,16 @@ jobs:
           TAB_NAME_A: ${{ secrets.TAB_NAME_A }} # SCC_RealTime_JOB
           TAB_NAME_B: ${{ secrets.TAB_NAME_B }} # ResidenceList_RealTime_JOB
           TAB_NAME_C: ${{ secrets.TAB_NAME_C }} # LiveBookings_RealTime_JOB
+          TAB_NAME_D: ${{ secrets.TAB_NAME_D }} # ResidenceList_VIEW_MIRROR
           KEY_FILE: gagan-automation-key.json
         run: |
           python SCC_Data.py
           python Live_Bookings.py
+          python gsheet_to_webpage.py
+
+      - name: Commit and push updated data.json
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add data.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update data.json via GitHub Action" && git push)
