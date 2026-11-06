@@ -3,80 +3,274 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Dashboard</title>
+  <title>Sales & Performance Dashboard</title>
 
-  <!-- jQuery & DataTables CSS -->
+  <!-- DataTables & Chart.js CSS -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
   <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.1/css/buttons.dataTables.min.css" />
 
   <style>
+    :root {
+      --bg-color: #f4f6f9;
+      --card-bg: #ffffff;
+      --text-main: #2c3e50;
+      --text-muted: #7f8c8d;
+      --accent-color: #3498db;
+      --border-color: #e2e8f0;
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      margin: 0;
       padding: 1.5rem;
-      background-color: #f8f9fa;
     }
-    .container {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    }
-    .filter-container {
+
+    .dashboard-container {
+      max-width: 1400px;
+      margin: 0 auto;
       display: flex;
-      flex-wrap: wrap;
-      gap: 24px;
-      margin-bottom: 1.25rem;
-      align-items: center;
+      flex-direction: column;
+      gap: 1.25rem;
     }
+
+    .header-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* KPI Summary Cards */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .kpi-card {
+      background: var(--card-bg);
+      padding: 1.25rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      border: 1px solid var(--border-color);
+    }
+
+    .kpi-card .title {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .kpi-card .value {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-top: 0.4rem;
+      color: var(--text-main);
+    }
+
+    /* Filters Bar */
+    .filter-card {
+      background: var(--card-bg);
+      padding: 1rem 1.25rem;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
     .filter-group {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 0.5rem;
     }
+
     .filter-group label {
+      font-size: 0.9rem;
       font-weight: 600;
-      color: #333;
     }
+
     .filter-group select {
       padding: 6px 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 0.95rem;
-      min-width: 200px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
       background-color: #fff;
+      font-size: 0.9rem;
+      min-width: 180px;
+    }
+
+    .reset-btn {
+      padding: 6px 14px;
+      background-color: #e2e8f0;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-main);
+      transition: background-color 0.2s;
+    }
+
+    .reset-btn:hover {
+      background-color: #cbd5e1;
+    }
+
+    /* Charts Section */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 900px) {
+      .charts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .chart-card {
+      background: var(--card-bg);
+      padding: 1.25rem;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      height: 280px;
+    }
+
+    .chart-card h3 {
+      margin: 0 0 0.75rem 0;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    /* Table Section */
+    .table-card {
+      background: var(--card-bg);
+      padding: 1.25rem;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      overflow-x: auto;
+    }
+
+    /* Progress bar visual inside table */
+    .progress-bar-container {
+      background-color: #e9ecef;
+      border-radius: 4px;
+      height: 16px;
+      width: 100%;
+      min-width: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.3s ease;
+    }
+
+    .progress-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    tfoot tr {
+      background-color: #f1f5f9;
+      font-weight: bold;
+    }
+
+    tfoot td {
+      border-top: 2px solid #cbd5e1 !important;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h2>Data Dashboard</h2>
-    
-    <!-- Side-by-side Top Filters (City 1st, Micro Market 2nd) -->
-    <div class="filter-container">
-      <div class="filter-group">
-        <label for="citySelect">City:</label>
-        <select id="citySelect">
-          <option value="">All Cities</option>
-        </select>
-      </div>
+  <div class="dashboard-container">
+    <div class="header-section">
+      <h1>Residence Sales Performance</h1>
+    </div>
 
-      <div class="filter-group">
-        <label for="microMarketSelect">Micro Market:</label>
-        <select id="microMarketSelect">
-          <option value="">All Micro Markets</option>
-        </select>
+    <!-- 1. KPI Cards -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="title">Total Properties</div>
+        <div class="value" id="kpiProperties">0</div>
+      </div>
+      <div class="kpi-card">
+        <div class="title">Total Beds</div>
+        <div class="value" id="kpiBeds">0</div>
+      </div>
+      <div class="kpi-card">
+        <div class="title">Total Sold (#)</div>
+        <div class="value" id="kpiSold">0</div>
+      </div>
+      <div class="kpi-card">
+        <div class="title">Overall Sold %</div>
+        <div class="value" id="kpiPct">0%</div>
       </div>
     </div>
 
-    <table id="dataTable" class="display" style="width:100%"></table>
+    <!-- 2. Filters -->
+    <div class="filter-card">
+      <div class="filter-group">
+        <label for="citySelect">City:</label>
+        <select id="citySelect"><option value="">All Cities</option></select>
+      </div>
+      <div class="filter-group">
+        <label for="microMarketSelect">Micro Market:</label>
+        <select id="microMarketSelect"><option value="">All Micro Markets</option></select>
+      </div>
+      <button class="reset-btn" id="resetFilters">Reset All Filters</button>
+    </div>
+
+    <!-- 3. Dynamic Charts -->
+    <div class="charts-grid">
+      <div class="chart-card">
+        <h3>Beds Sold by City</h3>
+        <canvas id="cityChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <h3>Sales Channel Breakdown</h3>
+        <canvas id="channelChart"></canvas>
+      </div>
+    </div>
+
+    <!-- 4. Data Table -->
+    <div class="table-card">
+      <table id="dataTable" class="display" style="width:100%"></table>
+    </div>
   </div>
 
+  <!-- Dependencies -->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
