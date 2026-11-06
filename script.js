@@ -1,6 +1,6 @@
 let dataTableInstance = null;
 let cityChartInstance = null;
-let channelChartInstance = null;
+let mmChartInstance = null;
 
 function loadData() {
   fetch('data.json')
@@ -13,30 +13,38 @@ function loadData() {
     .catch(err => console.error('Error loading data:', err));
 }
 
+// Clean helper to parse numeric values safely
+function parseNum(val) {
+  if (val === null || val === undefined) return 0;
+  const clean = val.toString().replace(/[^0-9.-]/g, '');
+  const num = parseFloat(clean);
+  return isNaN(num) ? 0 : num;
+}
+
 function renderDashboard(data) {
   const keys = Object.keys(data[0]);
 
-  const microMarketIdx = 1; // Column B (Micro Market)
-  const cityIdx = 2;        // Column C (City)
-  const bedsIdx = 8;        // Column I (Beds)
-  const scholarIdx = 9;     // Column J (Scholar Sold #)
-  const wpIdx = 10;         // Column K (WP Sold #)
-  const coachingIdx = 11;   // Column L (Coaching Sold #)
-  const hydraIdx = 12;      // Column M (Hydra Sold #)
-  const totalSoldIdx = 13;  // Column N (Total Sold #)
-  const totalPctIdx = 14;   // Column O (Total Sold %)
+  // Find dynamic column keys safely regardless of column positions
+  const findKey = (name) => keys.find(k => k.trim().toLowerCase() === name.toLowerCase()) || '';
 
-  // Define table columns with custom formatting for Column O (Progress Bar)
-  const columns = keys.map((key, index) => {
-    if (index === totalPctIdx) {
+  const propertyKey = findKey('Property');
+  const mmKey = findKey('Micro Market');
+  const cityKey = findKey('City');
+  const bedsKey = findKey('Beds');
+  const totalSoldKey = findKey('Total Sold #');
+  const totalPctKey = findKey('Total Sold %');
+
+  // Format columns for DataTables
+  const columns = keys.map(key => {
+    if (key === totalPctKey) {
       return {
         title: key,
         data: key,
         render: function (val) {
-          const num = parseFloat(val) || 0;
-          let color = '#f59e0b'; // Default orange
-          if (num >= 80) color = '#10b981'; // Green
-          else if (num >= 50) color = '#3b82f6'; // Blue
+          const num = parseNum(val);
+          let color = '#f59e0b';
+          if (num >= 80) color = '#10b981';
+          else if (num >= 50) color = '#3b82f6';
 
           return `
             <div class="progress-bar-container">
@@ -49,13 +57,15 @@ function renderDashboard(data) {
     return { title: key, data: key, defaultContent: "" };
   });
 
-  // Setup Table Footer HTML
-  let footerHtml = '<tfoot><tr>';
-  keys.forEach((key, idx) => {
-    footerHtml += idx === 0 ? '<td><strong>Total</strong></td>' : '<td></td>';
-  });
-  footerHtml += '</tr></tfoot>';
-  $('#dataTable').append(footerHtml);
+  // Footer Row setup
+  if ($('#dataTable tfoot').length === 0) {
+    let footerHtml = '<tfoot><tr>';
+    keys.forEach((key, idx) => {
+      footerHtml += idx === 0 ? '<td><strong>Total</strong></td>' : '<td></td>';
+    });
+    footerHtml += '</tr></tfoot>';
+    $('#dataTable').append(footerHtml);
+  }
 
   // Initialize DataTable
   dataTableInstance = $('#dataTable').DataTable({
@@ -65,44 +75,54 @@ function renderDashboard(data) {
     responsive: true,
     dom: 'Bfrtip',
     buttons: ['copy', 'csv', 'excel'],
-    footerCallback: function () {
-      updateSummaryMetricsAndCharts(keys, cityIdx, bedsIdx, scholarIdx, wpIdx, coachingIdx, hydraIdx, totalSoldIdx);
+    drawCallback: function () {
+      updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey);
     }
   });
 
-  // Initialize Filters
-  populateDropdown('#citySelect', cityIdx, data, keys, 'All Cities');
-  populateDropdown('#microMarketSelect', microMarketIdx, data, keys, 'All Micro Markets');
+  // Populate Initial Dropdowns
+  const cityIdx = keys.indexOf(cityKey);
+  const mmIdx = keys.indexOf(mmKey);
 
-  // Filter Handlers
+  populateDropdown('#citySelect', cityKey, data, 'All Cities');
+  populateDropdown('#microMarketSelect', mmKey, data, 'All Micro Markets');
+
+  // Event Listeners for Filters
   $('#citySelect').on('change', function () {
     const val = $.fn.dataTable.util.escapeRegex($(this).val());
-    dataTableInstance.column(microMarketIdx).search('');
-    $('#microMarketSelect').val('');
-    dataTableInstance.column(cityIdx).search(val ? '^' + val + '$' : '', true, false).draw();
     
-    // Update Micro Market options for selected City
+    // Reset Micro Market selection when City changes
+    if (mmIdx !== -1) dataTableInstance.column(mmIdx).search('');
+    $('#microMarketSelect').val('');
+
+    if (cityIdx !== -1) {
+      dataTableInstance.column(cityIdx).search(val ? '^' + val + '$' : '', true, false).draw();
+    }
+
+    // Update Micro Market dropdown options based on filtered data
     const visibleData = dataTableInstance.rows({ search: 'applied' }).data().toArray();
-    populateDropdown('#microMarketSelect', microMarketIdx, visibleData, keys, 'All Micro Markets');
+    populateDropdown('#microMarketSelect', mmKey, visibleData, 'All Micro Markets');
   });
 
   $('#microMarketSelect').on('change', function () {
     const val = $.fn.dataTable.util.escapeRegex($(this).val());
-    dataTableInstance.column(microMarketIdx).search(val ? '^' + val + '$' : '', true, false).draw();
+    if (mmIdx !== -1) {
+      dataTableInstance.column(mmIdx).search(val ? '^' + val + '$' : '', true, false).draw();
+    }
   });
 
   $('#resetFilters').on('click', function () {
     $('#citySelect').val('');
     $('#microMarketSelect').val('');
     dataTableInstance.columns().search('').draw();
-    populateDropdown('#citySelect', cityIdx, data, keys, 'All Cities');
-    populateDropdown('#microMarketSelect', microMarketIdx, data, keys, 'All Micro Markets');
+    populateDropdown('#citySelect', cityKey, data, 'All Cities');
+    populateDropdown('#microMarketSelect', mmKey, data, 'All Micro Markets');
   });
 }
 
-// Populate Dropdown helper
-function populateDropdown(selectId, colIdx, rowData, keys, defaultLabel) {
-  const values = [...new Set(rowData.map(r => r[keys[colIdx]]))].filter(Boolean).sort();
+function populateDropdown(selectId, colKey, rowData, defaultLabel) {
+  if (!colKey) return;
+  const values = [...new Set(rowData.map(r => r[colKey]))].filter(Boolean).sort();
   const elem = $(selectId);
   const currentVal = elem.val();
   elem.html(`<option value="">${defaultLabel}</option>`);
@@ -112,39 +132,28 @@ function populateDropdown(selectId, colIdx, rowData, keys, defaultLabel) {
   elem.val(currentVal);
 }
 
-// Dynamic KPI Cards, Footer Sums, and Chart Renderer
-function updateSummaryMetricsAndCharts(keys, cityIdx, bedsIdx, scholarIdx, wpIdx, coachingIdx, hydraIdx, totalSoldIdx) {
+function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey) {
   if (!dataTableInstance) return;
 
-  const api = dataTableInstance;
-  const visibleRows = api.rows({ search: 'applied' }).data().toArray();
+  const visibleRows = dataTableInstance.rows({ search: 'applied' }).data().toArray();
 
   let totalBeds = 0;
   let totalSold = 0;
-  let sumScholar = 0;
-  let sumWP = 0;
-  let sumCoaching = 0;
-  let sumHydra = 0;
 
   const cityMap = {};
+  const mmMap = {};
 
   visibleRows.forEach(row => {
-    const beds = parseFloat(row[keys[bedsIdx]]) || 0;
-    const sold = parseFloat(row[keys[totalSoldIdx]]) || 0;
-    const scholar = parseFloat(row[keys[scholarIdx]]) || 0;
-    const wp = parseFloat(row[keys[wpIdx]]) || 0;
-    const coaching = parseFloat(row[keys[coachingIdx]]) || 0;
-    const hydra = parseFloat(row[keys[hydraIdx]]) || 0;
-    const city = row[keys[cityIdx]] || 'Unknown';
+    const beds = parseNum(row[bedsKey]);
+    const sold = parseNum(row[totalSoldKey]);
+    const city = row[cityKey] || 'Unknown';
+    const mm = row[mmKey] || 'Unknown';
 
     totalBeds += beds;
     totalSold += sold;
-    sumScholar += scholar;
-    sumWP += wp;
-    sumCoaching += coaching;
-    sumHydra += hydra;
 
     cityMap[city] = (cityMap[city] || 0) + sold;
+    mmMap[mm] = (mmMap[mm] || 0) + sold;
   });
 
   // 1. Update KPI Cards
@@ -154,25 +163,28 @@ function updateSummaryMetricsAndCharts(keys, cityIdx, bedsIdx, scholarIdx, wpIdx
   const overallPct = totalBeds > 0 ? ((totalSold / totalBeds) * 100).toFixed(1) : 0;
   $('#kpiPct').text(overallPct + '%');
 
-  // 2. Update Footer Sums for Columns I through N (Indices 8 to 13)
-  for (let c = 8; c <= 13; c++) {
-    const colSum = api.column(c, { page: 'current' }).data().reduce((a, b) => (parseFloat(a) || 0) + (parseFloat(b) || 0), 0);
-    $(api.column(c).footer()).html(colSum.toLocaleString(undefined, { maximumFractionDigits: 1 }));
-  }
+  // 2. Update Footer Sums dynamically for numeric columns
+  keys.forEach((key, colIdx) => {
+    if (colIdx === 0) return;
+    const isNumeric = visibleRows.some(r => !isNaN(parseNum(r[key])) && parseNum(r[key]) !== 0);
+    if (isNumeric && !key.includes('%')) {
+      const colSum = visibleRows.reduce((sum, r) => sum + parseNum(r[key]), 0);
+      $(dataTableInstance.column(colIdx).footer()).html(colSum.toLocaleString(undefined, { maximumFractionDigits: 1 }));
+    } else {
+      $(dataTableInstance.column(colIdx).footer()).html('');
+    }
+  });
 
-  // 3. Render / Update City Bar Chart
-  const cityLabels = Object.keys(cityMap);
-  const cityValues = Object.values(cityMap);
-
+  // 3. Render City Bar Graph (Total Sold #)
   if (cityChartInstance) cityChartInstance.destroy();
   const ctxCity = document.getElementById('cityChart').getContext('2d');
   cityChartInstance = new Chart(ctxCity, {
     type: 'bar',
     data: {
-      labels: cityLabels,
+      labels: Object.keys(cityMap),
       datasets: [{
-        label: 'Beds Sold',
-        data: cityValues,
+        label: 'Total Sold #',
+        data: Object.values(cityMap),
         backgroundColor: '#3b82f6',
         borderRadius: 4
       }]
@@ -185,22 +197,25 @@ function updateSummaryMetricsAndCharts(keys, cityIdx, bedsIdx, scholarIdx, wpIdx
     }
   });
 
-  // 4. Render / Update Channel Donut Chart
-  if (channelChartInstance) channelChartInstance.destroy();
-  const ctxChannel = document.getElementById('channelChart').getContext('2d');
-  channelChartInstance = new Chart(ctxChannel, {
-    type: 'doughnut',
+  // 4. Render Micro Market Bar Graph (Total Sold #)
+  if (mmChartInstance) mmChartInstance.destroy();
+  const ctxMM = document.getElementById('channelChart').getContext('2d'); // Using existing canvas element
+  mmChartInstance = new Chart(ctxMM, {
+    type: 'bar',
     data: {
-      labels: ['Scholar', 'WP', 'Coaching', 'Hydra'],
+      labels: Object.keys(mmMap),
       datasets: [{
-        data: [sumScholar, sumWP, sumCoaching, sumHydra],
-        backgroundColor: ['#6366f1', '#10b981', '#f59e0b', '#ec4899']
+        label: 'Total Sold #',
+        data: Object.values(mmMap),
+        backgroundColor: '#10b981',
+        borderRadius: 4
       }]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      plugins: { legend: { position: 'bottom' } }
+      plugins: { legend: { display: false } },
+      scales: { y: { beginAtZero: true } }
     }
   });
 }

@@ -131,7 +131,7 @@
     /* Charts Section */
     .charts-grid {
       display: grid;
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
 
@@ -233,7 +233,7 @@
       </div>
     </div>
 
-    <!-- 2. Filters -->
+    <!-- 2. Side-by-Side Horizontal Filters -->
     <div class="filter-card">
       <div class="filter-group">
         <label for="citySelect">City:</label>
@@ -246,14 +246,14 @@
       <button class="reset-btn" id="resetFilters">Reset All Filters</button>
     </div>
 
-    <!-- 3. Dynamic Charts -->
+    <!-- 3. Dynamic Side-by-Side Bar Charts -->
     <div class="charts-grid">
       <div class="chart-card">
-        <h3>Beds Sold by City</h3>
+        <h3>Total Sold # by City</h3>
         <canvas id="cityChart"></canvas>
       </div>
       <div class="chart-card">
-        <h3>Sales Channel Breakdown</h3>
+        <h3>Total Sold # by Micro Market</h3>
         <canvas id="channelChart"></canvas>
       </div>
     </div>
@@ -264,7 +264,7 @@
     </div>
   </div>
 
-  <!-- Dependencies -->
+  <!-- JS Dependencies -->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
