@@ -79,7 +79,7 @@
       color: var(--text-main);
     }
 
-    /* Filters Bar */
+    /* Unified Control Bar (Filters Left, Export Buttons Right) */
     .filter-card {
       background: var(--card-bg);
       padding: 1rem 1.25rem;
@@ -87,7 +87,15 @@
       border: 1px solid var(--border-color);
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-left {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
       flex-wrap: wrap;
     }
 
@@ -127,6 +135,35 @@
       background-color: #cbd5e1;
     }
 
+    .export-right {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* DataTables Export Buttons Custom Styling */
+    .export-right .dt-buttons {
+      display: flex;
+      gap: 6px;
+    }
+
+    .export-right button.dt-button {
+      background: #ffffff !important;
+      border: 1px solid var(--border-color) !important;
+      border-radius: 6px !important;
+      padding: 6px 14px !important;
+      font-size: 0.85rem !important;
+      font-weight: 600 !important;
+      color: var(--text-main) !important;
+      transition: all 0.2s ease !important;
+      margin: 0 !important;
+    }
+
+    .export-right button.dt-button:hover {
+      background: #f1f5f9 !important;
+      border-color: #cbd5e1 !important;
+    }
+
     /* Charts Section */
     .charts-grid {
       display: grid;
@@ -145,14 +182,110 @@
       padding: 1.25rem;
       border-radius: 10px;
       border: 1px solid var(--border-color);
-      height: 280px;
+      height: 300px;
+      position: relative;
     }
 
-    .chart-card h3 {
-      margin: 0 0 0.75rem 0;
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .chart-header h3 {
+      margin: 0;
       font-size: 0.95rem;
       color: var(--text-muted);
       font-weight: 600;
+    }
+
+    .expand-btn {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      padding: 4px 8px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      color: var(--text-muted);
+      transition: all 0.2s ease;
+    }
+
+    .expand-btn:hover {
+      background: #e2e8f0;
+      color: var(--text-main);
+    }
+
+    .chart-wrapper {
+      position: relative;
+      height: calc(100% - 35px);
+      width: 100%;
+    }
+
+    /* Modal for Expanded Graph */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(4px);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      width: 90vw;
+      max-width: 1300px;
+      height: 85vh;
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .modal-header h2 {
+      margin: 0;
+      font-size: 1.25rem;
+      color: var(--text-main);
+    }
+
+    .close-modal-btn {
+      background: #f1f5f9;
+      border: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .close-modal-btn:hover {
+      background: #e2e8f0;
+    }
+
+    .modal-body {
+      flex: 1;
+      width: 100%;
+      overflow-x: auto;
+      position: relative;
+    }
+
+    .modal-chart-scroll-wrapper {
+      min-width: 100%;
+      height: 100%;
     }
 
     /* Table Section */
@@ -162,6 +295,11 @@
       border-radius: 10px;
       border: 1px solid var(--border-color);
       overflow-x: auto;
+    }
+
+    /* Hide standard DataTables buttons container since we move it to top bar */
+    .table-card .dt-buttons {
+      display: none;
     }
 
     /* Progress bar visual inside table */
@@ -194,15 +332,6 @@
       font-weight: 700;
       color: #1e293b;
     }
-
-    tfoot tr {
-      background-color: #f1f5f9;
-      font-weight: bold;
-    }
-
-    tfoot td {
-      border-top: 2px solid #cbd5e1 !important;
-    }
   </style>
 </head>
 <body>
@@ -232,28 +361,45 @@
       </div>
     </div>
 
-    <!-- 2. Filters -->
+    <!-- 2. Single Bar: Filters Left | Export Buttons Right -->
     <div class="filter-card">
-      <div class="filter-group">
-        <label for="citySelect">City:</label>
-        <select id="citySelect"><option value="">All Cities</option></select>
+      <div class="filter-left">
+        <div class="filter-group">
+          <label for="citySelect">City:</label>
+          <select id="citySelect"><option value="">All Cities</option></select>
+        </div>
+        <div class="filter-group">
+          <label for="microMarketSelect">Micro Market:</label>
+          <select id="microMarketSelect"><option value="">All Micro Markets</option></select>
+        </div>
+        <button class="reset-btn" id="resetFilters">Reset All Filters</button>
       </div>
-      <div class="filter-group">
-        <label for="microMarketSelect">Micro Market:</label>
-        <select id="microMarketSelect"><option value="">All Micro Markets</option></select>
+
+      <div class="export-right" id="exportContainer">
+        <!-- Copy, CSV, Excel buttons attached dynamically via JS -->
       </div>
-      <button class="reset-btn" id="resetFilters">Reset All Filters</button>
     </div>
 
-    <!-- 3. Dynamic Side-by-Side Bar Charts (Occupancy %) -->
+    <!-- 3. Dynamic Side-by-Side Bar Charts -->
     <div class="charts-grid">
       <div class="chart-card">
-        <h3>Occupancy % by City</h3>
-        <canvas id="cityChart"></canvas>
+        <div class="chart-header">
+          <h3>Occupancy % by City</h3>
+          <button class="expand-btn" id="expandCityChart" title="Expand View">⛶ Expand</button>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="cityChart"></canvas>
+        </div>
       </div>
+
       <div class="chart-card">
-        <h3>Occupancy % by Micro Market</h3>
-        <canvas id="channelChart"></canvas>
+        <div class="chart-header">
+          <h3>Occupancy % by Micro Market</h3>
+          <button class="expand-btn" id="expandMMChart" title="Expand View">⛶ Expand</button>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="channelChart"></canvas>
+        </div>
       </div>
     </div>
 
@@ -263,10 +409,25 @@
     </div>
   </div>
 
+  <!-- Modal for Enlarged Chart View -->
+  <div class="modal-overlay" id="chartModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalChartTitle">Expanded Chart</h2>
+        <button class="close-modal-btn" id="closeModal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-chart-scroll-wrapper" id="modalChartWrapper">
+          <canvas id="modalChartCanvas"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- JS Dependencies -->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
