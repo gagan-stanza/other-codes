@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sales & Performance Dashboard</title>
+  <title>Residence Performance Dashboard</title>
 
   <!-- DataTables & Chart.js CSS -->
   <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
@@ -15,7 +15,6 @@
       --card-bg: #ffffff;
       --text-main: #2c3e50;
       --text-muted: #7f8c8d;
-      --accent-color: #3498db;
       --border-color: #e2e8f0;
     }
 
@@ -233,7 +232,7 @@
       </div>
     </div>
 
-    <!-- 2. Side-by-Side Horizontal Filters -->
+    <!-- 2. Filters -->
     <div class="filter-card">
       <div class="filter-group">
         <label for="citySelect">City:</label>
@@ -246,7 +245,7 @@
       <button class="reset-btn" id="resetFilters">Reset All Filters</button>
     </div>
 
-    <!-- 3. Dynamic Side-by-Side Bar Charts (Sold %) -->
+    <!-- 3. Dynamic Side-by-Side Bar Charts (Occupancy %) -->
     <div class="charts-grid">
       <div class="chart-card">
         <h3>Occupancy % by City</h3>
@@ -267,7 +266,7 @@
   <!-- JS Dependencies -->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.dataTables.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/2.4.1/js/buttons.html5.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

@@ -23,18 +23,20 @@ function parseNum(val) {
 function renderDashboard(data) {
   const keys = Object.keys(data[0]);
 
+  // Dynamic header matching based on your new sheet structure
   const findKey = (name) => keys.find(k => k.trim().toLowerCase() === name.toLowerCase()) || '';
 
   const propertyKey = findKey('Property');
   const mmKey = findKey('Micro Market');
   const cityKey = findKey('City');
-  const bedsKey = findKey('Beds');
+  const bedsKey = findKey('Ops Beds') || findKey('Beds') || findKey('Total Beds'); // Fallback check
   const totalSoldKey = findKey('Total Sold #');
   const totalPctKey = findKey('Total Sold %');
 
   const cityIdx = keys.indexOf(cityKey);
   const mmIdx = keys.indexOf(mmKey);
 
+  // Column formatting for data table (Progress Bar for Total Sold %)
   const columns = keys.map(key => {
     if (key === totalPctKey) {
       return {
@@ -42,9 +44,9 @@ function renderDashboard(data) {
         data: key,
         render: function (val) {
           const num = parseNum(val);
-          let color = '#f59e0b';
-          if (num >= 80) color = '#10b981';
-          else if (num >= 50) color = '#3b82f6';
+          let color = '#f59e0b'; // Orange
+          if (num >= 80) color = '#10b981'; // Green
+          else if (num >= 50) color = '#3b82f6'; // Blue
 
           return `
             <div class="progress-bar-container">
@@ -57,6 +59,7 @@ function renderDashboard(data) {
     return { title: key, data: key, defaultContent: "" };
   });
 
+  // Dynamic Footer Setup
   if ($('#dataTable tfoot').length === 0) {
     let footerHtml = '<tfoot><tr>';
     keys.forEach((key, idx) => {
@@ -66,6 +69,7 @@ function renderDashboard(data) {
     $('#dataTable').append(footerHtml);
   }
 
+  // Initialize DataTable
   dataTableInstance = $('#dataTable').DataTable({
     data: data,
     columns: columns,
@@ -78,10 +82,12 @@ function renderDashboard(data) {
     }
   });
 
+  // Initial Dropdowns & Metrics Population
   populateDropdown('#citySelect', cityKey, data, 'All Cities');
   populateDropdown('#microMarketSelect', mmKey, data, 'All Micro Markets');
   updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey);
 
+  // Filter Handler: City Selection
   $('#citySelect').on('change', function () {
     const selectedCity = $(this).val();
 
@@ -98,6 +104,7 @@ function renderDashboard(data) {
     updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey);
   });
 
+  // Filter Handler: Micro Market Selection
   $('#microMarketSelect').on('change', function () {
     const selectedMM = $(this).val();
 
@@ -108,10 +115,12 @@ function renderDashboard(data) {
     updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey);
   });
 
+  // Table Search Bar Listener
   dataTableInstance.on('search.dt', function () {
     updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey);
   });
 
+  // Reset Filters Handler
   $('#resetFilters').on('click', function () {
     $('#citySelect').val('');
     $('#microMarketSelect').val('');
@@ -160,7 +169,6 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
   let totalBeds = 0;
   let totalSold = 0;
 
-  // Track both Beds and Sold per City / MM to accurately calculate Sold %
   const cityTotals = {};
   const mmTotals = {};
 
@@ -182,14 +190,14 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
     mmTotals[mm].sold += sold;
   });
 
-  // 1. Update Top KPI Cards
+  // Update Top KPI Cards
   $('#kpiProperties').text(visibleRows.length);
   $('#kpiBeds').text(totalBeds.toLocaleString());
   $('#kpiSold').text(totalSold.toLocaleString(undefined, { maximumFractionDigits: 1 }));
   const overallPct = totalBeds > 0 ? ((totalSold / totalBeds) * 100).toFixed(1) : 0;
   $('#kpiPct').text(overallPct + '%');
 
-  // 2. Compute City Sold % and Sort Descending
+  // Calculate & Sort City Occupancy %
   const sortedCities = Object.entries(cityTotals)
     .map(([city, data]) => ({
       name: city,
@@ -197,10 +205,7 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
     }))
     .sort((a, b) => b.pct - a.pct);
 
-  const cityLabels = sortedCities.map(i => i.name);
-  const cityValues = sortedCities.map(i => i.pct);
-
-  // 3. Compute Micro Market Sold % and Sort Descending
+  // Calculate & Sort Micro Market Occupancy %
   const sortedMM = Object.entries(mmTotals)
     .map(([mm, data]) => ({
       name: mm,
@@ -208,19 +213,16 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
     }))
     .sort((a, b) => b.pct - a.pct);
 
-  const mmLabels = sortedMM.map(i => i.name);
-  const mmValues = sortedMM.map(i => i.pct);
-
-  // 4. Render / Update City Bar Chart (Sold %)
+  // Render City Chart
   if (cityChartInstance) cityChartInstance.destroy();
   const ctxCity = document.getElementById('cityChart').getContext('2d');
   cityChartInstance = new Chart(ctxCity, {
     type: 'bar',
     data: {
-      labels: cityLabels,
+      labels: sortedCities.map(i => i.name),
       datasets: [{
         label: 'Occupancy %',
-        data: cityValues,
+        data: sortedCities.map(i => i.pct),
         backgroundColor: '#3b82f6',
         borderRadius: 4
       }]
@@ -230,32 +232,24 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
       maintainAspectRatio: false,
       plugins: {
         legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: (ctx) => ` Occupancy: ${ctx.raw}%`
-          }
-        }
+        tooltip: { callbacks: { label: (ctx) => ` Occupancy: ${ctx.raw}%` } }
       },
       scales: {
-        y: {
-          beginAtZero: true,
-          max: 100,
-          ticks: { callback: (val) => val + '%' }
-        }
+        y: { beginAtZero: true, max: 100, ticks: { callback: (val) => val + '%' } }
       }
     }
   });
 
-  // 5. Render / Update Micro Market Bar Chart (Sold %)
+  // Render Micro Market Chart
   if (mmChartInstance) mmChartInstance.destroy();
   const ctxMM = document.getElementById('channelChart').getContext('2d');
   mmChartInstance = new Chart(ctxMM, {
     type: 'bar',
     data: {
-      labels: mmLabels,
+      labels: sortedMM.map(i => i.name),
       datasets: [{
         label: 'Occupancy %',
-        data: mmValues,
+        data: sortedMM.map(i => i.pct),
         backgroundColor: '#10b981',
         borderRadius: 4
       }]
@@ -265,18 +259,10 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
       maintainAspectRatio: false,
       plugins: {
         legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: (ctx) => ` Occupancy: ${ctx.raw}%`
-          }
-        }
+        tooltip: { callbacks: { label: (ctx) => ` Occupancy: ${ctx.raw}%` } }
       },
       scales: {
-        y: {
-          beginAtZero: true,
-          max: 100,
-          ticks: { callback: (val) => val + '%' }
-        }
+        y: { beginAtZero: true, max: 100, ticks: { callback: (val) => val + '%' } }
       }
     }
   });
