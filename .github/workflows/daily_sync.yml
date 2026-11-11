@@ -9,12 +9,18 @@ jobs:
   run-script:
     runs-on: ubuntu-24.04
 
+    permissions:
+      contents: write
+
+    env:
+      ACTIONS_RUNNER_FORCE_NODE24: "true"
+
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.3.0
+        uses: actions/checkout@v7
 
       - name: Set up Python
-        uses: actions/setup-python@v5.6.0
+        uses: actions/setup-python@v7
         with:
           python-version: '3.13'
 
