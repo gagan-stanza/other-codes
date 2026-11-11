@@ -1,2405 +1,2405 @@
 [
   {
     "City": "Coimbatore",
-    "Micro Market": "Avinashi Road",
+    "Micro-Market": "Avinashi Road",
     "Property": "Adana House",
     "Category": "Scholar",
-    "Ops Beds": "456",
-    "Total Sold #": "177.0",
-    "Total Sold %": "38.8%"
+    "Ops Beds #": "456",
+    "Sold Beds #": "177.0",
+    "Sold %": "38.8%"
   },
   {
     "City": "Greater Noida",
-    "Micro Market": "Knowledge Park",
+    "Micro-Market": "Knowledge Park",
     "Property": "Adelaide House",
     "Category": "Scholar",
-    "Ops Beds": "559",
-    "Total Sold #": "433.0",
-    "Total Sold %": "77.5%"
+    "Ops Beds #": "559",
+    "Sold Beds #": "433.0",
+    "Sold %": "77.5%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Porur",
+    "Micro-Market": "Porur",
     "Property": "Agadir House",
     "Category": "Suits",
-    "Ops Beds": "50",
-    "Total Sold #": "8.0",
-    "Total Sold %": "16.0%"
+    "Ops Beds #": "50",
+    "Sold Beds #": "8.0",
+    "Sold %": "16.0%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Kothrud",
+    "Micro-Market": "Kothrud",
     "Property": "Akron House",
     "Category": "Scholar",
-    "Ops Beds": "54",
-    "Total Sold #": "46.0",
-    "Total Sold %": "85.2%"
+    "Ops Beds #": "54",
+    "Sold Beds #": "46.0",
+    "Sold %": "85.2%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Kharadi",
+    "Micro-Market": "Kharadi",
     "Property": "Alanya House",
     "Category": "Suits",
-    "Ops Beds": "56",
-    "Total Sold #": "46.0",
-    "Total Sold %": "82.1%"
+    "Ops Beds #": "56",
+    "Sold Beds #": "46.0",
+    "Sold %": "82.1%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Rajankunte",
+    "Micro-Market": "Rajankunte",
     "Property": "Albury House",
     "Category": "Scholar",
-    "Ops Beds": "87",
-    "Total Sold #": "83.5",
-    "Total Sold %": "96.0%"
+    "Ops Beds #": "87",
+    "Sold Beds #": "83.5",
+    "Sold %": "96.0%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Dhankawadi",
+    "Micro-Market": "Dhankawadi",
     "Property": "Alexandria House",
     "Category": "Scholar",
-    "Ops Beds": "109",
-    "Total Sold #": "94.5",
-    "Total Sold %": "86.7%"
+    "Ops Beds #": "109",
+    "Sold Beds #": "94.5",
+    "Sold %": "86.7%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Q City",
+    "Micro-Market": "Q City",
     "Property": "Amarillo House",
     "Category": "Suits",
-    "Ops Beds": "138",
-    "Total Sold #": "69.5",
-    "Total Sold %": "50.4%"
+    "Ops Beds #": "138",
+    "Sold Beds #": "69.5",
+    "Sold %": "50.4%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Kharadi",
+    "Micro-Market": "Kharadi",
     "Property": "Amiens House",
     "Category": "Suits",
-    "Ops Beds": "41",
-    "Total Sold #": "28.0",
-    "Total Sold %": "68.3%"
+    "Ops Beds #": "41",
+    "Sold Beds #": "28.0",
+    "Sold %": "68.3%"
   },
   {
     "City": "Kochi",
-    "Micro Market": "Kochi",
+    "Micro-Market": "Kochi",
     "Property": "Amora House",
     "Category": "Scholar",
-    "Ops Beds": "0",
-    "Total Sold #": "0.0",
-    "Total Sold %": "-"
+    "Ops Beds #": "0",
+    "Sold Beds #": "0.0",
+    "Sold %": "-"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Kumaraswamy Layout",
+    "Micro-Market": "Kumaraswamy Layout",
     "Property": "Anamur House",
     "Category": "Scholar",
-    "Ops Beds": "48",
-    "Total Sold #": "42.0",
-    "Total Sold %": "87.5%"
+    "Ops Beds #": "48",
+    "Sold Beds #": "42.0",
+    "Sold %": "87.5%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "Laxmi Nagar",
+    "Micro-Market": "Laxmi Nagar",
     "Property": "Ancona House",
     "Category": "Scholar",
-    "Ops Beds": "36",
-    "Total Sold #": "27.0",
-    "Total Sold %": "75.0%"
+    "Ops Beds #": "36",
+    "Sold Beds #": "27.0",
+    "Sold %": "75.0%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Senapati Bapat Road",
+    "Micro-Market": "Senapati Bapat Road",
     "Property": "Andria House",
     "Category": "Scholar",
-    "Ops Beds": "68",
-    "Total Sold #": "55.0",
-    "Total Sold %": "80.9%"
+    "Ops Beds #": "68",
+    "Sold Beds #": "55.0",
+    "Sold %": "80.9%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Mathikere",
+    "Micro-Market": "Mathikere",
     "Property": "Aswan House",
     "Category": "Scholar",
-    "Ops Beds": "42",
-    "Total Sold #": "3.0",
-    "Total Sold %": "7.1%"
+    "Ops Beds #": "42",
+    "Sold Beds #": "3.0",
+    "Sold %": "7.1%"
   },
   {
     "City": "Greater Noida",
-    "Micro Market": "Knowledge Park",
+    "Micro-Market": "Knowledge Park",
     "Property": "Athens House",
     "Category": "Scholar",
-    "Ops Beds": "736",
-    "Total Sold #": "747.0",
-    "Total Sold %": "101.5%"
+    "Ops Beds #": "736",
+    "Sold Beds #": "747.0",
+    "Sold %": "101.5%"
   },
   {
     "City": "Vadodara",
-    "Micro Market": "Waghodia Road",
+    "Micro-Market": "Waghodia Road",
     "Property": "Auckland House",
     "Category": "Scholar",
-    "Ops Beds": "600",
-    "Total Sold #": "72.0",
-    "Total Sold %": "12.0%"
+    "Ops Beds #": "600",
+    "Sold Beds #": "72.0",
+    "Sold %": "12.0%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Kondhwa",
+    "Micro-Market": "Kondhwa",
     "Property": "Austin House",
     "Category": "Scholar",
-    "Ops Beds": "256",
-    "Total Sold #": "229.0",
-    "Total Sold %": "89.5%"
+    "Ops Beds #": "256",
+    "Sold Beds #": "229.0",
+    "Sold %": "89.5%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Kukatpally",
+    "Micro-Market": "Kukatpally",
     "Property": "Bagan House",
     "Category": "Suits",
-    "Ops Beds": "214",
-    "Total Sold #": "152.0",
-    "Total Sold %": "71.0%"
+    "Ops Beds #": "214",
+    "Sold Beds #": "152.0",
+    "Sold %": "71.0%"
   },
   {
     "City": "Bangalore 2",
-    "Micro Market": "Whitefield",
+    "Micro-Market": "Whitefield",
     "Property": "Bakersfield House",
     "Category": "Suits",
-    "Ops Beds": "106",
-    "Total Sold #": "55.0",
-    "Total Sold %": "51.9%"
+    "Ops Beds #": "106",
+    "Sold Beds #": "55.0",
+    "Sold %": "51.9%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Lohegaon Dhanori",
+    "Micro-Market": "Lohegaon Dhanori",
     "Property": "Barnsley House",
     "Category": "Scholar",
-    "Ops Beds": "106",
-    "Total Sold #": "100.0",
-    "Total Sold %": "94.3%"
+    "Ops Beds #": "106",
+    "Sold Beds #": "100.0",
+    "Sold %": "94.3%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Rajarajeshwari Nagar",
+    "Micro-Market": "Rajarajeshwari Nagar",
     "Property": "Batumi House",
     "Category": "Scholar",
-    "Ops Beds": "107",
-    "Total Sold #": "102.0",
-    "Total Sold %": "95.3%"
+    "Ops Beds #": "107",
+    "Sold Beds #": "102.0",
+    "Sold %": "95.3%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Geeta Bhawan",
+    "Micro-Market": "Geeta Bhawan",
     "Property": "Beira House",
     "Category": "Scholar",
-    "Ops Beds": "114",
-    "Total Sold #": "82.5",
-    "Total Sold %": "72.4%"
+    "Ops Beds #": "114",
+    "Sold Beds #": "82.5",
+    "Sold %": "72.4%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Ameerpet",
+    "Micro-Market": "Ameerpet",
     "Property": "Belgrade House",
     "Category": "Scholar",
-    "Ops Beds": "606",
-    "Total Sold #": "399.0",
-    "Total Sold %": "65.8%"
+    "Ops Beds #": "606",
+    "Sold Beds #": "399.0",
+    "Sold %": "65.8%"
   },
   {
     "City": "Mumbai",
-    "Micro Market": "Bandra",
+    "Micro-Market": "Bandra",
     "Property": "Benin House",
     "Category": "Suits",
-    "Ops Beds": "60",
-    "Total Sold #": "51.0",
-    "Total Sold %": "85.0%"
+    "Ops Beds #": "60",
+    "Sold Beds #": "51.0",
+    "Sold %": "85.0%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "HSR Layout",
+    "Micro-Market": "HSR Layout",
     "Property": "Bilbao House",
     "Category": "Suits",
-    "Ops Beds": "479",
-    "Total Sold #": "376.5",
-    "Total Sold %": "78.6%"
+    "Ops Beds #": "479",
+    "Sold Beds #": "376.5",
+    "Sold %": "78.6%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Soladevanahalli",
+    "Micro-Market": "Soladevanahalli",
     "Property": "Bismarck House",
     "Category": "Scholar",
-    "Ops Beds": "44",
-    "Total Sold #": "30.0",
-    "Total Sold %": "68.2%"
+    "Ops Beds #": "44",
+    "Sold Beds #": "30.0",
+    "Sold %": "68.2%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Bellandur",
+    "Micro-Market": "Bellandur",
     "Property": "Bochum House",
     "Category": "Suits",
-    "Ops Beds": "254",
-    "Total Sold #": "180.0",
-    "Total Sold %": "70.9%"
+    "Ops Beds #": "254",
+    "Sold Beds #": "180.0",
+    "Sold %": "70.9%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Bhanwar Kua",
+    "Micro-Market": "Bhanwar Kua",
     "Property": "Boden House",
     "Category": "Scholar",
-    "Ops Beds": "45",
-    "Total Sold #": "32.0",
-    "Total Sold %": "71.1%"
+    "Ops Beds #": "45",
+    "Sold Beds #": "32.0",
+    "Sold %": "71.1%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "Laxmi Nagar",
+    "Micro-Market": "Laxmi Nagar",
     "Property": "Perugia House",
     "Category": "Scholar",
-    "Ops Beds": "76",
-    "Total Sold #": "47.0",
-    "Total Sold %": "61.8%"
+    "Ops Beds #": "76",
+    "Sold Beds #": "47.0",
+    "Sold %": "61.8%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Shivajinagar",
+    "Micro-Market": "Shivajinagar",
     "Property": "Boulder House",
     "Category": "Scholar",
-    "Ops Beds": "43",
-    "Total Sold #": "42.0",
-    "Total Sold %": "97.7%"
+    "Ops Beds #": "43",
+    "Sold Beds #": "42.0",
+    "Sold %": "97.7%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Aziznagar",
+    "Micro-Market": "Aziznagar",
     "Property": "Brasov House",
     "Category": "Scholar",
-    "Ops Beds": "67",
-    "Total Sold #": "65.5",
-    "Total Sold %": "97.8%"
+    "Ops Beds #": "67",
+    "Sold Beds #": "65.5",
+    "Sold %": "97.8%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Koramangala",
+    "Micro-Market": "Koramangala",
     "Property": "Bratislava House",
     "Category": "Scholar",
-    "Ops Beds": "151",
-    "Total Sold #": "133.0",
-    "Total Sold %": "88.1%"
+    "Ops Beds #": "151",
+    "Sold Beds #": "133.0",
+    "Sold %": "88.1%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Gachibowli",
+    "Micro-Market": "Gachibowli",
     "Property": "Bremen House",
     "Category": "Suits",
-    "Ops Beds": "115",
-    "Total Sold #": "42.0",
-    "Total Sold %": "36.5%"
+    "Ops Beds #": "115",
+    "Sold Beds #": "42.0",
+    "Sold %": "36.5%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Manipal University",
+    "Micro-Market": "Manipal University",
     "Property": "Brighton House",
     "Category": "Scholar",
-    "Ops Beds": "56",
-    "Total Sold #": "50.0",
-    "Total Sold %": "89.3%"
+    "Ops Beds #": "56",
+    "Sold Beds #": "50.0",
+    "Sold %": "89.3%"
   },
   {
     "City": "Coimbatore",
-    "Micro Market": "Avinashi Road",
+    "Micro-Market": "Avinashi Road",
     "Property": "Brunswick House",
     "Category": "Scholar",
-    "Ops Beds": "119",
-    "Total Sold #": "92.7",
-    "Total Sold %": "77.9%"
+    "Ops Beds #": "119",
+    "Sold Beds #": "92.7",
+    "Sold %": "77.9%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Bellandur",
+    "Micro-Market": "Bellandur",
     "Property": "Brussels House",
     "Category": "Suits",
-    "Ops Beds": "407",
-    "Total Sold #": "313.0",
-    "Total Sold %": "76.9%"
+    "Ops Beds #": "407",
+    "Sold Beds #": "313.0",
+    "Sold %": "76.9%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Kondapur",
+    "Micro-Market": "Kondapur",
     "Property": "Burnley House",
     "Category": "Suits",
-    "Ops Beds": "212",
-    "Total Sold #": "136.0",
-    "Total Sold %": "64.2%"
+    "Ops Beds #": "212",
+    "Sold Beds #": "136.0",
+    "Sold %": "64.2%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Vijay Nagar",
+    "Micro-Market": "Vijay Nagar",
     "Property": "Caen House",
     "Category": "Scholar",
-    "Ops Beds": "57",
-    "Total Sold #": "0.0",
-    "Total Sold %": "0.0%"
+    "Ops Beds #": "57",
+    "Sold Beds #": "0.0",
+    "Sold %": "0.0%"
   },
   {
     "City": "Coimbatore",
-    "Micro Market": "Avinashi Road",
+    "Micro-Market": "Avinashi Road",
     "Property": "Calgary House",
     "Category": "Scholar",
-    "Ops Beds": "120",
-    "Total Sold #": "95.0",
-    "Total Sold %": "79.2%"
+    "Ops Beds #": "120",
+    "Sold Beds #": "95.0",
+    "Sold %": "79.2%"
   },
   {
     "City": "Coimbatore",
-    "Micro Market": "Avinashi Road",
+    "Micro-Market": "Avinashi Road",
     "Property": "Cali House",
     "Category": "Scholar",
-    "Ops Beds": "124",
-    "Total Sold #": "109.3",
-    "Total Sold %": "88.2%"
+    "Ops Beds #": "124",
+    "Sold Beds #": "109.3",
+    "Sold %": "88.2%"
   },
   {
     "City": "Ahmedabad",
-    "Micro Market": "Navrangpura",
+    "Micro-Market": "Navrangpura",
     "Property": "Callao House",
     "Category": "Scholar",
-    "Ops Beds": "101",
-    "Total Sold #": "59.0",
-    "Total Sold %": "58.4%"
+    "Ops Beds #": "101",
+    "Sold Beds #": "59.0",
+    "Sold %": "58.4%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Vijay Nagar",
+    "Micro-Market": "Vijay Nagar",
     "Property": "Cameron House",
     "Category": "Scholar",
-    "Ops Beds": "56",
-    "Total Sold #": "0.0",
-    "Total Sold %": "0.0%"
+    "Ops Beds #": "56",
+    "Sold Beds #": "0.0",
+    "Sold %": "0.0%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "Laxmi Nagar",
+    "Micro-Market": "Laxmi Nagar",
     "Property": "Quito House",
     "Category": "Scholar",
-    "Ops Beds": "59",
-    "Total Sold #": "41.0",
-    "Total Sold %": "69.5%"
+    "Ops Beds #": "59",
+    "Sold Beds #": "41.0",
+    "Sold %": "69.5%"
   },
   {
     "City": "Coimbatore",
-    "Micro Market": "Avinashi Road",
+    "Micro-Market": "Avinashi Road",
     "Property": "Carmen House",
     "Category": "Scholar",
-    "Ops Beds": "75",
-    "Total Sold #": "65.0",
-    "Total Sold %": "86.7%"
+    "Ops Beds #": "75",
+    "Sold Beds #": "65.0",
+    "Sold %": "86.7%"
   },
   {
     "City": "Bangalore 2",
-    "Micro Market": "Domlur",
+    "Micro-Market": "Domlur",
     "Property": "Casper House",
     "Category": "Suits",
-    "Ops Beds": "61",
-    "Total Sold #": "60.0",
-    "Total Sold %": "98.4%"
+    "Ops Beds #": "61",
+    "Sold Beds #": "60.0",
+    "Sold %": "98.4%"
   },
   {
     "City": "Bangalore 2",
-    "Micro Market": "Mahadevapura",
+    "Micro-Market": "Mahadevapura",
     "Property": "Cayenne House",
     "Category": "Suits",
-    "Ops Beds": "120",
-    "Total Sold #": "100.0",
-    "Total Sold %": "83.3%"
+    "Ops Beds #": "120",
+    "Sold Beds #": "100.0",
+    "Sold %": "83.3%"
   },
   {
     "City": "Bangalore 2",
-    "Micro Market": "Marathahalli",
+    "Micro-Market": "Marathahalli",
     "Property": "Chatham House",
     "Category": "Suits",
-    "Ops Beds": "168",
-    "Total Sold #": "68.0",
-    "Total Sold %": "40.5%"
+    "Ops Beds #": "168",
+    "Sold Beds #": "68.0",
+    "Sold %": "40.5%"
   },
   {
     "City": "Greater Noida",
-    "Micro Market": "Knowledge Park",
+    "Micro-Market": "Knowledge Park",
     "Property": "Chicago House",
     "Category": "Scholar",
-    "Ops Beds": "674",
-    "Total Sold #": "408.0",
-    "Total Sold %": "60.5%"
+    "Ops Beds #": "674",
+    "Sold Beds #": "408.0",
+    "Sold %": "60.5%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Electronic City Phase 2",
+    "Micro-Market": "Electronic City Phase 2",
     "Property": "Cicero House",
     "Category": "Suits",
-    "Ops Beds": "69",
-    "Total Sold #": "4.0",
-    "Total Sold %": "5.8%"
+    "Ops Beds #": "69",
+    "Sold Beds #": "4.0",
+    "Sold %": "5.8%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Nungambakkam",
+    "Micro-Market": "Nungambakkam",
     "Property": "Clarksville House",
     "Category": "Scholar",
-    "Ops Beds": "81",
-    "Total Sold #": "76.0",
-    "Total Sold %": "93.8%"
+    "Ops Beds #": "81",
+    "Sold Beds #": "76.0",
+    "Sold %": "93.8%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Mathikere",
+    "Micro-Market": "Mathikere",
     "Property": "Cologne House",
     "Category": "Scholar",
-    "Ops Beds": "62",
-    "Total Sold #": "54.0",
-    "Total Sold %": "87.1%"
+    "Ops Beds #": "62",
+    "Sold Beds #": "54.0",
+    "Sold %": "87.1%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Koramangala",
+    "Micro-Market": "Koramangala",
     "Property": "Como House",
     "Category": "Scholar",
-    "Ops Beds": "84",
-    "Total Sold #": "69.0",
-    "Total Sold %": "82.1%"
+    "Ops Beds #": "84",
+    "Sold Beds #": "69.0",
+    "Sold %": "82.1%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Gachibowli",
+    "Micro-Market": "Gachibowli",
     "Property": "Conroe House",
     "Category": "Suits",
-    "Ops Beds": "74",
-    "Total Sold #": "69.0",
-    "Total Sold %": "93.2%"
+    "Ops Beds #": "74",
+    "Sold Beds #": "69.0",
+    "Sold %": "93.2%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "OMR",
+    "Micro-Market": "OMR",
     "Property": "Conway House",
     "Category": "Suits",
-    "Ops Beds": "173",
-    "Total Sold #": "112.0",
-    "Total Sold %": "64.7%"
+    "Ops Beds #": "173",
+    "Sold Beds #": "112.0",
+    "Sold %": "64.7%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "RVCE",
+    "Micro-Market": "RVCE",
     "Property": "Cordoba House",
     "Category": "Scholar",
-    "Ops Beds": "136",
-    "Total Sold #": "34.0",
-    "Total Sold %": "25.0%"
+    "Ops Beds #": "136",
+    "Sold Beds #": "34.0",
+    "Sold %": "25.0%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "HSR Layout",
+    "Micro-Market": "HSR Layout",
     "Property": "Cork House",
     "Category": "Suits",
-    "Ops Beds": "135",
-    "Total Sold #": "115.5",
-    "Total Sold %": "85.6%"
+    "Ops Beds #": "135",
+    "Sold Beds #": "115.5",
+    "Sold %": "85.6%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Shivajinagar",
+    "Micro-Market": "Shivajinagar",
     "Property": "Cosenza House",
     "Category": "Scholar",
-    "Ops Beds": "40",
-    "Total Sold #": "36.0",
-    "Total Sold %": "90.0%"
+    "Ops Beds #": "40",
+    "Sold Beds #": "36.0",
+    "Sold %": "90.0%"
   },
   {
     "City": "Gurgaon",
-    "Micro Market": "Medanta",
+    "Micro-Market": "Medanta",
     "Property": "Crawley House",
     "Category": "Suits",
-    "Ops Beds": "108",
-    "Total Sold #": "98.0",
-    "Total Sold %": "90.7%"
+    "Ops Beds #": "108",
+    "Sold Beds #": "98.0",
+    "Sold %": "90.7%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Rajarajeshwari Nagar",
+    "Micro-Market": "Rajarajeshwari Nagar",
     "Property": "Crotone House",
     "Category": "Scholar",
-    "Ops Beds": "52",
-    "Total Sold #": "49.0",
-    "Total Sold %": "94.2%"
+    "Ops Beds #": "52",
+    "Sold Beds #": "49.0",
+    "Sold %": "94.2%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Bhanwar Kua",
+    "Micro-Market": "Bhanwar Kua",
     "Property": "Culiacan House",
     "Category": "Scholar",
-    "Ops Beds": "66",
-    "Total Sold #": "54.0",
-    "Total Sold %": "81.8%"
+    "Ops Beds #": "66",
+    "Sold Beds #": "54.0",
+    "Sold %": "81.8%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Rajarajeshwari Nagar",
+    "Micro-Market": "Rajarajeshwari Nagar",
     "Property": "Cuneo House",
     "Category": "Scholar",
-    "Ops Beds": "35",
-    "Total Sold #": "32.0",
-    "Total Sold %": "91.4%"
+    "Ops Beds #": "35",
+    "Sold Beds #": "32.0",
+    "Sold %": "91.4%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Soladevanahalli",
+    "Micro-Market": "Soladevanahalli",
     "Property": "Davao House",
     "Category": "Scholar",
-    "Ops Beds": "66",
-    "Total Sold #": "52.0",
-    "Total Sold %": "78.8%"
+    "Ops Beds #": "66",
+    "Sold Beds #": "52.0",
+    "Sold %": "78.8%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Rajarajeshwari Nagar",
+    "Micro-Market": "Rajarajeshwari Nagar",
     "Property": "Debrecan House",
     "Category": "Scholar",
-    "Ops Beds": "92",
-    "Total Sold #": "0.0",
-    "Total Sold %": "0.0%"
+    "Ops Beds #": "92",
+    "Sold Beds #": "0.0",
+    "Sold %": "0.0%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "North Campus",
+    "Micro-Market": "North Campus",
     "Property": "Armagh House",
     "Category": "Scholar",
-    "Ops Beds": "58",
-    "Total Sold #": "44.0",
-    "Total Sold %": "75.9%"
+    "Ops Beds #": "58",
+    "Sold Beds #": "44.0",
+    "Sold %": "75.9%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Pallavaram",
+    "Micro-Market": "Pallavaram",
     "Property": "Doncaster House",
     "Category": "Suits",
-    "Ops Beds": "69",
-    "Total Sold #": "23.0",
-    "Total Sold %": "33.3%"
+    "Ops Beds #": "69",
+    "Sold Beds #": "23.0",
+    "Sold %": "33.3%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Mathikere",
+    "Micro-Market": "Mathikere",
     "Property": "Dortmund House",
     "Category": "Scholar",
-    "Ops Beds": "61",
-    "Total Sold #": "62.0",
-    "Total Sold %": "101.6%"
+    "Ops Beds #": "61",
+    "Sold Beds #": "62.0",
+    "Sold %": "101.6%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Wakad",
+    "Micro-Market": "Wakad",
     "Property": "Dover House",
     "Category": "Scholar",
-    "Ops Beds": "67",
-    "Total Sold #": "45.0",
-    "Total Sold %": "67.2%"
+    "Ops Beds #": "67",
+    "Sold Beds #": "45.0",
+    "Sold %": "67.2%"
   },
   {
     "City": "Vadodara",
-    "Micro Market": "Fatehgunj",
+    "Micro-Market": "Fatehgunj",
     "Property": "Drammen House",
     "Category": "Scholar",
-    "Ops Beds": "54",
-    "Total Sold #": "44.0",
-    "Total Sold %": "81.5%"
+    "Ops Beds #": "54",
+    "Sold Beds #": "44.0",
+    "Sold %": "81.5%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Electronic City Phase 2",
+    "Micro-Market": "Electronic City Phase 2",
     "Property": "Dublin House",
     "Category": "Suits",
-    "Ops Beds": "154",
-    "Total Sold #": "100.0",
-    "Total Sold %": "64.9%"
+    "Ops Beds #": "154",
+    "Sold Beds #": "100.0",
+    "Sold %": "64.9%"
   },
   {
     "City": "Gurgaon",
-    "Micro Market": "Sohna Road",
+    "Micro-Market": "Sohna Road",
     "Property": "Dunkirk House",
     "Category": "Suits",
-    "Ops Beds": "144",
-    "Total Sold #": "114.0",
-    "Total Sold %": "79.2%"
+    "Ops Beds #": "144",
+    "Sold Beds #": "114.0",
+    "Sold %": "79.2%"
   },
   {
     "City": "Bangalore 2",
-    "Micro Market": "Whitefield",
+    "Micro-Market": "Whitefield",
     "Property": "Durham House",
     "Category": "Suits",
-    "Ops Beds": "424",
-    "Total Sold #": "230.0",
-    "Total Sold %": "54.2%"
+    "Ops Beds #": "424",
+    "Sold Beds #": "230.0",
+    "Sold %": "54.2%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Vijay Nagar",
+    "Micro-Market": "Vijay Nagar",
     "Property": "Easton House",
     "Category": "Scholar",
-    "Ops Beds": "61",
-    "Total Sold #": "49.0",
-    "Total Sold %": "80.3%"
+    "Ops Beds #": "61",
+    "Sold Beds #": "49.0",
+    "Sold %": "80.3%"
   },
   {
     "City": "Ahmedabad",
-    "Micro Market": "Bopal & Shilaj",
+    "Micro-Market": "Bopal & Shilaj",
     "Property": "Elgin House",
     "Category": "Scholar",
-    "Ops Beds": "150",
-    "Total Sold #": "133.0",
-    "Total Sold %": "88.7%"
+    "Ops Beds #": "150",
+    "Sold Beds #": "133.0",
+    "Sold %": "88.7%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Porur",
+    "Micro-Market": "Porur",
     "Property": "Essen House",
     "Category": "Scholar",
-    "Ops Beds": "94",
-    "Total Sold #": "87.0",
-    "Total Sold %": "92.6%"
+    "Ops Beds #": "94",
+    "Sold Beds #": "87.0",
+    "Sold %": "92.6%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Poonamallee",
+    "Micro-Market": "Poonamallee",
     "Property": "Eugene House",
     "Category": "Scholar",
-    "Ops Beds": "488",
-    "Total Sold #": "172.0",
-    "Total Sold %": "35.2%"
+    "Ops Beds #": "488",
+    "Sold Beds #": "172.0",
+    "Sold %": "35.2%"
   },
   {
     "City": "Ahmedabad",
-    "Micro Market": "Vastrapur & Thaltej",
+    "Micro-Market": "Vastrapur & Thaltej",
     "Property": "Evanston House",
     "Category": "Suits",
-    "Ops Beds": "103",
-    "Total Sold #": "94.0",
-    "Total Sold %": "91.3%"
+    "Ops Beds #": "103",
+    "Sold Beds #": "94.0",
+    "Sold %": "91.3%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Viman Nagar",
+    "Micro-Market": "Viman Nagar",
     "Property": "Evansville House",
     "Category": "Scholar",
-    "Ops Beds": "35",
-    "Total Sold #": "30.5",
-    "Total Sold %": "87.1%"
+    "Ops Beds #": "35",
+    "Sold Beds #": "30.5",
+    "Sold %": "87.1%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Urapakkam",
+    "Micro-Market": "Urapakkam",
     "Property": "Fernley House",
     "Category": "Scholar",
-    "Ops Beds": "92",
-    "Total Sold #": "76.0",
-    "Total Sold %": "82.6%"
+    "Ops Beds #": "92",
+    "Sold Beds #": "76.0",
+    "Sold %": "82.6%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Nungambakkam",
+    "Micro-Market": "Nungambakkam",
     "Property": "Flensburg House",
     "Category": "Scholar",
-    "Ops Beds": "98",
-    "Total Sold #": "99.0",
-    "Total Sold %": "101.0%"
+    "Ops Beds #": "98",
+    "Sold Beds #": "99.0",
+    "Sold %": "101.0%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Koramangala",
+    "Micro-Market": "Koramangala",
     "Property": "Frankfurt House",
     "Category": "Scholar",
-    "Ops Beds": "208",
-    "Total Sold #": "200.0",
-    "Total Sold %": "96.2%"
+    "Ops Beds #": "208",
+    "Sold Beds #": "200.0",
+    "Sold %": "96.2%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Gandi Maisamma",
+    "Micro-Market": "Gandi Maisamma",
     "Property": "Gateshead House",
     "Category": "Scholar",
-    "Ops Beds": "174",
-    "Total Sold #": "147.0",
-    "Total Sold %": "84.5%"
+    "Ops Beds #": "174",
+    "Sold Beds #": "147.0",
+    "Sold %": "84.5%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "OMR",
+    "Micro-Market": "OMR",
     "Property": "Getafe House",
     "Category": "Suits",
-    "Ops Beds": "91",
-    "Total Sold #": "55.0",
-    "Total Sold %": "60.4%"
+    "Ops Beds #": "91",
+    "Sold Beds #": "55.0",
+    "Sold %": "60.4%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Dhankawadi",
+    "Micro-Market": "Dhankawadi",
     "Property": "Girona House",
     "Category": "Scholar",
-    "Ops Beds": "67",
-    "Total Sold #": "65.5",
-    "Total Sold %": "97.8%"
+    "Ops Beds #": "67",
+    "Sold Beds #": "65.5",
+    "Sold %": "97.8%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Dhankawadi",
+    "Micro-Market": "Dhankawadi",
     "Property": "Giza House",
     "Category": "Scholar",
-    "Ops Beds": "56",
-    "Total Sold #": "56.0",
-    "Total Sold %": "100.0%"
+    "Ops Beds #": "56",
+    "Sold Beds #": "56.0",
+    "Sold %": "100.0%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Rajankunte",
+    "Micro-Market": "Rajankunte",
     "Property": "Glencoe House",
     "Category": "Scholar",
-    "Ops Beds": "68",
-    "Total Sold #": "52.0",
-    "Total Sold %": "76.5%"
+    "Ops Beds #": "68",
+    "Sold Beds #": "52.0",
+    "Sold %": "76.5%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "RVCE",
+    "Micro-Market": "RVCE",
     "Property": "Granada House",
     "Category": "Scholar",
-    "Ops Beds": "132",
-    "Total Sold #": "0.0",
-    "Total Sold %": "0.0%"
+    "Ops Beds #": "132",
+    "Sold Beds #": "0.0",
+    "Sold %": "0.0%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "OMR",
+    "Micro-Market": "OMR",
     "Property": "Greensboro House",
     "Category": "Suits",
-    "Ops Beds": "63",
-    "Total Sold #": "48.0",
-    "Total Sold %": "76.2%"
+    "Ops Beds #": "63",
+    "Sold Beds #": "48.0",
+    "Sold %": "76.2%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Baner",
+    "Micro-Market": "Baner",
     "Property": "Haifa House",
     "Category": "Suits",
-    "Ops Beds": "247",
-    "Total Sold #": "160.0",
-    "Total Sold %": "64.8%"
+    "Ops Beds #": "247",
+    "Sold Beds #": "160.0",
+    "Sold %": "64.8%"
   },
   {
     "City": "Vadodara",
-    "Micro Market": "Ajwa Road",
+    "Micro-Market": "Ajwa Road",
     "Property": "Hamilton House",
     "Category": "Scholar",
-    "Ops Beds": "168",
-    "Total Sold #": "76.5",
-    "Total Sold %": "45.5%"
+    "Ops Beds #": "168",
+    "Sold Beds #": "76.5",
+    "Sold %": "45.5%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Urapakkam",
+    "Micro-Market": "Urapakkam",
     "Property": "Harrogate House",
     "Category": "Scholar",
-    "Ops Beds": "172",
-    "Total Sold #": "154.0",
-    "Total Sold %": "89.5%"
+    "Ops Beds #": "172",
+    "Sold Beds #": "154.0",
+    "Sold %": "89.5%"
   },
   {
     "City": "Bangalore 2",
-    "Micro Market": "Kundalahalli Gate",
+    "Micro-Market": "Kundalahalli Gate",
     "Property": "Heidelberg House",
     "Category": "Suits",
-    "Ops Beds": "111",
-    "Total Sold #": "70.0",
-    "Total Sold %": "63.1%"
+    "Ops Beds #": "111",
+    "Sold Beds #": "70.0",
+    "Sold %": "63.1%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Lohegaon Dhanori",
+    "Micro-Market": "Lohegaon Dhanori",
     "Property": "Herat House",
     "Category": "Scholar",
-    "Ops Beds": "78",
-    "Total Sold #": "59.0",
-    "Total Sold %": "75.6%"
+    "Ops Beds #": "78",
+    "Sold Beds #": "59.0",
+    "Sold %": "75.6%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "North Campus",
+    "Micro-Market": "North Campus",
     "Property": "Boston House",
     "Category": "Scholar",
-    "Ops Beds": "56",
-    "Total Sold #": "35.0",
-    "Total Sold %": "62.5%"
+    "Ops Beds #": "56",
+    "Sold Beds #": "35.0",
+    "Sold %": "62.5%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "RVCE",
+    "Micro-Market": "RVCE",
     "Property": "Huelva House",
     "Category": "Scholar",
-    "Ops Beds": "237",
-    "Total Sold #": "0.0",
-    "Total Sold %": "0.0%"
+    "Ops Beds #": "237",
+    "Sold Beds #": "0.0",
+    "Sold %": "0.0%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Reva University",
+    "Micro-Market": "Reva University",
     "Property": "Incheon House",
     "Category": "Scholar",
-    "Ops Beds": "147",
-    "Total Sold #": "120.2",
-    "Total Sold %": "81.7%"
+    "Ops Beds #": "147",
+    "Sold Beds #": "120.2",
+    "Sold %": "81.7%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Porur",
+    "Micro-Market": "Porur",
     "Property": "Irving House",
     "Category": "Suits",
-    "Ops Beds": "54",
-    "Total Sold #": "52.0",
-    "Total Sold %": "96.3%"
+    "Ops Beds #": "54",
+    "Sold Beds #": "52.0",
+    "Sold %": "96.3%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Koramangala",
+    "Micro-Market": "Koramangala",
     "Property": "Jerez House",
     "Category": "Scholar",
-    "Ops Beds": "96",
-    "Total Sold #": "85.0",
-    "Total Sold %": "88.5%"
+    "Ops Beds #": "96",
+    "Sold Beds #": "85.0",
+    "Sold %": "88.5%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "BTM Layout",
+    "Micro-Market": "BTM Layout",
     "Property": "Jounieh House",
     "Category": "Suits",
-    "Ops Beds": "113",
-    "Total Sold #": "103.0",
-    "Total Sold %": "91.2%"
+    "Ops Beds #": "113",
+    "Sold Beds #": "103.0",
+    "Sold %": "91.2%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Kondhwa",
+    "Micro-Market": "Kondhwa",
     "Property": "Juliaca House",
     "Category": "Suits",
-    "Ops Beds": "97",
-    "Total Sold #": "74.5",
-    "Total Sold %": "76.8%"
+    "Ops Beds #": "97",
+    "Sold Beds #": "74.5",
+    "Sold %": "76.8%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Banashankri",
+    "Micro-Market": "Banashankri",
     "Property": "Kampala House",
     "Category": "Scholar",
-    "Ops Beds": "65",
-    "Total Sold #": "0.0",
-    "Total Sold %": "0.0%"
+    "Ops Beds #": "65",
+    "Sold Beds #": "0.0",
+    "Sold %": "0.0%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Wakad",
+    "Micro-Market": "Wakad",
     "Property": "Karlsruhe House",
     "Category": "Suits",
-    "Ops Beds": "101",
-    "Total Sold #": "0.0",
-    "Total Sold %": "0.0%"
+    "Ops Beds #": "101",
+    "Sold Beds #": "0.0",
+    "Sold %": "0.0%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Gachibowli",
+    "Micro-Market": "Gachibowli",
     "Property": "Kassel House",
     "Category": "Suits",
-    "Ops Beds": "50",
-    "Total Sold #": "44.0",
-    "Total Sold %": "88.0%"
+    "Ops Beds #": "50",
+    "Sold Beds #": "44.0",
+    "Sold %": "88.0%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "North Campus",
+    "Micro-Market": "North Campus",
     "Property": "Bukhara House",
     "Category": "Scholar",
-    "Ops Beds": "56",
-    "Total Sold #": "51.0",
-    "Total Sold %": "91.1%"
+    "Ops Beds #": "56",
+    "Sold Beds #": "51.0",
+    "Sold %": "91.1%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Dhankawadi",
+    "Micro-Market": "Dhankawadi",
     "Property": "Kenitra House",
     "Category": "Scholar",
-    "Ops Beds": "56",
-    "Total Sold #": "38.5",
-    "Total Sold %": "68.8%"
+    "Ops Beds #": "56",
+    "Sold Beds #": "38.5",
+    "Sold %": "68.8%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "North Campus",
+    "Micro-Market": "North Campus",
     "Property": "Derby House",
     "Category": "Scholar",
-    "Ops Beds": "44",
-    "Total Sold #": "40.0",
-    "Total Sold %": "90.9%"
+    "Ops Beds #": "44",
+    "Sold Beds #": "40.0",
+    "Sold %": "90.9%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Kumaraswamy Layout",
+    "Micro-Market": "Kumaraswamy Layout",
     "Property": "Kiev House",
     "Category": "Scholar",
-    "Ops Beds": "84",
-    "Total Sold #": "84.0",
-    "Total Sold %": "100.0%"
+    "Ops Beds #": "84",
+    "Sold Beds #": "84.0",
+    "Sold %": "100.0%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Manipal University",
+    "Micro-Market": "Manipal University",
     "Property": "Kilmarnock House",
     "Category": "Scholar",
-    "Ops Beds": "89",
-    "Total Sold #": "79.5",
-    "Total Sold %": "89.3%"
+    "Ops Beds #": "89",
+    "Sold Beds #": "79.5",
+    "Sold %": "89.3%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Wagholi",
+    "Micro-Market": "Wagholi",
     "Property": "Kingston House",
     "Category": "Scholar",
-    "Ops Beds": "80",
-    "Total Sold #": "78.0",
-    "Total Sold %": "97.5%"
+    "Ops Beds #": "80",
+    "Sold Beds #": "78.0",
+    "Sold %": "97.5%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Pallavaram",
+    "Micro-Market": "Pallavaram",
     "Property": "Knoxville House",
     "Category": "Suits",
-    "Ops Beds": "56",
-    "Total Sold #": "44.5",
-    "Total Sold %": "79.5%"
+    "Ops Beds #": "56",
+    "Sold Beds #": "44.5",
+    "Sold %": "79.5%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "North Campus",
+    "Micro-Market": "North Campus",
     "Property": "Kiel House",
     "Category": "Scholar",
-    "Ops Beds": "70",
-    "Total Sold #": "47.0",
-    "Total Sold %": "67.1%"
+    "Ops Beds #": "70",
+    "Sold Beds #": "47.0",
+    "Sold %": "67.1%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Geeta Bhawan",
+    "Micro-Market": "Geeta Bhawan",
     "Property": "Kolding House",
     "Category": "Scholar",
-    "Ops Beds": "44",
-    "Total Sold #": "42.0",
-    "Total Sold %": "95.5%"
+    "Ops Beds #": "44",
+    "Sold Beds #": "42.0",
+    "Sold %": "95.5%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "North Campus",
+    "Micro-Market": "North Campus",
     "Property": "Nuremberg House",
     "Category": "Scholar",
-    "Ops Beds": "135",
-    "Total Sold #": "99.0",
-    "Total Sold %": "73.3%"
+    "Ops Beds #": "135",
+    "Sold Beds #": "99.0",
+    "Sold %": "73.3%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Magadi Road",
+    "Micro-Market": "Magadi Road",
     "Property": "Krefeld House",
     "Category": "Scholar",
-    "Ops Beds": "57",
-    "Total Sold #": "47.0",
-    "Total Sold %": "82.5%"
+    "Ops Beds #": "57",
+    "Sold Beds #": "47.0",
+    "Sold %": "82.5%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Koramangala",
+    "Micro-Market": "Koramangala",
     "Property": "Lafayette House",
     "Category": "Suits",
-    "Ops Beds": "80",
-    "Total Sold #": "60.0",
-    "Total Sold %": "75.0%"
+    "Ops Beds #": "80",
+    "Sold Beds #": "60.0",
+    "Sold %": "75.0%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Gandi Maisamma",
+    "Micro-Market": "Gandi Maisamma",
     "Property": "Lagos House",
     "Category": "Scholar",
-    "Ops Beds": "132",
-    "Total Sold #": "49.0",
-    "Total Sold %": "37.1%"
+    "Ops Beds #": "132",
+    "Sold Beds #": "49.0",
+    "Sold %": "37.1%"
   },
   {
     "City": "Kochi",
-    "Micro Market": "Kakkanad",
+    "Micro-Market": "Kakkanad",
     "Property": "Laramie House",
     "Category": "Scholar",
-    "Ops Beds": "280",
-    "Total Sold #": "96.5",
-    "Total Sold %": "34.5%"
+    "Ops Beds #": "280",
+    "Sold Beds #": "96.5",
+    "Sold %": "34.5%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Mathikere",
+    "Micro-Market": "Mathikere",
     "Property": "Laredo House",
     "Category": "Scholar",
-    "Ops Beds": "83",
-    "Total Sold #": "74.0",
-    "Total Sold %": "89.2%"
+    "Ops Beds #": "83",
+    "Sold Beds #": "74.0",
+    "Sold %": "89.2%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Porur",
+    "Micro-Market": "Porur",
     "Property": "Latina House",
     "Category": "Suits",
-    "Ops Beds": "51",
-    "Total Sold #": "30.0",
-    "Total Sold %": "58.8%"
+    "Ops Beds #": "51",
+    "Sold Beds #": "30.0",
+    "Sold %": "58.8%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Koramangala",
+    "Micro-Market": "Koramangala",
     "Property": "Leeds House",
     "Category": "Scholar",
-    "Ops Beds": "64",
-    "Total Sold #": "53.0",
-    "Total Sold %": "82.8%"
+    "Ops Beds #": "64",
+    "Sold Beds #": "53.0",
+    "Sold %": "82.8%"
   },
   {
     "City": "Kochi",
-    "Micro Market": "Kochi",
+    "Micro-Market": "Kochi",
     "Property": "Leon House",
     "Category": "Scholar",
-    "Ops Beds": "63",
-    "Total Sold #": "53.0",
-    "Total Sold %": "84.1%"
+    "Ops Beds #": "63",
+    "Sold Beds #": "53.0",
+    "Sold %": "84.1%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Gachibowli",
+    "Micro-Market": "Gachibowli",
     "Property": "Limoges House",
     "Category": "Suits",
-    "Ops Beds": "110",
-    "Total Sold #": "17.0",
-    "Total Sold %": "15.5%"
+    "Ops Beds #": "110",
+    "Sold Beds #": "17.0",
+    "Sold %": "15.5%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Electronic City Phase 1",
+    "Micro-Market": "Electronic City Phase 1",
     "Property": "Lincoln House",
     "Category": "Suits",
-    "Ops Beds": "162",
-    "Total Sold #": "88.0",
-    "Total Sold %": "54.3%"
+    "Ops Beds #": "162",
+    "Sold Beds #": "88.0",
+    "Sold %": "54.3%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Viman Nagar",
+    "Micro-Market": "Viman Nagar",
     "Property": "Livermore House",
     "Category": "Suits",
-    "Ops Beds": "58",
-    "Total Sold #": "31.0",
-    "Total Sold %": "53.4%"
+    "Ops Beds #": "58",
+    "Sold Beds #": "31.0",
+    "Sold %": "53.4%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Mathikere",
+    "Micro-Market": "Mathikere",
     "Property": "Lobito House",
     "Category": "Scholar",
-    "Ops Beds": "54",
-    "Total Sold #": "55.0",
-    "Total Sold %": "101.9%"
+    "Ops Beds #": "54",
+    "Sold Beds #": "55.0",
+    "Sold %": "101.9%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Vijay Nagar",
+    "Micro-Market": "Vijay Nagar",
     "Property": "Lucerne House",
     "Category": "Scholar",
-    "Ops Beds": "89",
-    "Total Sold #": "61.0",
-    "Total Sold %": "68.5%"
+    "Ops Beds #": "89",
+    "Sold Beds #": "61.0",
+    "Sold %": "68.5%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Porur",
+    "Micro-Market": "Porur",
     "Property": "Luton House",
     "Category": "Suits",
-    "Ops Beds": "42",
-    "Total Sold #": "36.0",
-    "Total Sold %": "85.7%"
+    "Ops Beds #": "42",
+    "Sold Beds #": "36.0",
+    "Sold %": "85.7%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Viman Nagar",
+    "Micro-Market": "Viman Nagar",
     "Property": "Malmo House",
     "Category": "Scholar",
-    "Ops Beds": "64",
-    "Total Sold #": "63.0",
-    "Total Sold %": "98.4%"
+    "Ops Beds #": "64",
+    "Sold Beds #": "63.0",
+    "Sold %": "98.4%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Soladevanahalli",
+    "Micro-Market": "Soladevanahalli",
     "Property": "Managua House",
     "Category": "Scholar",
-    "Ops Beds": "53",
-    "Total Sold #": "37.5",
-    "Total Sold %": "70.8%"
+    "Ops Beds #": "53",
+    "Sold Beds #": "37.5",
+    "Sold %": "70.8%"
   },
   {
     "City": "Bangalore 2",
-    "Micro Market": "Manyata Tech Park",
+    "Micro-Market": "Manyata Tech Park",
     "Property": "Manchester House",
     "Category": "Suits",
-    "Ops Beds": "373",
-    "Total Sold #": "306.0",
-    "Total Sold %": "82.0%"
+    "Ops Beds #": "373",
+    "Sold Beds #": "306.0",
+    "Sold %": "82.0%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Karve Nagar",
+    "Micro-Market": "Karve Nagar",
     "Property": "Mansa House",
     "Category": "Scholar",
-    "Ops Beds": "48",
-    "Total Sold #": "42.0",
-    "Total Sold %": "87.5%"
+    "Ops Beds #": "48",
+    "Sold Beds #": "42.0",
+    "Sold %": "87.5%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Gachibowli",
+    "Micro-Market": "Gachibowli",
     "Property": "Marianna House",
     "Category": "Suits",
-    "Ops Beds": "88",
-    "Total Sold #": "50.5",
-    "Total Sold %": "57.4%"
+    "Ops Beds #": "88",
+    "Sold Beds #": "50.5",
+    "Sold %": "57.4%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Hinjawadi",
+    "Micro-Market": "Hinjawadi",
     "Property": "Marseille House",
     "Category": "Suits",
-    "Ops Beds": "639",
-    "Total Sold #": "535.0",
-    "Total Sold %": "83.7%"
+    "Ops Beds #": "639",
+    "Sold Beds #": "535.0",
+    "Sold %": "83.7%"
   },
   {
     "City": "Kochi",
-    "Micro Market": "Kakkanad",
+    "Micro-Market": "Kakkanad",
     "Property": "Maseru House",
     "Category": "Scholar",
-    "Ops Beds": "67",
-    "Total Sold #": "53.0",
-    "Total Sold %": "79.1%"
+    "Ops Beds #": "67",
+    "Sold Beds #": "53.0",
+    "Sold %": "79.1%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "OMR",
+    "Micro-Market": "OMR",
     "Property": "Mataro House",
     "Category": "Scholar",
-    "Ops Beds": "48",
-    "Total Sold #": "35.0",
-    "Total Sold %": "72.9%"
+    "Ops Beds #": "48",
+    "Sold Beds #": "35.0",
+    "Sold %": "72.9%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Pallavaram",
+    "Micro-Market": "Pallavaram",
     "Property": "Mazatlan House",
     "Category": "Suits",
-    "Ops Beds": "70",
-    "Total Sold #": "50.0",
-    "Total Sold %": "71.4%"
+    "Ops Beds #": "70",
+    "Sold Beds #": "50.0",
+    "Sold %": "71.4%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Karve Nagar",
+    "Micro-Market": "Karve Nagar",
     "Property": "Mckinney House",
     "Category": "Scholar",
-    "Ops Beds": "86",
-    "Total Sold #": "81.5",
-    "Total Sold %": "94.8%"
+    "Ops Beds #": "86",
+    "Sold Beds #": "81.5",
+    "Sold %": "94.8%"
   },
   {
     "City": "Bangalore 2",
-    "Micro Market": "Whitefield",
+    "Micro-Market": "Whitefield",
     "Property": "Medan House",
     "Category": "Suits",
-    "Ops Beds": "110",
-    "Total Sold #": "71.0",
-    "Total Sold %": "64.5%"
+    "Ops Beds #": "110",
+    "Sold Beds #": "71.0",
+    "Sold %": "64.5%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Gandi Maisamma",
+    "Micro-Market": "Gandi Maisamma",
     "Property": "Meknes House",
     "Category": "Scholar",
-    "Ops Beds": "0",
-    "Total Sold #": "45.0",
-    "Total Sold %": "-"
+    "Ops Beds #": "0",
+    "Sold Beds #": "45.0",
+    "Sold %": "-"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Q City",
+    "Micro-Market": "Q City",
     "Property": "Memphis House",
     "Category": "Suits",
-    "Ops Beds": "575",
-    "Total Sold #": "228.5",
-    "Total Sold %": "39.7%"
+    "Ops Beds #": "575",
+    "Sold Beds #": "228.5",
+    "Sold %": "39.7%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Gachibowli",
+    "Micro-Market": "Gachibowli",
     "Property": "Mendoza House",
     "Category": "Suits",
-    "Ops Beds": "97",
-    "Total Sold #": "103.0",
-    "Total Sold %": "106.2%"
+    "Ops Beds #": "97",
+    "Sold Beds #": "103.0",
+    "Sold %": "106.2%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Aziznagar",
+    "Micro-Market": "Aziznagar",
     "Property": "Merlo House",
     "Category": "Scholar",
-    "Ops Beds": "73",
-    "Total Sold #": "69.3",
-    "Total Sold %": "95.0%"
+    "Ops Beds #": "73",
+    "Sold Beds #": "69.3",
+    "Sold %": "95.0%"
   },
   {
     "City": "Coimbatore",
-    "Micro Market": "Saravanampatti",
+    "Micro-Market": "Saravanampatti",
     "Property": "Metz House",
     "Category": "Suits",
-    "Ops Beds": "95",
-    "Total Sold #": "54.5",
-    "Total Sold %": "57.4%"
+    "Ops Beds #": "95",
+    "Sold Beds #": "54.5",
+    "Sold %": "57.4%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Vadapalani",
+    "Micro-Market": "Vadapalani",
     "Property": "Mildura House",
     "Category": "Scholar",
-    "Ops Beds": "61",
-    "Total Sold #": "45.0",
-    "Total Sold %": "73.8%"
+    "Ops Beds #": "61",
+    "Sold Beds #": "45.0",
+    "Sold %": "73.8%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Vijay Nagar",
+    "Micro-Market": "Vijay Nagar",
     "Property": "Minya House",
     "Category": "Scholar",
-    "Ops Beds": "73",
-    "Total Sold #": "0.0",
-    "Total Sold %": "0.0%"
+    "Ops Beds #": "73",
+    "Sold Beds #": "0.0",
+    "Sold %": "0.0%"
   },
   {
     "City": "Bangalore 2",
-    "Micro Market": "Manyata Tech Park",
+    "Micro-Market": "Manyata Tech Park",
     "Property": "Modena House",
     "Category": "Suits",
-    "Ops Beds": "36",
-    "Total Sold #": "40.0",
-    "Total Sold %": "111.1%"
+    "Ops Beds #": "36",
+    "Sold Beds #": "40.0",
+    "Sold %": "111.1%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "HSR Layout",
+    "Micro-Market": "HSR Layout",
     "Property": "Modesto House",
     "Category": "Suits",
-    "Ops Beds": "72",
-    "Total Sold #": "74.0",
-    "Total Sold %": "102.8%"
+    "Ops Beds #": "72",
+    "Sold Beds #": "74.0",
+    "Sold %": "102.8%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Narhe",
+    "Micro-Market": "Narhe",
     "Property": "Mogilev House",
     "Category": "Scholar",
-    "Ops Beds": "80",
-    "Total Sold #": "82.0",
-    "Total Sold %": "102.5%"
+    "Ops Beds #": "80",
+    "Sold Beds #": "82.0",
+    "Sold %": "102.5%"
   },
   {
     "City": "Dehradun",
-    "Micro Market": "Pondha",
+    "Micro-Market": "Pondha",
     "Property": "Luzon House",
     "Category": "Scholar",
-    "Ops Beds": "86",
-    "Total Sold #": "43.0",
-    "Total Sold %": "50.0%"
+    "Ops Beds #": "86",
+    "Sold Beds #": "43.0",
+    "Sold %": "50.0%"
   },
   {
     "City": "Mumbai",
-    "Micro Market": "Juhu",
+    "Micro-Market": "Juhu",
     "Property": "Monterrey House",
     "Category": "Scholar",
-    "Ops Beds": "148",
-    "Total Sold #": "130.0",
-    "Total Sold %": "87.8%"
+    "Ops Beds #": "148",
+    "Sold Beds #": "130.0",
+    "Sold %": "87.8%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "North Campus",
+    "Micro-Market": "North Campus",
     "Property": "San Diego House",
     "Category": "Scholar",
-    "Ops Beds": "61",
-    "Total Sold #": "52.0",
-    "Total Sold %": "85.2%"
+    "Ops Beds #": "61",
+    "Sold Beds #": "52.0",
+    "Sold %": "85.2%"
   },
   {
     "City": "Bangalore 2",
-    "Micro Market": "Whitefield",
+    "Micro-Market": "Whitefield",
     "Property": "Monza House",
     "Category": "Suits",
-    "Ops Beds": "123",
-    "Total Sold #": "93.0",
-    "Total Sold %": "75.6%"
+    "Ops Beds #": "123",
+    "Sold Beds #": "93.0",
+    "Sold %": "75.6%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Gachibowli",
+    "Micro-Market": "Gachibowli",
     "Property": "Munich House",
     "Category": "Suits",
-    "Ops Beds": "475",
-    "Total Sold #": "423.7",
-    "Total Sold %": "89.2%"
+    "Ops Beds #": "475",
+    "Sold Beds #": "423.7",
+    "Sold %": "89.2%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Anna Nagar",
+    "Micro-Market": "Anna Nagar",
     "Property": "Murcia House",
     "Category": "Scholar",
-    "Ops Beds": "108",
-    "Total Sold #": "102.0",
-    "Total Sold %": "94.4%"
+    "Ops Beds #": "108",
+    "Sold Beds #": "102.0",
+    "Sold %": "94.4%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "North Campus",
+    "Micro-Market": "North Campus",
     "Property": "Sheffield House",
     "Category": "Scholar",
-    "Ops Beds": "60",
-    "Total Sold #": "58.0",
-    "Total Sold %": "96.7%"
+    "Ops Beds #": "60",
+    "Sold Beds #": "58.0",
+    "Sold %": "96.7%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Pallavaram",
+    "Micro-Market": "Pallavaram",
     "Property": "Naperville House",
     "Category": "Suits",
-    "Ops Beds": "92",
-    "Total Sold #": "67.5",
-    "Total Sold %": "73.4%"
+    "Ops Beds #": "92",
+    "Sold Beds #": "67.5",
+    "Sold %": "73.4%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Akurdi",
+    "Micro-Market": "Akurdi",
     "Property": "Napier House",
     "Category": "Scholar",
-    "Ops Beds": "72",
-    "Total Sold #": "69.0",
-    "Total Sold %": "95.8%"
+    "Ops Beds #": "72",
+    "Sold Beds #": "69.0",
+    "Sold %": "95.8%"
   },
   {
     "City": "Mumbai",
-    "Micro Market": "Vile Parle",
+    "Micro-Market": "Vile Parle",
     "Property": "New Orleans House",
     "Category": "Scholar",
-    "Ops Beds": "90",
-    "Total Sold #": "0.0",
-    "Total Sold %": "0.0%"
+    "Ops Beds #": "90",
+    "Sold Beds #": "0.0",
+    "Sold %": "0.0%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Reva University",
+    "Micro-Market": "Reva University",
     "Property": "Newport House",
     "Category": "Scholar",
-    "Ops Beds": "82",
-    "Total Sold #": "68.0",
-    "Total Sold %": "82.9%"
+    "Ops Beds #": "82",
+    "Sold Beds #": "68.0",
+    "Sold %": "82.9%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Rajarajeshwari Nagar",
+    "Micro-Market": "Rajarajeshwari Nagar",
     "Property": "Nome House",
     "Category": "Scholar",
-    "Ops Beds": "91",
-    "Total Sold #": "0.0",
-    "Total Sold %": "0.0%"
+    "Ops Beds #": "91",
+    "Sold Beds #": "0.0",
+    "Sold %": "0.0%"
   },
   {
     "City": "Mumbai",
-    "Micro Market": "Andheri East",
+    "Micro-Market": "Andheri East",
     "Property": "Norman House",
     "Category": "Suits",
-    "Ops Beds": "103",
-    "Total Sold #": "80.0",
-    "Total Sold %": "77.7%"
+    "Ops Beds #": "103",
+    "Sold Beds #": "80.0",
+    "Sold %": "77.7%"
   },
   {
     "City": "Bangalore 2",
-    "Micro Market": "Mahadevapura",
+    "Micro-Market": "Mahadevapura",
     "Property": "Nottingham House",
     "Category": "Suits",
-    "Ops Beds": "285",
-    "Total Sold #": "216.0",
-    "Total Sold %": "75.8%"
+    "Ops Beds #": "285",
+    "Sold Beds #": "216.0",
+    "Sold %": "75.8%"
   },
   {
     "City": "Ahmedabad",
-    "Micro Market": "Gota",
+    "Micro-Market": "Gota",
     "Property": "Odessa House",
     "Category": "Scholar",
-    "Ops Beds": "112",
-    "Total Sold #": "87.7",
-    "Total Sold %": "78.3%"
+    "Ops Beds #": "112",
+    "Sold Beds #": "87.7",
+    "Sold %": "78.3%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "North Campus",
+    "Micro-Market": "North Campus",
     "Property": "Ventura House",
     "Category": "Scholar",
-    "Ops Beds": "72",
-    "Total Sold #": "0.0",
-    "Total Sold %": "0.0%"
+    "Ops Beds #": "72",
+    "Sold Beds #": "0.0",
+    "Sold %": "0.0%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Karve Nagar",
+    "Micro-Market": "Karve Nagar",
     "Property": "Oran House",
     "Category": "Scholar",
-    "Ops Beds": "52",
-    "Total Sold #": "45.0",
-    "Total Sold %": "86.5%"
+    "Ops Beds #": "52",
+    "Sold Beds #": "45.0",
+    "Sold %": "86.5%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Nungambakkam",
+    "Micro-Market": "Nungambakkam",
     "Property": "Osasco House",
     "Category": "Scholar",
-    "Ops Beds": "44",
-    "Total Sold #": "44.0",
-    "Total Sold %": "100.0%"
+    "Ops Beds #": "44",
+    "Sold Beds #": "44.0",
+    "Sold %": "100.0%"
   },
   {
     "City": "Vadodara",
-    "Micro Market": "Sayaji Bagh",
+    "Micro-Market": "Sayaji Bagh",
     "Property": "Oslo House",
     "Category": "Scholar",
-    "Ops Beds": "120",
-    "Total Sold #": "100.0",
-    "Total Sold %": "83.3%"
+    "Ops Beds #": "120",
+    "Sold Beds #": "100.0",
+    "Sold %": "83.3%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Magadi Road",
+    "Micro-Market": "Magadi Road",
     "Property": "Padova House",
     "Category": "Scholar",
-    "Ops Beds": "45",
-    "Total Sold #": "34.0",
-    "Total Sold %": "75.6%"
+    "Ops Beds #": "45",
+    "Sold Beds #": "34.0",
+    "Sold %": "75.6%"
   },
   {
     "City": "Greater Noida",
-    "Micro Market": "Knowledge Park",
+    "Micro-Market": "Knowledge Park",
     "Property": "Paris House",
     "Category": "Scholar",
-    "Ops Beds": "421",
-    "Total Sold #": "282.0",
-    "Total Sold %": "67.0%"
+    "Ops Beds #": "421",
+    "Sold Beds #": "282.0",
+    "Sold %": "67.0%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Hinjawadi",
+    "Micro-Market": "Hinjawadi",
     "Property": "Parma House",
     "Category": "Suits",
-    "Ops Beds": "126",
-    "Total Sold #": "91.5",
-    "Total Sold %": "72.6%"
+    "Ops Beds #": "126",
+    "Sold Beds #": "91.5",
+    "Sold %": "72.6%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Vijay Nagar",
+    "Micro-Market": "Vijay Nagar",
     "Property": "Pasadena House",
     "Category": "Scholar",
-    "Ops Beds": "37",
-    "Total Sold #": "31.0",
-    "Total Sold %": "83.8%"
+    "Ops Beds #": "37",
+    "Sold Beds #": "31.0",
+    "Sold %": "83.8%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Vadgaon",
+    "Micro-Market": "Vadgaon",
     "Property": "Pelotas House",
     "Category": "Scholar",
-    "Ops Beds": "74",
-    "Total Sold #": "61.7",
-    "Total Sold %": "83.3%"
+    "Ops Beds #": "74",
+    "Sold Beds #": "61.7",
+    "Sold %": "83.3%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "North Campus",
+    "Micro-Market": "North Campus",
     "Property": "Weymouth House",
     "Category": "Scholar",
-    "Ops Beds": "62",
-    "Total Sold #": "57.0",
-    "Total Sold %": "91.9%"
+    "Ops Beds #": "62",
+    "Sold Beds #": "57.0",
+    "Sold %": "91.9%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Wakad",
+    "Micro-Market": "Wakad",
     "Property": "Pereira House",
     "Category": "Suits",
-    "Ops Beds": "159",
-    "Total Sold #": "98.5",
-    "Total Sold %": "61.9%"
+    "Ops Beds #": "159",
+    "Sold Beds #": "98.5",
+    "Sold %": "61.9%"
   },
   {
     "City": "Dehradun",
-    "Micro Market": "Pondha",
+    "Micro-Market": "Pondha",
     "Property": "Marsala House",
     "Category": "Scholar",
-    "Ops Beds": "28",
-    "Total Sold #": "21.0",
-    "Total Sold %": "75.0%"
+    "Ops Beds #": "28",
+    "Sold Beds #": "21.0",
+    "Sold %": "75.0%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Vadgaon",
+    "Micro-Market": "Vadgaon",
     "Property": "Pinsk House",
     "Category": "Scholar",
-    "Ops Beds": "235",
-    "Total Sold #": "201.0",
-    "Total Sold %": "85.5%"
+    "Ops Beds #": "235",
+    "Sold Beds #": "201.0",
+    "Sold %": "85.5%"
   },
   {
     "City": "Gurgaon",
-    "Micro Market": "HUDA City Center",
+    "Micro-Market": "HUDA City Center",
     "Property": "Pisa House",
     "Category": "Suits",
-    "Ops Beds": "40",
-    "Total Sold #": "31.0",
-    "Total Sold %": "77.5%"
+    "Ops Beds #": "40",
+    "Sold Beds #": "31.0",
+    "Sold %": "77.5%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "BTM Layout",
+    "Micro-Market": "BTM Layout",
     "Property": "Podolsk House",
     "Category": "Suits",
-    "Ops Beds": "88",
-    "Total Sold #": "90.0",
-    "Total Sold %": "102.3%"
+    "Ops Beds #": "88",
+    "Sold Beds #": "90.0",
+    "Sold %": "102.3%"
   },
   {
     "City": "Ahmedabad",
-    "Micro Market": "Gota",
+    "Micro-Market": "Gota",
     "Property": "Portland House",
     "Category": "Scholar",
-    "Ops Beds": "245",
-    "Total Sold #": "139.0",
-    "Total Sold %": "56.7%"
+    "Ops Beds #": "245",
+    "Sold Beds #": "139.0",
+    "Sold %": "56.7%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Hinjawadi",
+    "Micro-Market": "Hinjawadi",
     "Property": "Positano House",
     "Category": "Suits",
-    "Ops Beds": "198",
-    "Total Sold #": "144.0",
-    "Total Sold %": "72.7%"
+    "Ops Beds #": "198",
+    "Sold Beds #": "144.0",
+    "Sold %": "72.7%"
   },
   {
     "City": "Dehradun",
-    "Micro Market": "Pondha",
+    "Micro-Market": "Pondha",
     "Property": "Monastir House",
     "Category": "Scholar",
-    "Ops Beds": "42",
-    "Total Sold #": "24.0",
-    "Total Sold %": "57.1%"
+    "Ops Beds #": "42",
+    "Sold Beds #": "24.0",
+    "Sold %": "57.1%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Rau",
+    "Micro-Market": "Rau",
     "Property": "Prato House",
     "Category": "Scholar",
-    "Ops Beds": "40",
-    "Total Sold #": "34.0",
-    "Total Sold %": "85.0%"
+    "Ops Beds #": "40",
+    "Sold Beds #": "34.0",
+    "Sold %": "85.0%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Viman Nagar",
+    "Micro-Market": "Viman Nagar",
     "Property": "Presov House",
     "Category": "Scholar",
-    "Ops Beds": "64",
-    "Total Sold #": "62.0",
-    "Total Sold %": "96.9%"
+    "Ops Beds #": "64",
+    "Sold Beds #": "62.0",
+    "Sold %": "96.9%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Bhanwar Kua",
+    "Micro-Market": "Bhanwar Kua",
     "Property": "Pretoria House",
     "Category": "Scholar",
-    "Ops Beds": "60",
-    "Total Sold #": "47.0",
-    "Total Sold %": "78.3%"
+    "Ops Beds #": "60",
+    "Sold Beds #": "47.0",
+    "Sold %": "78.3%"
   },
   {
     "City": "Coimbatore",
-    "Micro Market": "Saravanampatti",
+    "Micro-Market": "Saravanampatti",
     "Property": "Quimper House",
     "Category": "Scholar",
-    "Ops Beds": "120",
-    "Total Sold #": "69.5",
-    "Total Sold %": "57.9%"
+    "Ops Beds #": "120",
+    "Sold Beds #": "69.5",
+    "Sold %": "57.9%"
   },
   {
     "City": "Dehradun",
-    "Micro Market": "Pondha",
+    "Micro-Market": "Pondha",
     "Property": "Pattaya House",
     "Category": "Scholar",
-    "Ops Beds": "106",
-    "Total Sold #": "63.5",
-    "Total Sold %": "59.9%"
+    "Ops Beds #": "106",
+    "Sold Beds #": "63.5",
+    "Sold %": "59.9%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Gachibowli",
+    "Micro-Market": "Gachibowli",
     "Property": "Rabat House",
     "Category": "Suits",
-    "Ops Beds": "128",
-    "Total Sold #": "68.5",
-    "Total Sold %": "53.5%"
+    "Ops Beds #": "128",
+    "Sold Beds #": "68.5",
+    "Sold %": "53.5%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Hinjawadi",
+    "Micro-Market": "Hinjawadi",
     "Property": "Reno House",
     "Category": "Suits",
-    "Ops Beds": "127",
-    "Total Sold #": "25.0",
-    "Total Sold %": "19.7%"
+    "Ops Beds #": "127",
+    "Sold Beds #": "25.0",
+    "Sold %": "19.7%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Hinjawadi",
+    "Micro-Market": "Hinjawadi",
     "Property": "Reynosa House",
     "Category": "Suits",
-    "Ops Beds": "44",
-    "Total Sold #": "38.0",
-    "Total Sold %": "86.4%"
+    "Ops Beds #": "44",
+    "Sold Beds #": "38.0",
+    "Sold %": "86.4%"
   },
   {
     "City": "Greater Noida",
-    "Micro Market": "Knowledge Park",
+    "Micro-Market": "Knowledge Park",
     "Property": "Rijeka House",
     "Category": "Scholar",
-    "Ops Beds": "135",
-    "Total Sold #": "94.0",
-    "Total Sold %": "69.6%"
+    "Ops Beds #": "135",
+    "Sold Beds #": "94.0",
+    "Sold %": "69.6%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Bellandur",
+    "Micro-Market": "Bellandur",
     "Property": "Rimini House",
     "Category": "Suits",
-    "Ops Beds": "177",
-    "Total Sold #": "153.0",
-    "Total Sold %": "86.4%"
+    "Ops Beds #": "177",
+    "Sold Beds #": "153.0",
+    "Sold %": "86.4%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Wagholi",
+    "Micro-Market": "Wagholi",
     "Property": "Ripon House",
     "Category": "Scholar",
-    "Ops Beds": "89",
-    "Total Sold #": "77.0",
-    "Total Sold %": "86.5%"
+    "Ops Beds #": "89",
+    "Sold Beds #": "77.0",
+    "Sold %": "86.5%"
   },
   {
     "City": "Coimbatore",
-    "Micro Market": "Gandhipuram",
+    "Micro-Market": "Gandhipuram",
     "Property": "Rivas House",
     "Category": "Scholar",
-    "Ops Beds": "60",
-    "Total Sold #": "52.0",
-    "Total Sold %": "86.7%"
+    "Ops Beds #": "60",
+    "Sold Beds #": "52.0",
+    "Sold %": "86.7%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Reva University",
+    "Micro-Market": "Reva University",
     "Property": "Ronda House",
     "Category": "Scholar",
-    "Ops Beds": "124",
-    "Total Sold #": "108.0",
-    "Total Sold %": "87.1%"
+    "Ops Beds #": "124",
+    "Sold Beds #": "108.0",
+    "Sold %": "87.1%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Mathikere",
+    "Micro-Market": "Mathikere",
     "Property": "Rostock House",
     "Category": "Scholar",
-    "Ops Beds": "103",
-    "Total Sold #": "86.5",
-    "Total Sold %": "84.0%"
+    "Ops Beds #": "103",
+    "Sold Beds #": "86.5",
+    "Sold %": "84.0%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Kumaraswamy Layout",
+    "Micro-Market": "Kumaraswamy Layout",
     "Property": "Rotherham House",
     "Category": "Scholar",
-    "Ops Beds": "74",
-    "Total Sold #": "55.0",
-    "Total Sold %": "74.3%"
+    "Ops Beds #": "74",
+    "Sold Beds #": "55.0",
+    "Sold %": "74.3%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Rau",
+    "Micro-Market": "Rau",
     "Property": "Rotorua House",
     "Category": "Scholar",
-    "Ops Beds": "45",
-    "Total Sold #": "36.0",
-    "Total Sold %": "80.0%"
+    "Ops Beds #": "45",
+    "Sold Beds #": "36.0",
+    "Sold %": "80.0%"
   },
   {
     "City": "Bangalore 2",
-    "Micro Market": "Kristu Jayanti",
+    "Micro-Market": "Kristu Jayanti",
     "Property": "Salisbury House",
     "Category": "Scholar",
-    "Ops Beds": "117",
-    "Total Sold #": "89.0",
-    "Total Sold %": "76.1%"
+    "Ops Beds #": "117",
+    "Sold Beds #": "89.0",
+    "Sold %": "76.1%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Reva University",
+    "Micro-Market": "Reva University",
     "Property": "Salta House",
     "Category": "Scholar",
-    "Ops Beds": "72",
-    "Total Sold #": "63.0",
-    "Total Sold %": "87.5%"
+    "Ops Beds #": "72",
+    "Sold Beds #": "63.0",
+    "Sold %": "87.5%"
   },
   {
     "City": "Coimbatore",
-    "Micro Market": "Avinashi Road",
+    "Micro-Market": "Avinashi Road",
     "Property": "Salto House",
     "Category": "Scholar",
-    "Ops Beds": "83",
-    "Total Sold #": "56.0",
-    "Total Sold %": "67.5%"
+    "Ops Beds #": "83",
+    "Sold Beds #": "56.0",
+    "Sold %": "67.5%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Koramangala",
+    "Micro-Market": "Koramangala",
     "Property": "Salzburg House",
     "Category": "Scholar",
-    "Ops Beds": "190",
-    "Total Sold #": "175.0",
-    "Total Sold %": "92.1%"
+    "Ops Beds #": "190",
+    "Sold Beds #": "175.0",
+    "Sold %": "92.1%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "South Campus",
+    "Micro-Market": "South Campus",
     "Property": "Hiroshima House",
     "Category": "Scholar",
-    "Ops Beds": "50",
-    "Total Sold #": "39.0",
-    "Total Sold %": "78.0%"
+    "Ops Beds #": "50",
+    "Sold Beds #": "39.0",
+    "Sold %": "78.0%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Manipal University",
+    "Micro-Market": "Manipal University",
     "Property": "San Pedro House",
     "Category": "Scholar",
-    "Ops Beds": "122",
-    "Total Sold #": "113.0",
-    "Total Sold %": "92.6%"
+    "Ops Beds #": "122",
+    "Sold Beds #": "113.0",
+    "Sold %": "92.6%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Aziznagar",
+    "Micro-Market": "Aziznagar",
     "Property": "Sandakan House",
     "Category": "Scholar",
-    "Ops Beds": "88",
-    "Total Sold #": "75.0",
-    "Total Sold %": "85.2%"
+    "Ops Beds #": "88",
+    "Sold Beds #": "75.0",
+    "Sold %": "85.2%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Bhanwar Kua",
+    "Micro-Market": "Bhanwar Kua",
     "Property": "Santa Barbara House",
     "Category": "Scholar",
-    "Ops Beds": "106",
-    "Total Sold #": "83.0",
-    "Total Sold %": "78.3%"
+    "Ops Beds #": "106",
+    "Sold Beds #": "83.0",
+    "Sold %": "78.3%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "OMR",
+    "Micro-Market": "OMR",
     "Property": "Santa Rosa House",
     "Category": "Suits",
-    "Ops Beds": "115",
-    "Total Sold #": "89.0",
-    "Total Sold %": "77.4%"
+    "Ops Beds #": "115",
+    "Sold Beds #": "89.0",
+    "Sold %": "77.4%"
   },
   {
     "City": "Bangalore 2",
-    "Micro Market": "Whitefield",
+    "Micro-Market": "Whitefield",
     "Property": "Sao Paulo House",
     "Category": "Suits",
-    "Ops Beds": "568",
-    "Total Sold #": "211.5",
-    "Total Sold %": "37.2%"
+    "Ops Beds #": "568",
+    "Sold Beds #": "211.5",
+    "Sold %": "37.2%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Shivajinagar",
+    "Micro-Market": "Shivajinagar",
     "Property": "Sarasota House",
     "Category": "Scholar",
-    "Ops Beds": "124",
-    "Total Sold #": "106.0",
-    "Total Sold %": "85.5%"
+    "Ops Beds #": "124",
+    "Sold Beds #": "106.0",
+    "Sold %": "85.5%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Rajarajeshwari Nagar",
+    "Micro-Market": "Rajarajeshwari Nagar",
     "Property": "Saratov House",
     "Category": "Suits",
-    "Ops Beds": "38",
-    "Total Sold #": "30.0",
-    "Total Sold %": "78.9%"
+    "Ops Beds #": "38",
+    "Sold Beds #": "30.0",
+    "Sold %": "78.9%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Dhankawadi",
+    "Micro-Market": "Dhankawadi",
     "Property": "Sarnen House",
     "Category": "Scholar",
-    "Ops Beds": "80",
-    "Total Sold #": "44.0",
-    "Total Sold %": "55.0%"
+    "Ops Beds #": "80",
+    "Sold Beds #": "44.0",
+    "Sold %": "55.0%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Porur",
+    "Micro-Market": "Porur",
     "Property": "Sarnia House",
     "Category": "Scholar",
-    "Ops Beds": "46",
-    "Total Sold #": "41.0",
-    "Total Sold %": "89.1%"
+    "Ops Beds #": "46",
+    "Sold Beds #": "41.0",
+    "Sold %": "89.1%"
   },
   {
     "City": "Bangalore 2",
-    "Micro Market": "Marathahalli",
+    "Micro-Market": "Marathahalli",
     "Property": "Scottsdale House",
     "Category": "Suits",
-    "Ops Beds": "66",
-    "Total Sold #": "45.0",
-    "Total Sold %": "68.2%"
+    "Ops Beds #": "66",
+    "Sold Beds #": "45.0",
+    "Sold %": "68.2%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Bellandur",
+    "Micro-Market": "Bellandur",
     "Property": "Seattle House",
     "Category": "Suits",
-    "Ops Beds": "416",
-    "Total Sold #": "325.0",
-    "Total Sold %": "78.1%"
+    "Ops Beds #": "416",
+    "Sold Beds #": "325.0",
+    "Sold %": "78.1%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Vijay Nagar",
+    "Micro-Market": "Vijay Nagar",
     "Property": "Segovia House",
     "Category": "Scholar",
-    "Ops Beds": "38",
-    "Total Sold #": "29.0",
-    "Total Sold %": "76.3%"
+    "Ops Beds #": "38",
+    "Sold Beds #": "29.0",
+    "Sold %": "76.3%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Wakad",
+    "Micro-Market": "Wakad",
     "Property": "Semey House",
     "Category": "Scholar",
-    "Ops Beds": "85",
-    "Total Sold #": "85.0",
-    "Total Sold %": "100.0%"
+    "Ops Beds #": "85",
+    "Sold Beds #": "85.0",
+    "Sold %": "100.0%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "South Campus",
+    "Micro-Market": "South Campus",
     "Property": "Kawasaki House",
     "Category": "Scholar",
-    "Ops Beds": "36",
-    "Total Sold #": "30.0",
-    "Total Sold %": "83.3%"
+    "Ops Beds #": "36",
+    "Sold Beds #": "30.0",
+    "Sold %": "83.3%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Rajankunte",
+    "Micro-Market": "Rajankunte",
     "Property": "Serov House",
     "Category": "Scholar",
-    "Ops Beds": "95",
-    "Total Sold #": "54.0",
-    "Total Sold %": "56.8%"
+    "Ops Beds #": "95",
+    "Sold Beds #": "54.0",
+    "Sold %": "56.8%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Bellandur",
+    "Micro-Market": "Bellandur",
     "Property": "Shanghai House",
     "Category": "Suits",
-    "Ops Beds": "775",
-    "Total Sold #": "553.0",
-    "Total Sold %": "71.4%"
+    "Ops Beds #": "775",
+    "Sold Beds #": "553.0",
+    "Sold %": "71.4%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "South Campus",
+    "Micro-Market": "South Campus",
     "Property": "Kobe House",
     "Category": "Scholar",
-    "Ops Beds": "53",
-    "Total Sold #": "38.0",
-    "Total Sold %": "71.7%"
+    "Ops Beds #": "53",
+    "Sold Beds #": "38.0",
+    "Sold %": "71.7%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Dhankawadi",
+    "Micro-Market": "Dhankawadi",
     "Property": "Shiraz House",
     "Category": "Scholar",
-    "Ops Beds": "115",
-    "Total Sold #": "63.5",
-    "Total Sold %": "55.2%"
+    "Ops Beds #": "115",
+    "Sold Beds #": "63.5",
+    "Sold %": "55.2%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Guindy",
+    "Micro-Market": "Guindy",
     "Property": "Shumen House",
     "Category": "Scholar",
-    "Ops Beds": "92",
-    "Total Sold #": "77.0",
-    "Total Sold %": "83.7%"
+    "Ops Beds #": "92",
+    "Sold Beds #": "77.0",
+    "Sold %": "83.7%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Vadgaon",
+    "Micro-Market": "Vadgaon",
     "Property": "Sidon House",
     "Category": "Scholar",
-    "Ops Beds": "98",
-    "Total Sold #": "96.0",
-    "Total Sold %": "98.0%"
+    "Ops Beds #": "98",
+    "Sold Beds #": "96.0",
+    "Sold %": "98.0%"
   },
   {
     "City": "Coimbatore",
-    "Micro Market": "Avinashi Road",
+    "Micro-Market": "Avinashi Road",
     "Property": "Smolensk House",
     "Category": "Scholar",
-    "Ops Beds": "50",
-    "Total Sold #": "46.0",
-    "Total Sold %": "92.0%"
+    "Ops Beds #": "50",
+    "Sold Beds #": "46.0",
+    "Sold %": "92.0%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Sarjapur Road",
+    "Micro-Market": "Sarjapur Road",
     "Property": "Sofia House",
     "Category": "Suits",
-    "Ops Beds": "131",
-    "Total Sold #": "0.0",
-    "Total Sold %": "0.0%"
+    "Ops Beds #": "131",
+    "Sold Beds #": "0.0",
+    "Sold %": "0.0%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Koramangala",
+    "Micro-Market": "Koramangala",
     "Property": "Spielberg House",
     "Category": "Scholar",
-    "Ops Beds": "72",
-    "Total Sold #": "56.0",
-    "Total Sold %": "77.8%"
+    "Ops Beds #": "72",
+    "Sold Beds #": "56.0",
+    "Sold %": "77.8%"
   },
   {
     "City": "Bangalore 2",
-    "Micro Market": "Kundalahalli Gate",
+    "Micro-Market": "Kundalahalli Gate",
     "Property": "Springbok House",
     "Category": "Suits",
-    "Ops Beds": "160",
-    "Total Sold #": "136.0",
-    "Total Sold %": "85.0%"
+    "Ops Beds #": "160",
+    "Sold Beds #": "136.0",
+    "Sold %": "85.0%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Pallavaram",
+    "Micro-Market": "Pallavaram",
     "Property": "Springfield House",
     "Category": "Suits",
-    "Ops Beds": "88",
-    "Total Sold #": "62.5",
-    "Total Sold %": "71.0%"
+    "Ops Beds #": "88",
+    "Sold Beds #": "62.5",
+    "Sold %": "71.0%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Gachibowli",
+    "Micro-Market": "Gachibowli",
     "Property": "Sunderland House",
     "Category": "Suits",
-    "Ops Beds": "119",
-    "Total Sold #": "58.0",
-    "Total Sold %": "48.7%"
+    "Ops Beds #": "119",
+    "Sold Beds #": "58.0",
+    "Sold %": "48.7%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Gandi Maisamma",
+    "Micro-Market": "Gandi Maisamma",
     "Property": "Syracuse House",
     "Category": "Scholar",
-    "Ops Beds": "141",
-    "Total Sold #": "72.0",
-    "Total Sold %": "51.1%"
+    "Ops Beds #": "141",
+    "Sold Beds #": "72.0",
+    "Sold %": "51.1%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Kondhwa",
+    "Micro-Market": "Kondhwa",
     "Property": "Syzran House",
     "Category": "Scholar",
-    "Ops Beds": "44",
-    "Total Sold #": "36.0",
-    "Total Sold %": "81.8%"
+    "Ops Beds #": "44",
+    "Sold Beds #": "36.0",
+    "Sold %": "81.8%"
   },
   {
     "City": "Gurgaon",
-    "Micro Market": "Medanta",
+    "Micro-Market": "Medanta",
     "Property": "Taiping House",
     "Category": "Suits",
-    "Ops Beds": "40",
-    "Total Sold #": "39.0",
-    "Total Sold %": "97.5%"
+    "Ops Beds #": "40",
+    "Sold Beds #": "39.0",
+    "Sold %": "97.5%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Hinjawadi",
+    "Micro-Market": "Hinjawadi",
     "Property": "Tallinn House",
     "Category": "Suits",
-    "Ops Beds": "175",
-    "Total Sold #": "154.0",
-    "Total Sold %": "88.0%"
+    "Ops Beds #": "175",
+    "Sold Beds #": "154.0",
+    "Sold %": "88.0%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Vadgaon",
+    "Micro-Market": "Vadgaon",
     "Property": "Tartus House",
     "Category": "Scholar",
-    "Ops Beds": "101",
-    "Total Sold #": "100.0",
-    "Total Sold %": "99.0%"
+    "Ops Beds #": "101",
+    "Sold Beds #": "100.0",
+    "Sold %": "99.0%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Baner",
+    "Micro-Market": "Baner",
     "Property": "Tel Aviv House",
     "Category": "Suits",
-    "Ops Beds": "606",
-    "Total Sold #": "390.5",
-    "Total Sold %": "64.4%"
+    "Ops Beds #": "606",
+    "Sold Beds #": "390.5",
+    "Sold %": "64.4%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "BTM Layout",
+    "Micro-Market": "BTM Layout",
     "Property": "Teresina House",
     "Category": "Suits",
-    "Ops Beds": "105",
-    "Total Sold #": "103.0",
-    "Total Sold %": "98.1%"
+    "Ops Beds #": "105",
+    "Sold Beds #": "103.0",
+    "Sold %": "98.1%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Karve Nagar",
+    "Micro-Market": "Karve Nagar",
     "Property": "Tobruk House",
     "Category": "Scholar",
-    "Ops Beds": "51",
-    "Total Sold #": "33.0",
-    "Total Sold %": "64.7%"
+    "Ops Beds #": "51",
+    "Sold Beds #": "33.0",
+    "Sold %": "64.7%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Nungambakkam",
+    "Micro-Market": "Nungambakkam",
     "Property": "Toledo House",
     "Category": "Scholar",
-    "Ops Beds": "50",
-    "Total Sold #": "41.5",
-    "Total Sold %": "83.0%"
+    "Ops Beds #": "50",
+    "Sold Beds #": "41.5",
+    "Sold %": "83.0%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "South Campus",
+    "Micro-Market": "South Campus",
     "Property": "Nagoya House",
     "Category": "Scholar",
-    "Ops Beds": "41",
-    "Total Sold #": "33.0",
-    "Total Sold %": "80.5%"
+    "Ops Beds #": "41",
+    "Sold Beds #": "33.0",
+    "Sold %": "80.5%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Wagholi",
+    "Micro-Market": "Wagholi",
     "Property": "Torreon House",
     "Category": "Scholar",
-    "Ops Beds": "60",
-    "Total Sold #": "53.0",
-    "Total Sold %": "88.3%"
+    "Ops Beds #": "60",
+    "Sold Beds #": "53.0",
+    "Sold %": "88.3%"
   },
   {
     "City": "Gurgaon",
-    "Micro Market": "Golf Course Extension",
+    "Micro-Market": "Golf Course Extension",
     "Property": "Tortosa House",
     "Category": "Suits",
-    "Ops Beds": "56",
-    "Total Sold #": "32.0",
-    "Total Sold %": "57.1%"
+    "Ops Beds #": "56",
+    "Sold Beds #": "32.0",
+    "Sold %": "57.1%"
   },
   {
     "City": "Kochi",
-    "Micro Market": "Edachira",
+    "Micro-Market": "Edachira",
     "Property": "Toulon House",
     "Category": "Scholar",
-    "Ops Beds": "153",
-    "Total Sold #": "100.0",
-    "Total Sold %": "65.4%"
+    "Ops Beds #": "153",
+    "Sold Beds #": "100.0",
+    "Sold %": "65.4%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Vijay Nagar",
+    "Micro-Market": "Vijay Nagar",
     "Property": "Trafford House",
     "Category": "Scholar",
-    "Ops Beds": "88",
-    "Total Sold #": "70.5",
-    "Total Sold %": "80.1%"
+    "Ops Beds #": "88",
+    "Sold Beds #": "70.5",
+    "Sold %": "80.1%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "Nungambakkam",
+    "Micro-Market": "Nungambakkam",
     "Property": "Tulsa House",
     "Category": "Scholar",
-    "Ops Beds": "48",
-    "Total Sold #": "48.0",
-    "Total Sold %": "100.0%"
+    "Ops Beds #": "48",
+    "Sold Beds #": "48.0",
+    "Sold %": "100.0%"
   },
   {
     "City": "Bangalore 3",
-    "Micro Market": "Kumaraswamy Layout",
+    "Micro-Market": "Kumaraswamy Layout",
     "Property": "Tumaco House",
     "Category": "Scholar",
-    "Ops Beds": "21",
-    "Total Sold #": "22.0",
-    "Total Sold %": "104.8%"
+    "Ops Beds #": "21",
+    "Sold Beds #": "22.0",
+    "Sold %": "104.8%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Rau",
+    "Micro-Market": "Rau",
     "Property": "Tunis House",
     "Category": "Scholar",
-    "Ops Beds": "497",
-    "Total Sold #": "197.5",
-    "Total Sold %": "39.7%"
+    "Ops Beds #": "497",
+    "Sold Beds #": "197.5",
+    "Sold %": "39.7%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Electronic City Phase 1",
+    "Micro-Market": "Electronic City Phase 1",
     "Property": "Turin House",
     "Category": "Suits",
-    "Ops Beds": "157",
-    "Total Sold #": "121.0",
-    "Total Sold %": "77.1%"
+    "Ops Beds #": "157",
+    "Sold Beds #": "121.0",
+    "Sold %": "77.1%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Gandi Maisamma",
+    "Micro-Market": "Gandi Maisamma",
     "Property": "Tuzla House",
     "Category": "Scholar",
-    "Ops Beds": "80",
-    "Total Sold #": "44.0",
-    "Total Sold %": "55.0%"
+    "Ops Beds #": "80",
+    "Sold Beds #": "44.0",
+    "Sold %": "55.0%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "OMR",
+    "Micro-Market": "OMR",
     "Property": "Tyler House",
     "Category": "Scholar",
-    "Ops Beds": "157",
-    "Total Sold #": "115.0",
-    "Total Sold %": "73.2%"
+    "Ops Beds #": "157",
+    "Sold Beds #": "115.0",
+    "Sold %": "73.2%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Karve Nagar",
+    "Micro-Market": "Karve Nagar",
     "Property": "Upington House",
     "Category": "Scholar",
-    "Ops Beds": "48",
-    "Total Sold #": "40.0",
-    "Total Sold %": "83.3%"
+    "Ops Beds #": "48",
+    "Sold Beds #": "40.0",
+    "Sold %": "83.3%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Koramangala",
+    "Micro-Market": "Koramangala",
     "Property": "Vaduz House",
     "Category": "Scholar",
-    "Ops Beds": "80",
-    "Total Sold #": "76.0",
-    "Total Sold %": "95.0%"
+    "Ops Beds #": "80",
+    "Sold Beds #": "76.0",
+    "Sold %": "95.0%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "South Campus",
+    "Micro-Market": "South Campus",
     "Property": "Okazaki House",
     "Category": "Scholar",
-    "Ops Beds": "68",
-    "Total Sold #": "54.0",
-    "Total Sold %": "79.4%"
+    "Ops Beds #": "68",
+    "Sold Beds #": "54.0",
+    "Sold %": "79.4%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Narsingi",
+    "Micro-Market": "Narsingi",
     "Property": "Vernier House",
     "Category": "Scholar",
-    "Ops Beds": "80",
-    "Total Sold #": "58.0",
-    "Total Sold %": "72.5%"
+    "Ops Beds #": "80",
+    "Sold Beds #": "58.0",
+    "Sold %": "72.5%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Reva University",
+    "Micro-Market": "Reva University",
     "Property": "Vernon House",
     "Category": "Scholar",
-    "Ops Beds": "237",
-    "Total Sold #": "0.0",
-    "Total Sold %": "0.0%"
+    "Ops Beds #": "237",
+    "Sold Beds #": "0.0",
+    "Sold %": "0.0%"
   },
   {
     "City": "Indore",
-    "Micro Market": "Rau",
+    "Micro-Market": "Rau",
     "Property": "Verona House",
     "Category": "Scholar",
-    "Ops Beds": "123",
-    "Total Sold #": "89.0",
-    "Total Sold %": "72.4%"
+    "Ops Beds #": "123",
+    "Sold Beds #": "89.0",
+    "Sold %": "72.4%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Koramangala",
+    "Micro-Market": "Koramangala",
     "Property": "Villareal House",
     "Category": "Scholar",
-    "Ops Beds": "94",
-    "Total Sold #": "80.0",
-    "Total Sold %": "85.1%"
+    "Ops Beds #": "94",
+    "Sold Beds #": "80.0",
+    "Sold %": "85.1%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Mathikere",
+    "Micro-Market": "Mathikere",
     "Property": "Vilnius House",
     "Category": "Scholar",
-    "Ops Beds": "145",
-    "Total Sold #": "129.5",
-    "Total Sold %": "89.3%"
+    "Ops Beds #": "145",
+    "Sold Beds #": "129.5",
+    "Sold %": "89.3%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Mathikere",
+    "Micro-Market": "Mathikere",
     "Property": "Viseu House",
     "Category": "Scholar",
-    "Ops Beds": "44",
-    "Total Sold #": "38.0",
-    "Total Sold %": "86.4%"
+    "Ops Beds #": "44",
+    "Sold Beds #": "38.0",
+    "Sold %": "86.4%"
   },
   {
     "City": "Chennai",
-    "Micro Market": "OMR",
+    "Micro-Market": "OMR",
     "Property": "Vitoria House",
     "Category": "Suits",
-    "Ops Beds": "57",
-    "Total Sold #": "45.0",
-    "Total Sold %": "78.9%"
+    "Ops Beds #": "57",
+    "Sold Beds #": "45.0",
+    "Sold %": "78.9%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Balewadi",
+    "Micro-Market": "Balewadi",
     "Property": "Waco House",
     "Category": "Suits",
-    "Ops Beds": "60",
-    "Total Sold #": "49.0",
-    "Total Sold %": "81.7%"
+    "Ops Beds #": "60",
+    "Sold Beds #": "49.0",
+    "Sold %": "81.7%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Rajankunte",
+    "Micro-Market": "Rajankunte",
     "Property": "Watford House",
     "Category": "Scholar",
-    "Ops Beds": "128",
-    "Total Sold #": "90.5",
-    "Total Sold %": "70.7%"
+    "Ops Beds #": "128",
+    "Sold Beds #": "90.5",
+    "Sold %": "70.7%"
   },
   {
     "City": "Delhi",
-    "Micro Market": "South Campus",
+    "Micro-Market": "South Campus",
     "Property": "Sendai House",
     "Category": "Scholar",
-    "Ops Beds": "133",
-    "Total Sold #": "114.0",
-    "Total Sold %": "85.7%"
+    "Ops Beds #": "133",
+    "Sold Beds #": "114.0",
+    "Sold %": "85.7%"
   },
   {
     "City": "Pune",
-    "Micro Market": "Wagholi",
+    "Micro-Market": "Wagholi",
     "Property": "Whitehaven House",
     "Category": "Scholar",
-    "Ops Beds": "72",
-    "Total Sold #": "45.0",
-    "Total Sold %": "62.5%"
+    "Ops Beds #": "72",
+    "Sold Beds #": "45.0",
+    "Sold %": "62.5%"
   },
   {
     "City": "Bangalore 1",
-    "Micro Market": "Magadi Road",
+    "Micro-Market": "Magadi Road",
     "Property": "Wichita House",
     "Category": "Scholar",
-    "Ops Beds": "33",
-    "Total Sold #": "28.0",
-    "Total Sold %": "84.8%"
+    "Ops Beds #": "33",
+    "Sold Beds #": "28.0",
+    "Sold %": "84.8%"
   },
   {
     "City": "Ahmedabad",
-    "Micro Market": "Navrangpura",
+    "Micro-Market": "Navrangpura",
     "Property": "Wilmington House",
     "Category": "Scholar",
-    "Ops Beds": "78",
-    "Total Sold #": "45.5",
-    "Total Sold %": "58.3%"
+    "Ops Beds #": "78",
+    "Sold Beds #": "45.5",
+    "Sold %": "58.3%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Madhapur",
+    "Micro-Market": "Madhapur",
     "Property": "Winnipeg House",
     "Category": "Suits",
-    "Ops Beds": "185",
-    "Total Sold #": "120.0",
-    "Total Sold %": "64.9%"
+    "Ops Beds #": "185",
+    "Sold Beds #": "120.0",
+    "Sold %": "64.9%"
   },
   {
     "City": "Dehradun",
-    "Micro Market": "Pondha",
+    "Micro-Market": "Pondha",
     "Property": "Yangon House",
     "Category": "Scholar",
-    "Ops Beds": "134",
-    "Total Sold #": "96.0",
-    "Total Sold %": "71.6%"
+    "Ops Beds #": "134",
+    "Sold Beds #": "96.0",
+    "Sold %": "71.6%"
   },
   {
     "City": "Dehradun",
-    "Micro Market": "Pondha",
+    "Micro-Market": "Pondha",
     "Property": "Zaragoza House",
     "Category": "Scholar",
-    "Ops Beds": "28",
-    "Total Sold #": "24.0",
-    "Total Sold %": "85.7%"
+    "Ops Beds #": "28",
+    "Sold Beds #": "24.0",
+    "Sold %": "85.7%"
   },
   {
     "City": "Hyderabad",
-    "Micro Market": "Gandi Maisamma",
+    "Micro-Market": "Gandi Maisamma",
     "Property": "Zenica House",
     "Category": "Scholar",
-    "Ops Beds": "108",
-    "Total Sold #": "80.5",
-    "Total Sold %": "74.5%"
+    "Ops Beds #": "108",
+    "Sold Beds #": "80.5",
+    "Sold %": "74.5%"
   }
 ]
