@@ -74,15 +74,17 @@ function renderDashboard(data) {
   // Move export buttons container directly into top filter bar (right corner)
   dataTableInstance.buttons().container().appendTo('#exportContainer');
 
+  // Initialize dropdowns with Select2 search boxes
   populateDropdown('#citySelect', cityKey, data, 'All Cities');
   populateDropdown('#microMarketSelect', mmKey, data, 'All Micro Markets');
+  
   updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey);
 
   $('#citySelect').on('change', function () {
     const selectedCity = $(this).val();
 
     if (mmIdx !== -1) dataTableInstance.column(mmIdx).search('');
-    $('#microMarketSelect').val('');
+    $('#microMarketSelect').val('').trigger('change.select2');
 
     if (cityIdx !== -1) {
       dataTableInstance.column(cityIdx).search(selectedCity ? '^' + $.fn.dataTable.util.escapeRegex(selectedCity) + '$' : '', true, false);
@@ -109,8 +111,8 @@ function renderDashboard(data) {
   });
 
   $('#resetFilters').on('click', function () {
-    $('#citySelect').val('');
-    $('#microMarketSelect').val('');
+    $('#citySelect').val('').trigger('change.select2');
+    $('#microMarketSelect').val('').trigger('change.select2');
     dataTableInstance.columns().search('').draw();
     populateDropdown('#citySelect', cityKey, data, 'All Cities');
     populateDropdown('#microMarketSelect', mmKey, data, 'All Micro Markets');
@@ -131,13 +133,27 @@ function populateDropdown(selectId, colKey, rowData, defaultLabel) {
   const values = [...new Set(rowData.map(r => r[colKey]))].filter(Boolean).sort();
   const elem = $(selectId);
   const currentVal = elem.val();
+  
+  // Destroy previous Select2 instance before updating options
+  if (elem.hasClass("select2-hidden-accessible")) {
+    elem.select2('destroy');
+  }
+
   elem.html(`<option value="">${defaultLabel}</option>`);
   values.forEach(v => {
     elem.append(`<option value="${v}">${v}</option>`);
   });
+  
   if (values.includes(currentVal)) {
     elem.val(currentVal);
   }
+
+  // Re-initialize Select2 with search enabled
+  elem.select2({
+    placeholder: defaultLabel,
+    allowClear: true,
+    width: '200px'
+  });
 }
 
 function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey) {
