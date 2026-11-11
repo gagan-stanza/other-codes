@@ -7,7 +7,7 @@ on:
 
 jobs:
   run-script:
-    runs-on: ubuntu-24.05
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout code
