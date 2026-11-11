@@ -6,6 +6,9 @@ let modalChartInstance = null;
 let currentSortedCities = [];
 let currentSortedMM = [];
 
+// Register ChartDataLabels plugin globally
+Chart.register(ChartDataLabels);
+
 function loadData() {
   fetch('data.json')
     .then(response => response.json())
@@ -76,7 +79,7 @@ function renderDashboard(data) {
 
   // Initialize dropdowns with Select2 search boxes
   populateDropdown('#citySelect', cityKey, data, 'All Cities');
-  populateDropdown('#microMarketSelect', mmKey, data, 'All Micro Markets');
+  populateDropdown('#microMarketSelect', mmKey, data, 'All Micro-Markets');
   
   updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey);
 
@@ -92,7 +95,7 @@ function renderDashboard(data) {
     dataTableInstance.draw();
 
     const visibleRows = dataTableInstance.rows({ search: 'applied' }).data().toArray();
-    populateDropdown('#microMarketSelect', mmKey, visibleRows, 'All Micro Markets');
+    populateDropdown('#microMarketSelect', mmKey, visibleRows, 'All Micro-Markets');
     updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey);
   });
 
@@ -115,7 +118,7 @@ function renderDashboard(data) {
     $('#microMarketSelect').val('').trigger('change.select2');
     dataTableInstance.columns().search('').draw();
     populateDropdown('#citySelect', cityKey, data, 'All Cities');
-    populateDropdown('#microMarketSelect', mmKey, data, 'All Micro Markets');
+    populateDropdown('#microMarketSelect', mmKey, data, 'All Micro-Markets');
     updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey);
   });
 
@@ -208,7 +211,7 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
     }))
     .sort((a, b) => b.pct - a.pct);
 
-  // Render City Chart
+  // Render City Chart (Always show data labels on top)
   if (cityChartInstance) cityChartInstance.destroy();
   const ctxCity = document.getElementById('cityChart').getContext('2d');
   cityChartInstance = new Chart(ctxCity, {
@@ -225,17 +228,27 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      layout: { padding: { top: 20 } },
       plugins: {
         legend: { display: false },
-        tooltip: { callbacks: { label: (ctx) => ` Occupancy: ${ctx.raw}%` } }
+        tooltip: { callbacks: { label: (ctx) => ` Occupancy: ${ctx.raw}%` } },
+        datalabels: {
+          anchor: 'end',
+          align: 'top',
+          color: '#2c3e50',
+          font: { weight: 'bold', size: 10 },
+          formatter: (value) => value + '%'
+        }
       },
       scales: {
-        y: { beginAtZero: true, max: 100, ticks: { callback: (val) => val + '%' } }
+        y: { beginAtZero: true, max: 110, ticks: { callback: (val) => val <= 100 ? val + '%' : '' } }
       }
     }
   });
 
-  // Render Micro Market Chart
+  // Render Micro Market Chart (Show labels only if filtered/<= 15 items to prevent clutter)
+  const showMMLabels = currentSortedMM.length <= 15;
+
   if (mmChartInstance) mmChartInstance.destroy();
   const ctxMM = document.getElementById('channelChart').getContext('2d');
   mmChartInstance = new Chart(ctxMM, {
@@ -252,12 +265,21 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      layout: { padding: { top: showMMLabels ? 20 : 0 } },
       plugins: {
         legend: { display: false },
-        tooltip: { callbacks: { label: (ctx) => ` Occupancy: ${ctx.raw}%` } }
+        tooltip: { callbacks: { label: (ctx) => ` Occupancy: ${ctx.raw}%` } },
+        datalabels: {
+          display: showMMLabels,
+          anchor: 'end',
+          align: 'top',
+          color: '#2c3e50',
+          font: { weight: 'bold', size: 10 },
+          formatter: (value) => value + '%'
+        }
       },
       scales: {
-        y: { beginAtZero: true, max: 100, ticks: { callback: (val) => val + '%' } }
+        y: { beginAtZero: true, max: showMMLabels ? 110 : 100, ticks: { callback: (val) => val <= 100 ? val + '%' : '' } }
       }
     }
   });
@@ -267,7 +289,7 @@ function openModalChart(title, dataItems, barColor) {
   $('#modalChartTitle').text(title);
   $('#chartModal').css('display', 'flex');
 
-  const minBarWidth = 35;
+  const minBarWidth = 45;
   const calculatedWidth = Math.max(dataItems.length * minBarWidth, 800);
   $('#modalChartWrapper').css('width', `${calculatedWidth}px`);
 
@@ -288,9 +310,18 @@ function openModalChart(title, dataItems, barColor) {
     options: {
       responsive: true,
       maintainAspectRatio: false,
+      layout: { padding: { top: 25 } },
       plugins: {
         legend: { display: false },
-        tooltip: { callbacks: { label: (ctx) => ` Occupancy: ${ctx.raw}%` } }
+        tooltip: { callbacks: { label: (ctx) => ` Occupancy: ${ctx.raw}%` } },
+        datalabels: {
+          display: true, // ALWAYS show labels in Expanded Modal view
+          anchor: 'end',
+          align: 'top',
+          color: '#2c3e50',
+          font: { weight: 'bold', size: 11 },
+          formatter: (value) => value + '%'
+        }
       },
       scales: {
         x: {
@@ -302,8 +333,8 @@ function openModalChart(title, dataItems, barColor) {
         },
         y: {
           beginAtZero: true,
-          max: 100,
-          ticks: { callback: (val) => val + '%' }
+          max: 110,
+          ticks: { callback: (val) => val <= 100 ? val + '%' : '' }
         }
       }
     }
