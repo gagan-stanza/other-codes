@@ -121,7 +121,7 @@ function renderDashboard(data) {
 
   // Expand Modal Listeners
   $('#expandCityChart').on('click', () => openModalChart('Sold % by City', currentSortedCities, '#3b82f6'));
-  $('#expandMMChart').on('click', () => openModalChart('Sold % by Micro Market', currentSortedMM, '#10b981'));
+  $('#expandMMChart').on('click', () => openModalChart('Sold % by Micro-Market', currentSortedMM, '#10b981'));
   $('#closeModal').on('click', closeModal);
   $('#chartModal').on('click', function(e) {
     if (e.target === this) closeModal();
