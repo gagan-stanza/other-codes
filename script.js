@@ -32,12 +32,14 @@ function renderDashboard(data) {
 
   const findKey = (name) => keys.find(k => k.trim().toLowerCase() === name.toLowerCase()) || '';
 
-  const propertyKey = findKey('Property');
-  const mmKey = findKey('Micro Market');
+  // Your new header mapping
   const cityKey = findKey('City');
-  const bedsKey = findKey('Ops Beds') || findKey('Beds') || findKey('Total Beds');
-  const totalSoldKey = findKey('Total Sold #');
-  const totalPctKey = findKey('Total Sold %');
+  const mmKey = findKey('Micro-Market');
+  const propertyKey = findKey('Property');
+  const categoryKey = findKey('Category');
+  const bedsKey = findKey('Ops Beds #');
+  const totalSoldKey = findKey('Sold Beds #');
+  const totalPctKey = findKey('Sold %');
 
   const cityIdx = keys.indexOf(cityKey);
   const mmIdx = keys.indexOf(mmKey);
@@ -49,9 +51,9 @@ function renderDashboard(data) {
         data: key,
         render: function (val) {
           const num = parseNum(val);
-          let color = '#f59e0b';
-          if (num >= 80) color = '#10b981';
-          else if (num >= 50) color = '#3b82f6';
+          let color = '#ef4444'; // Red (Default for < 60%)
+          if (num >= 80) color = '#10b981'; // Green (80% to 100%)
+          else if (num >= 60) color = '#f59e0b'; // Amber (60% to < 80%)
 
           return `
             <div class="progress-bar-container">
@@ -74,10 +76,10 @@ function renderDashboard(data) {
     buttons: ['copy', 'csv', 'excel']
   });
 
-  // Move export buttons container directly into top filter bar (right corner)
+  // Move export buttons container directly into top filter bar
   dataTableInstance.buttons().container().appendTo('#exportContainer');
 
-  // Initialize dropdowns with Select2 search boxes
+  // Initialize dropdowns
   populateDropdown('#citySelect', cityKey, data, 'All Cities');
   populateDropdown('#microMarketSelect', mmKey, data, 'All Micro-Markets');
   
@@ -137,7 +139,6 @@ function populateDropdown(selectId, colKey, rowData, defaultLabel) {
   const elem = $(selectId);
   const currentVal = elem.val();
   
-  // Destroy previous Select2 instance before updating options
   if (elem.hasClass("select2-hidden-accessible")) {
     elem.select2('destroy');
   }
@@ -151,7 +152,6 @@ function populateDropdown(selectId, colKey, rowData, defaultLabel) {
     elem.val(currentVal);
   }
 
-  // Re-initialize Select2 with search enabled
   elem.select2({
     placeholder: defaultLabel,
     allowClear: true,
@@ -211,7 +211,7 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
     }))
     .sort((a, b) => b.pct - a.pct);
 
-  // Render City Chart (Always show data labels on top)
+  // Render City Chart
   if (cityChartInstance) cityChartInstance.destroy();
   const ctxCity = document.getElementById('cityChart').getContext('2d');
   cityChartInstance = new Chart(ctxCity, {
@@ -246,7 +246,7 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
     }
   });
 
-  // Render Micro Market Chart (Show labels only if filtered/<= 15 items to prevent clutter)
+  // Render Micro Market Chart
   const showMMLabels = currentSortedMM.length <= 15;
 
   if (mmChartInstance) mmChartInstance.destroy();
@@ -315,7 +315,7 @@ function openModalChart(title, dataItems, barColor) {
         legend: { display: false },
         tooltip: { callbacks: { label: (ctx) => ` Occupancy: ${ctx.raw}%` } },
         datalabels: {
-          display: true, // ALWAYS show labels in Expanded Modal view
+          display: true,
           anchor: 'end',
           align: 'top',
           color: '#2c3e50',
