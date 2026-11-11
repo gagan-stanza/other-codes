@@ -80,7 +80,7 @@
       color: var(--text-main);
     }
 
-    /* Unified Control Bar (Filters Left, Export Buttons Right) */
+    /* Unified Control Bar */
     .filter-card {
       background: var(--card-bg);
       padding: 1rem 1.25rem;
@@ -115,7 +115,6 @@
       min-width: 200px;
     }
 
-    /* Customizing Select2 to match clean SaaS theme */
     .select2-container--default .select2-selection--single {
       height: 34px;
       border: 1px solid var(--border-color);
@@ -160,7 +159,6 @@
       gap: 0.5rem;
     }
 
-    /* DataTables Export Buttons Custom Styling */
     .export-right .dt-buttons {
       display: flex;
       gap: 6px;
@@ -183,16 +181,24 @@
       border-color: #cbd5e1 !important;
     }
 
-    /* Charts Section */
+    /* Charts Grid Layout */
     .charts-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
     }
 
+    /* Full-width style for top Micro-Market chart */
+    .chart-card-full {
+      grid-column: 1 / -1;
+    }
+
     @media (max-width: 900px) {
       .charts-grid {
         grid-template-columns: 1fr;
+      }
+      .chart-card-full {
+        grid-column: span 1;
       }
     }
 
@@ -241,7 +247,7 @@
       width: 100%;
     }
 
-    /* Modal for Expanded Graph */
+    /* Modal */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -316,12 +322,10 @@
       overflow-x: auto;
     }
 
-    /* Hide standard DataTables buttons container since we move it to top bar */
     .table-card .dt-buttons {
       display: none;
     }
 
-    /* Progress bar visual inside table */
     .progress-bar-container {
       background-color: #e9ecef;
       border-radius: 4px;
@@ -399,8 +403,20 @@
       </div>
     </div>
 
-    <!-- 3. Dynamic Side-by-Side Bar Charts -->
+    <!-- 3. Dynamic Charts Grid -->
     <div class="charts-grid">
+      <!-- Top Row: Micro-Market Chart (Full Stretch) -->
+      <div class="chart-card chart-card-full">
+        <div class="chart-header">
+          <h3>Sold % by Micro-Market</h3>
+          <button class="expand-btn" id="expandMMChart" title="Expand View">⛶ Expand</button>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="channelChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Bottom Row: City Chart (Left) & Category Chart (Right) -->
       <div class="chart-card">
         <div class="chart-header">
           <h3>Sold % by City</h3>
@@ -413,11 +429,11 @@
 
       <div class="chart-card">
         <div class="chart-header">
-          <h3>Sold % by Micro-Market</h3>
-          <button class="expand-btn" id="expandMMChart" title="Expand View">⛶ Expand</button>
+          <h3>Sold % by Category</h3>
+          <button class="expand-btn" id="expandCategoryChart" title="Expand View">⛶ Expand</button>
         </div>
         <div class="chart-wrapper">
-          <canvas id="channelChart"></canvas>
+          <canvas id="categoryChart"></canvas>
         </div>
       </div>
     </div>

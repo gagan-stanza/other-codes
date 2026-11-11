@@ -1,10 +1,12 @@
 let dataTableInstance = null;
 let cityChartInstance = null;
 let mmChartInstance = null;
+let categoryChartInstance = null;
 let modalChartInstance = null;
 
 let currentSortedCities = [];
 let currentSortedMM = [];
+let currentSortedCategory = [];
 
 // Register ChartDataLabels plugin globally
 Chart.register(ChartDataLabels);
@@ -32,7 +34,6 @@ function renderDashboard(data) {
 
   const findKey = (name) => keys.find(k => k.trim().toLowerCase() === name.toLowerCase()) || '';
 
-  // Your new header mapping
   const cityKey = findKey('City');
   const mmKey = findKey('Micro-Market');
   const propertyKey = findKey('Property');
@@ -83,7 +84,7 @@ function renderDashboard(data) {
   populateDropdown('#citySelect', cityKey, data, 'All Cities');
   populateDropdown('#microMarketSelect', mmKey, data, 'All Micro-Markets');
   
-  updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey);
+  updateSummaryMetricsAndCharts(keys, cityKey, mmKey, categoryKey, bedsKey, totalSoldKey);
 
   $('#citySelect').on('change', function () {
     const selectedCity = $(this).val();
@@ -98,7 +99,7 @@ function renderDashboard(data) {
 
     const visibleRows = dataTableInstance.rows({ search: 'applied' }).data().toArray();
     populateDropdown('#microMarketSelect', mmKey, visibleRows, 'All Micro-Markets');
-    updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey);
+    updateSummaryMetricsAndCharts(keys, cityKey, mmKey, categoryKey, bedsKey, totalSoldKey);
   });
 
   $('#microMarketSelect').on('change', function () {
@@ -108,11 +109,11 @@ function renderDashboard(data) {
       dataTableInstance.column(mmIdx).search(selectedMM ? '^' + $.fn.dataTable.util.escapeRegex(selectedMM) + '$' : '', true, false);
     }
     dataTableInstance.draw();
-    updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey);
+    updateSummaryMetricsAndCharts(keys, cityKey, mmKey, categoryKey, bedsKey, totalSoldKey);
   });
 
   dataTableInstance.on('search.dt', function () {
-    updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey);
+    updateSummaryMetricsAndCharts(keys, cityKey, mmKey, categoryKey, bedsKey, totalSoldKey);
   });
 
   $('#resetFilters').on('click', function () {
@@ -121,12 +122,13 @@ function renderDashboard(data) {
     dataTableInstance.columns().search('').draw();
     populateDropdown('#citySelect', cityKey, data, 'All Cities');
     populateDropdown('#microMarketSelect', mmKey, data, 'All Micro-Markets');
-    updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey);
+    updateSummaryMetricsAndCharts(keys, cityKey, mmKey, categoryKey, bedsKey, totalSoldKey);
   });
 
   // Expand Modal Listeners
-  $('#expandCityChart').on('click', () => openModalChart('Sold % by City', currentSortedCities, '#3b82f6'));
   $('#expandMMChart').on('click', () => openModalChart('Sold % by Micro-Market', currentSortedMM, '#10b981'));
+  $('#expandCityChart').on('click', () => openModalChart('Sold % by City', currentSortedCities, '#3b82f6'));
+  $('#expandCategoryChart').on('click', () => openModalChart('Sold % by Category', currentSortedCategory, '#8b5cf6'));
   $('#closeModal').on('click', closeModal);
   $('#chartModal').on('click', function(e) {
     if (e.target === this) closeModal();
@@ -159,7 +161,7 @@ function populateDropdown(selectId, colKey, rowData, defaultLabel) {
   });
 }
 
-function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldKey) {
+function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, categoryKey, bedsKey, totalSoldKey) {
   if (!dataTableInstance) return;
 
   const visibleRows = dataTableInstance.rows({ search: 'applied' }).data().toArray();
@@ -169,12 +171,14 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
 
   const cityTotals = {};
   const mmTotals = {};
+  const categoryTotals = {};
 
   visibleRows.forEach(row => {
     const beds = parseNum(row[bedsKey]);
     const sold = parseNum(row[totalSoldKey]);
     const city = row[cityKey] || 'Unknown';
     const mm = row[mmKey] || 'Unknown';
+    const category = row[categoryKey] || 'Unknown';
 
     totalBeds += beds;
     totalSold += sold;
@@ -186,6 +190,10 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
     if (!mmTotals[mm]) mmTotals[mm] = { beds: 0, sold: 0 };
     mmTotals[mm].beds += beds;
     mmTotals[mm].sold += sold;
+
+    if (!categoryTotals[category]) categoryTotals[category] = { beds: 0, sold: 0 };
+    categoryTotals[category].beds += beds;
+    categoryTotals[category].sold += sold;
   });
 
   // Update Top KPI Cards
@@ -195,6 +203,14 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
   const overallPct = totalBeds > 0 ? ((totalSold / totalBeds) * 100).toFixed(1) : 0;
   $('#kpiPct').text(overallPct + '%');
 
+  // Compute Micro-Market Occupancy %
+  currentSortedMM = Object.entries(mmTotals)
+    .map(([mm, data]) => ({
+      name: mm,
+      pct: data.beds > 0 ? parseFloat(((data.sold / data.beds) * 100).toFixed(1)) : 0
+    }))
+    .sort((a, b) => b.pct - a.pct);
+
   // Compute City Occupancy %
   currentSortedCities = Object.entries(cityTotals)
     .map(([city, data]) => ({
@@ -203,15 +219,53 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
     }))
     .sort((a, b) => b.pct - a.pct);
 
-  // Compute Micro Market Occupancy %
-  currentSortedMM = Object.entries(mmTotals)
-    .map(([mm, data]) => ({
-      name: mm,
+  // Compute Category Occupancy %
+  currentSortedCategory = Object.entries(categoryTotals)
+    .map(([cat, data]) => ({
+      name: cat,
       pct: data.beds > 0 ? parseFloat(((data.sold / data.beds) * 100).toFixed(1)) : 0
     }))
     .sort((a, b) => b.pct - a.pct);
 
-  // Render City Chart
+  // 1. Render Micro Market Chart (Top Full-Width Row)
+  const showMMLabels = currentSortedMM.length <= 15;
+
+  if (mmChartInstance) mmChartInstance.destroy();
+  const ctxMM = document.getElementById('channelChart').getContext('2d');
+  mmChartInstance = new Chart(ctxMM, {
+    type: 'bar',
+    data: {
+      labels: currentSortedMM.map(i => i.name),
+      datasets: [{
+        label: 'Occupancy %',
+        data: currentSortedMM.map(i => i.pct),
+        backgroundColor: '#10b981',
+        borderRadius: 4
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      layout: { padding: { top: showMMLabels ? 20 : 0 } },
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: (ctx) => ` Occupancy: ${ctx.raw}%` } },
+        datalabels: {
+          display: showMMLabels,
+          anchor: 'end',
+          align: 'top',
+          color: '#2c3e50',
+          font: { weight: 'bold', size: 10 },
+          formatter: (value) => value + '%'
+        }
+      },
+      scales: {
+        y: { beginAtZero: true, max: showMMLabels ? 110 : 100, ticks: { callback: (val) => val <= 100 ? val + '%' : '' } }
+      }
+    }
+  });
+
+  // 2. Render City Chart (Bottom Left)
   if (cityChartInstance) cityChartInstance.destroy();
   const ctxCity = document.getElementById('cityChart').getContext('2d');
   cityChartInstance = new Chart(ctxCity, {
@@ -246,31 +300,28 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
     }
   });
 
-  // Render Micro Market Chart
-  const showMMLabels = currentSortedMM.length <= 15;
-
-  if (mmChartInstance) mmChartInstance.destroy();
-  const ctxMM = document.getElementById('channelChart').getContext('2d');
-  mmChartInstance = new Chart(ctxMM, {
+  // 3. Render Category Chart (Bottom Right)
+  if (categoryChartInstance) categoryChartInstance.destroy();
+  const ctxCategory = document.getElementById('categoryChart').getContext('2d');
+  categoryChartInstance = new Chart(ctxCategory, {
     type: 'bar',
     data: {
-      labels: currentSortedMM.map(i => i.name),
+      labels: currentSortedCategory.map(i => i.name),
       datasets: [{
         label: 'Occupancy %',
-        data: currentSortedMM.map(i => i.pct),
-        backgroundColor: '#10b981',
+        data: currentSortedCategory.map(i => i.pct),
+        backgroundColor: '#8b5cf6', // Purple color theme for Category
         borderRadius: 4
       }]
     },
     options: {
       responsive: true,
       maintainAspectRatio: false,
-      layout: { padding: { top: showMMLabels ? 20 : 0 } },
+      layout: { padding: { top: 20 } },
       plugins: {
         legend: { display: false },
         tooltip: { callbacks: { label: (ctx) => ` Occupancy: ${ctx.raw}%` } },
         datalabels: {
-          display: showMMLabels,
           anchor: 'end',
           align: 'top',
           color: '#2c3e50',
@@ -279,7 +330,7 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, bedsKey, totalSoldK
         }
       },
       scales: {
-        y: { beginAtZero: true, max: showMMLabels ? 110 : 100, ticks: { callback: (val) => val <= 100 ? val + '%' : '' } }
+        y: { beginAtZero: true, max: 110, ticks: { callback: (val) => val <= 100 ? val + '%' : '' } }
       }
     }
   });
