@@ -1,3 +1,5 @@
+const ALLOWED_DOMAIN = "stanzaliving.com"; //  Authorized Domain for Google Sign-In
+
 let dataTableInstance = null;
 let cityChartInstance = null;
 let mmChartInstance = null;
@@ -11,6 +13,43 @@ let currentSortedCategory = [];
 // Register ChartDataLabels plugin globally
 Chart.register(ChartDataLabels);
 
+// --- Google Authentication Gate Logic ---
+function handleCredentialResponse(response) {
+  const payload = parseJwt(response.credential);
+  
+  if (payload.email && payload.email.endsWith('@' + ALLOWED_DOMAIN)) {
+    sessionStorage.setItem('dashboard_auth_email', payload.email);
+    document.getElementById('googleAuthModal').style.display = 'none';
+    loadData();
+  } else {
+    const errorElem = document.getElementById('googleAuthError');
+    if (errorElem) {
+      errorElem.innerText = `Access denied (${payload.email}). You must sign in with a @${ALLOWED_DOMAIN} email.`;
+      errorElem.style.display = 'block';
+    }
+  }
+}
+
+function parseJwt(token) {
+  const base64Url = token.split('.')[1];
+  const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+  const jsonPayload = decodeURIComponent(window.atob(base64).split('').map(c => {
+    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+  }).join(''));
+  return JSON.parse(jsonPayload);
+}
+
+// Auto-login check if session is already authenticated
+document.addEventListener('DOMContentLoaded', () => {
+  const savedEmail = sessionStorage.getItem('dashboard_auth_email');
+  if (savedEmail && savedEmail.endsWith('@' + ALLOWED_DOMAIN)) {
+    const modal = document.getElementById('googleAuthModal');
+    if (modal) modal.style.display = 'none';
+    loadData();
+  }
+});
+
+// --- Dashboard Code ---
 function loadData() {
   fetch('data.json')
     .then(response => response.json())
@@ -227,7 +266,7 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, categoryKey, bedsKe
     }))
     .sort((a, b) => b.pct - a.pct);
 
-  // 1. Render Micro Market Chart (Top Full-Width Row)
+  // 1. Render Micro Market Chart
   const showMMLabels = currentSortedMM.length <= 15;
 
   if (mmChartInstance) mmChartInstance.destroy();
@@ -265,7 +304,7 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, categoryKey, bedsKe
     }
   });
 
-  // 2. Render City Chart (Bottom Left)
+  // 2. Render City Chart
   if (cityChartInstance) cityChartInstance.destroy();
   const ctxCity = document.getElementById('cityChart').getContext('2d');
   cityChartInstance = new Chart(ctxCity, {
@@ -300,7 +339,7 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, categoryKey, bedsKe
     }
   });
 
-  // 3. Render Category Chart (Bottom Right)
+  // 3. Render Category Chart
   if (categoryChartInstance) categoryChartInstance.destroy();
   const ctxCategory = document.getElementById('categoryChart').getContext('2d');
   categoryChartInstance = new Chart(ctxCategory, {
@@ -310,7 +349,7 @@ function updateSummaryMetricsAndCharts(keys, cityKey, mmKey, categoryKey, bedsKe
       datasets: [{
         label: 'Occupancy %',
         data: currentSortedCategory.map(i => i.pct),
-        backgroundColor: '#8b5cf6', // Purple color theme for Category
+        backgroundColor: '#8b5cf6',
         borderRadius: 4
       }]
     },
@@ -395,5 +434,3 @@ function openModalChart(title, dataItems, barColor) {
 function closeModal() {
   $('#chartModal').css('display', 'none');
 }
-
-document.addEventListener('DOMContentLoaded', loadData);

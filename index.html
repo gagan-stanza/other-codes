@@ -188,7 +188,6 @@
       gap: 1rem;
     }
 
-    /* Full-width style for top Micro-Market chart */
     .chart-card-full {
       grid-column: 1 / -1;
     }
@@ -247,7 +246,7 @@
       width: 100%;
     }
 
-    /* Modal */
+    /* Modal Styling */
     .modal-overlay {
       display: none;
       position: fixed;
@@ -359,6 +358,29 @@
 </head>
 <body>
 
+  <!-- Google Authentication Lock Modal -->
+  <div class="modal-overlay" id="googleAuthModal" style="display: flex;">
+    <div class="modal-content" style="max-width: 420px; height: auto; text-align: center; gap: 1rem; padding: 2.2rem 2rem;">
+      <h2 style="margin: 0; font-size: 1.3rem;">Organization Access</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin: 0;">
+        Sign in with your official company email to view the Pan-India Dashboard.
+      </p>
+
+      <!-- Google Sign-In SDK Render Container -->
+      <div id="g_id_onload"
+        data-client_id="610095419259-92iifkk4668pd8n529sh84jbi1oie12m.apps.googleusercontent.com"
+        data-callback="handleCredentialResponse"
+        data-auto_prompt="false">
+      </div>
+      
+      <div style="display: flex; justify-content: center; margin-top: 0.5rem;">
+        <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"></div>
+      </div>
+
+      <div id="googleAuthError" style="color: #ef4444; font-size: 0.85rem; display: none; margin-top: 0.5rem;"></div>
+    </div>
+  </div>
+
   <div class="dashboard-container">
     <div class="header-section">
       <h1>OVERALL BEDS SOLD: PAN-INDIA</h1>
@@ -398,9 +420,7 @@
         <button class="reset-btn" id="resetFilters">Reset All Filters</button>
       </div>
 
-      <div class="export-right" id="exportContainer">
-        <!-- Copy, CSV, Excel buttons attached dynamically via JS -->
-      </div>
+      <div class="export-right" id="exportContainer"></div>
     </div>
 
     <!-- 3. Dynamic Charts Grid -->
@@ -460,6 +480,7 @@
   </div>
 
   <!-- JS Dependencies -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/2.4.1/js/dataTables.buttons.min.js"></script>
