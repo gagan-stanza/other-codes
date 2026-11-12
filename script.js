@@ -1,4 +1,5 @@
-const ALLOWED_DOMAIN = "stanzaliving.com"; //  Authorized Domain for Google Sign-In
+const ALLOWED_DOMAIN = "stanzaliving.com"; // Authorized Domain for Google Sign-In
+const SESSION_DURATION_DAYS = 7; // Session stays active for 7 days across all tabs
 
 let dataTableInstance = null;
 let cityChartInstance = null;
@@ -18,7 +19,12 @@ function handleCredentialResponse(response) {
   const payload = parseJwt(response.credential);
   
   if (payload.email && payload.email.endsWith('@' + ALLOWED_DOMAIN)) {
-    sessionStorage.setItem('dashboard_auth_email', payload.email);
+    const authSession = {
+      email: payload.email,
+      expiresAt: Date.now() + (SESSION_DURATION_DAYS * 24 * 60 * 60 * 1000)
+    };
+    localStorage.setItem('dashboard_auth_session', JSON.stringify(authSession));
+    
     document.getElementById('googleAuthModal').style.display = 'none';
     loadData();
   } else {
@@ -39,13 +45,26 @@ function parseJwt(token) {
   return JSON.parse(jsonPayload);
 }
 
-// Auto-login check if session is already authenticated
+// Auto-login check across all tabs if 7-day session hasn't expired
 document.addEventListener('DOMContentLoaded', () => {
-  const savedEmail = sessionStorage.getItem('dashboard_auth_email');
-  if (savedEmail && savedEmail.endsWith('@' + ALLOWED_DOMAIN)) {
-    const modal = document.getElementById('googleAuthModal');
-    if (modal) modal.style.display = 'none';
-    loadData();
+  const savedSessionRaw = localStorage.getItem('dashboard_auth_session');
+  if (savedSessionRaw) {
+    try {
+      const session = JSON.parse(savedSessionRaw);
+      const isValidDomain = session.email && session.email.endsWith('@' + ALLOWED_DOMAIN);
+      const isNotExpired = session.expiresAt && Date.now() < session.expiresAt;
+
+      if (isValidDomain && isNotExpired) {
+        const modal = document.getElementById('googleAuthModal');
+        if (modal) modal.style.display = 'none';
+        loadData();
+        return;
+      } else {
+        localStorage.removeItem('dashboard_auth_session');
+      }
+    } catch (e) {
+      localStorage.removeItem('dashboard_auth_session');
+    }
   }
 });
 
