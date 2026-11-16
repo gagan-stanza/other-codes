@@ -41,8 +41,8 @@
     "Property": "Toulon House",
     "Category": "SCHOLAR",
     "Ops Beds #": "153.0",
-    "Sold Beds #": "103.0",
-    "Sold %": "67%"
+    "Sold Beds #": "105.0",
+    "Sold %": "69%"
   },
   {
     "City": "Hyderabad",
@@ -50,8 +50,8 @@
     "Property": "Winnipeg House",
     "Category": "SUITS",
     "Ops Beds #": "185.0",
-    "Sold Beds #": "117.5",
-    "Sold %": "64%"
+    "Sold Beds #": "119.5",
+    "Sold %": "65%"
   },
   {
     "City": "Chennai",
@@ -59,8 +59,8 @@
     "Property": "Murcia House",
     "Category": "SCHOLAR",
     "Ops Beds #": "108.0",
-    "Sold Beds #": "104.0",
-    "Sold %": "96%"
+    "Sold Beds #": "105.0",
+    "Sold %": "97%"
   },
   {
     "City": "Pune",
@@ -86,7 +86,7 @@
     "Property": "Turin House",
     "Category": "SUITS",
     "Ops Beds #": "0.0",
-    "Sold Beds #": "121.0",
+    "Sold Beds #": "120.0",
     "Sold %": "-"
   },
   {
@@ -239,8 +239,8 @@
     "Property": "Callao House",
     "Category": "SCHOLAR",
     "Ops Beds #": "102.0",
-    "Sold Beds #": "60.0",
-    "Sold %": "59%"
+    "Sold Beds #": "62.0",
+    "Sold %": "61%"
   },
   {
     "City": "Delhi",
@@ -266,8 +266,8 @@
     "Property": "Springbok House",
     "Category": "SUITS",
     "Ops Beds #": "160.0",
-    "Sold Beds #": "142.0",
-    "Sold %": "89%"
+    "Sold Beds #": "140.0",
+    "Sold %": "88%"
   },
   {
     "City": "Bangalore",
@@ -500,8 +500,8 @@
     "Property": "Sao Paulo House",
     "Category": "SUITS",
     "Ops Beds #": "568.0",
-    "Sold Beds #": "209.0",
-    "Sold %": "37%"
+    "Sold Beds #": "205.0",
+    "Sold %": "36%"
   },
   {
     "City": "Bangalore",
@@ -716,8 +716,8 @@
     "Property": "Nottingham House",
     "Category": "SUITS",
     "Ops Beds #": "285.0",
-    "Sold Beds #": "215.0",
-    "Sold %": "75%"
+    "Sold Beds #": "218.0",
+    "Sold %": "76%"
   },
   {
     "City": "Bangalore",
@@ -761,7 +761,7 @@
     "Property": "Positano House",
     "Category": "SUITS",
     "Ops Beds #": "198.0",
-    "Sold Beds #": "145.0",
+    "Sold Beds #": "144.0",
     "Sold %": "73%"
   },
   {
@@ -770,8 +770,8 @@
     "Property": "Doncaster House",
     "Category": "SUITS",
     "Ops Beds #": "69.0",
-    "Sold Beds #": "26.0",
-    "Sold %": "38%"
+    "Sold Beds #": "27.0",
+    "Sold %": "39%"
   },
   {
     "City": "Chennai",
@@ -941,8 +941,8 @@
     "Property": "Mendoza House",
     "Category": "SUITS",
     "Ops Beds #": "97.0",
-    "Sold Beds #": "101.0",
-    "Sold %": "104%"
+    "Sold Beds #": "102.0",
+    "Sold %": "105%"
   },
   {
     "City": "Hyderabad",
@@ -968,8 +968,8 @@
     "Property": "Mildura House",
     "Category": "SCHOLAR",
     "Ops Beds #": "61.0",
-    "Sold Beds #": "42.0",
-    "Sold %": "69%"
+    "Sold Beds #": "41.0",
+    "Sold %": "67%"
   },
   {
     "City": "Delhi",
@@ -986,8 +986,8 @@
     "Property": "Brussels House",
     "Category": "SUITS",
     "Ops Beds #": "415.0",
-    "Sold Beds #": "319.0",
-    "Sold %": "77%"
+    "Sold Beds #": "316.0",
+    "Sold %": "76%"
   },
   {
     "City": "Pune",
@@ -1013,8 +1013,8 @@
     "Property": "Ronda House",
     "Category": "SCHOLAR",
     "Ops Beds #": "124.0",
-    "Sold Beds #": "109.0",
-    "Sold %": "88%"
+    "Sold Beds #": "108.0",
+    "Sold %": "87%"
   },
   {
     "City": "Bangalore",
@@ -1022,8 +1022,8 @@
     "Property": "Monza House",
     "Category": "SUITS",
     "Ops Beds #": "123.0",
-    "Sold Beds #": "90.0",
-    "Sold %": "73%"
+    "Sold Beds #": "89.0",
+    "Sold %": "72%"
   },
   {
     "City": "Vadodara",
@@ -1067,7 +1067,7 @@
     "Property": "Seattle House",
     "Category": "SUITS",
     "Ops Beds #": "415.0",
-    "Sold Beds #": "324.0",
+    "Sold Beds #": "323.0",
     "Sold %": "78%"
   },
   {
@@ -1085,7 +1085,7 @@
     "Property": "Limoges House",
     "Category": "SUITS",
     "Ops Beds #": "110.0",
-    "Sold Beds #": "17.0",
+    "Sold Beds #": "16.0",
     "Sold %": "15%"
   },
   {
@@ -1301,8 +1301,8 @@
     "Property": "Malmo House",
     "Category": "SCHOLAR",
     "Ops Beds #": "64.0",
-    "Sold Beds #": "63.0",
-    "Sold %": "98%"
+    "Sold Beds #": "64.0",
+    "Sold %": "100%"
   },
   {
     "City": "Bangalore",
@@ -1481,8 +1481,8 @@
     "Property": "Evanston House",
     "Category": "SUITS",
     "Ops Beds #": "104.0",
-    "Sold Beds #": "95.0",
-    "Sold %": "91%"
+    "Sold Beds #": "96.0",
+    "Sold %": "92%"
   },
   {
     "City": "Delhi",
@@ -1679,7 +1679,7 @@
     "Property": "Tunis House",
     "Category": "SCHOLAR",
     "Ops Beds #": "384.0",
-    "Sold Beds #": "191.5",
+    "Sold Beds #": "190.5",
     "Sold %": "50%"
   },
   {
@@ -1688,8 +1688,8 @@
     "Property": "Torreon House",
     "Category": "SCHOLAR",
     "Ops Beds #": "60.0",
-    "Sold Beds #": "53.0",
-    "Sold %": "88%"
+    "Sold Beds #": "52.0",
+    "Sold %": "87%"
   },
   {
     "City": "Chennai",
@@ -1697,8 +1697,8 @@
     "Property": "Mazatlan House",
     "Category": "SUITS",
     "Ops Beds #": "70.0",
-    "Sold Beds #": "51.0",
-    "Sold %": "73%"
+    "Sold Beds #": "52.0",
+    "Sold %": "74%"
   },
   {
     "City": "Hyderabad",
@@ -1706,8 +1706,8 @@
     "Property": "Bagan House",
     "Category": "SUITS",
     "Ops Beds #": "212.0",
-    "Sold Beds #": "154.5",
-    "Sold %": "73%"
+    "Sold Beds #": "153.5",
+    "Sold %": "72%"
   },
   {
     "City": "Mumbai",
@@ -1715,8 +1715,8 @@
     "Property": "Benin House",
     "Category": "SUITS",
     "Ops Beds #": "60.0",
-    "Sold Beds #": "49.0",
-    "Sold %": "82%"
+    "Sold Beds #": "50.0",
+    "Sold %": "83%"
   },
   {
     "City": "Bangalore",
@@ -1994,8 +1994,8 @@
     "Property": "Watford House",
     "Category": "SCHOLAR",
     "Ops Beds #": "128.0",
-    "Sold Beds #": "92.0",
-    "Sold %": "72%"
+    "Sold Beds #": "94.0",
+    "Sold %": "73%"
   },
   {
     "City": "Bangalore",
@@ -2030,8 +2030,8 @@
     "Property": "Alanya House",
     "Category": "SUITS",
     "Ops Beds #": "56.0",
-    "Sold Beds #": "46.0",
-    "Sold %": "82%"
+    "Sold Beds #": "45.0",
+    "Sold %": "80%"
   },
   {
     "City": "Bangalore",
@@ -2039,8 +2039,8 @@
     "Property": "Shanghai House",
     "Category": "SUITS",
     "Ops Beds #": "775.0",
-    "Sold Beds #": "547.0",
-    "Sold %": "71%"
+    "Sold Beds #": "542.0",
+    "Sold %": "70%"
   },
   {
     "City": "Pune",
@@ -2048,8 +2048,8 @@
     "Property": "Reynosa House",
     "Category": "SUITS",
     "Ops Beds #": "47.0",
-    "Sold Beds #": "36.0",
-    "Sold %": "77%"
+    "Sold Beds #": "35.0",
+    "Sold %": "74%"
   },
   {
     "City": "Pune",
@@ -2192,8 +2192,8 @@
     "Property": "Vernier House",
     "Category": "SCHOLAR",
     "Ops Beds #": "80.0",
-    "Sold Beds #": "54.7",
-    "Sold %": "68%"
+    "Sold Beds #": "53.7",
+    "Sold %": "67%"
   },
   {
     "City": "Chennai",
@@ -2201,8 +2201,8 @@
     "Property": "Greensboro House",
     "Category": "SUITS",
     "Ops Beds #": "63.0",
-    "Sold Beds #": "48.0",
-    "Sold %": "76%"
+    "Sold Beds #": "49.0",
+    "Sold %": "78%"
   },
   {
     "City": "Bangalore",
@@ -2210,7 +2210,7 @@
     "Property": "Bilbao House",
     "Category": "SUITS",
     "Ops Beds #": "471.0",
-    "Sold Beds #": "378.5",
+    "Sold Beds #": "376.5",
     "Sold %": "80%"
   },
   {
@@ -2417,8 +2417,8 @@
     "Property": "Como House",
     "Category": "SCHOLAR",
     "Ops Beds #": "84.0",
-    "Sold Beds #": "70.0",
-    "Sold %": "83%"
+    "Sold Beds #": "71.0",
+    "Sold %": "85%"
   },
   {
     "City": "Pune",
@@ -2705,8 +2705,8 @@
     "Property": "Memphis House",
     "Category": "SUITS",
     "Ops Beds #": "575.0",
-    "Sold Beds #": "229.5",
-    "Sold %": "40%"
+    "Sold Beds #": "227.0",
+    "Sold %": "39%"
   },
   {
     "City": "Hyderabad",
@@ -2732,8 +2732,8 @@
     "Property": "Salto House",
     "Category": "SCHOLAR",
     "Ops Beds #": "83.0",
-    "Sold Beds #": "57.0",
-    "Sold %": "69%"
+    "Sold Beds #": "58.0",
+    "Sold %": "70%"
   },
   {
     "City": "Bangalore",
@@ -2750,8 +2750,8 @@
     "Property": "Parma House",
     "Category": "SUITS",
     "Ops Beds #": "126.0",
-    "Sold Beds #": "92.5",
-    "Sold %": "73%"
+    "Sold Beds #": "88.5",
+    "Sold %": "70%"
   },
   {
     "City": "Bangalore",
@@ -2903,8 +2903,8 @@
     "Property": "Jounieh House",
     "Category": "SUITS",
     "Ops Beds #": "113.0",
-    "Sold Beds #": "102.0",
-    "Sold %": "90%"
+    "Sold Beds #": "103.0",
+    "Sold %": "91%"
   },
   {
     "City": "Bangalore",
@@ -2921,8 +2921,8 @@
     "Property": "Serov House",
     "Category": "SCHOLAR",
     "Ops Beds #": "95.0",
-    "Sold Beds #": "54.0",
-    "Sold %": "57%"
+    "Sold Beds #": "53.0",
+    "Sold %": "56%"
   },
   {
     "City": "Dehradun",
@@ -2939,8 +2939,8 @@
     "Property": "Nuremberg House",
     "Category": "SCHOLAR",
     "Ops Beds #": "135.0",
-    "Sold Beds #": "99.0",
-    "Sold %": "73%"
+    "Sold Beds #": "100.0",
+    "Sold %": "74%"
   },
   {
     "City": "Chennai",
@@ -2966,8 +2966,8 @@
     "Property": "Sandakan House",
     "Category": "SCHOLAR",
     "Ops Beds #": "88.0",
-    "Sold Beds #": "76.0",
-    "Sold %": "86%"
+    "Sold Beds #": "77.0",
+    "Sold %": "88%"
   },
   {
     "City": "Coimbatore",
@@ -2975,8 +2975,8 @@
     "Property": "Rivas House",
     "Category": "SCHOLAR",
     "Ops Beds #": "60.0",
-    "Sold Beds #": "51.0",
-    "Sold %": "85%"
+    "Sold Beds #": "52.0",
+    "Sold %": "87%"
   },
   {
     "City": "Hyderabad",
@@ -3182,8 +3182,8 @@
     "Property": "Lafayette House",
     "Category": "SUITS",
     "Ops Beds #": "80.0",
-    "Sold Beds #": "60.0",
-    "Sold %": "75%"
+    "Sold Beds #": "63.0",
+    "Sold %": "79%"
   },
   {
     "City": "Bangalore",
@@ -3200,8 +3200,8 @@
     "Property": "Luzon House",
     "Category": "SCHOLAR",
     "Ops Beds #": "86.0",
-    "Sold Beds #": "43.0",
-    "Sold %": "50%"
+    "Sold Beds #": "42.0",
+    "Sold %": "49%"
   },
   {
     "City": "Hyderabad",
@@ -3209,8 +3209,8 @@
     "Property": "Meknes House",
     "Category": "SCHOLAR",
     "Ops Beds #": "66.0",
-    "Sold Beds #": "47.0",
-    "Sold %": "71%"
+    "Sold Beds #": "48.0",
+    "Sold %": "73%"
   },
   {
     "City": "Greater Noida",
@@ -3218,7 +3218,7 @@
     "Property": "Paris House",
     "Category": "SCHOLAR",
     "Ops Beds #": "421.0",
-    "Sold Beds #": "286.0",
+    "Sold Beds #": "287.0",
     "Sold %": "68%"
   },
   {
@@ -3227,8 +3227,8 @@
     "Property": "Modesto House",
     "Category": "SUITS",
     "Ops Beds #": "72.0",
-    "Sold Beds #": "73.0",
-    "Sold %": "101%"
+    "Sold Beds #": "72.0",
+    "Sold %": "100%"
   },
   {
     "City": "Indore",
@@ -3641,8 +3641,8 @@
     "Property": "Clarksville House",
     "Category": "SCHOLAR",
     "Ops Beds #": "81.0",
-    "Sold Beds #": "79.0",
-    "Sold %": "98%"
+    "Sold Beds #": "81.0",
+    "Sold %": "100%"
   },
   {
     "City": "Vadodara",
@@ -3911,8 +3911,8 @@
     "Property": "Rimini House",
     "Category": "SUITS",
     "Ops Beds #": "177.0",
-    "Sold Beds #": "151.0",
-    "Sold %": "85%"
+    "Sold Beds #": "153.0",
+    "Sold %": "86%"
   },
   {
     "City": "Bangalore",
@@ -3938,7 +3938,7 @@
     "Property": "Adana House",
     "Category": "SCHOLAR",
     "Ops Beds #": "455.0",
-    "Sold Beds #": "177.0",
+    "Sold Beds #": "178.5",
     "Sold %": "39%"
   },
   {
@@ -3956,8 +3956,8 @@
     "Property": "Santa Barbara House",
     "Category": "SCHOLAR",
     "Ops Beds #": "108.0",
-    "Sold Beds #": "84.0",
-    "Sold %": "78%"
+    "Sold Beds #": "82.0",
+    "Sold %": "76%"
   },
   {
     "City": "Bangalore",
@@ -3965,8 +3965,8 @@
     "Property": "Wichita House",
     "Category": "SCHOLAR",
     "Ops Beds #": "33.0",
-    "Sold Beds #": "28.0",
-    "Sold %": "85%"
+    "Sold Beds #": "26.0",
+    "Sold %": "79%"
   },
   {
     "City": "Hyderabad",
@@ -3974,7 +3974,7 @@
     "Property": "Burnley House",
     "Category": "SUITS",
     "Ops Beds #": "212.0",
-    "Sold Beds #": "132.5",
+    "Sold Beds #": "134.5",
     "Sold %": "63%"
   },
   {
@@ -3983,7 +3983,7 @@
     "Property": "Bochum House",
     "Category": "SUITS",
     "Ops Beds #": "258.0",
-    "Sold Beds #": "178.0",
+    "Sold Beds #": "177.0",
     "Sold %": "69%"
   },
   {
@@ -4154,8 +4154,8 @@
     "Property": "Segovia House",
     "Category": "SCHOLAR",
     "Ops Beds #": "36.0",
-    "Sold Beds #": "31.0",
-    "Sold %": "86%"
+    "Sold Beds #": "32.0",
+    "Sold %": "89%"
   },
   {
     "City": "Chennai",
@@ -4415,8 +4415,8 @@
     "Property": "Culiacan House",
     "Category": "SCHOLAR",
     "Ops Beds #": "66.0",
-    "Sold Beds #": "56.0",
-    "Sold %": "85%"
+    "Sold Beds #": "58.0",
+    "Sold %": "88%"
   },
   {
     "City": "Chennai",
@@ -4424,8 +4424,8 @@
     "Property": "Shumen House",
     "Category": "SCHOLAR",
     "Ops Beds #": "92.0",
-    "Sold Beds #": "76.0",
-    "Sold %": "83%"
+    "Sold Beds #": "75.0",
+    "Sold %": "82%"
   },
   {
     "City": "Bangalore",
@@ -4667,8 +4667,8 @@
     "Property": "Munich House",
     "Category": "SUITS",
     "Ops Beds #": "474.0",
-    "Sold Beds #": "427.7",
-    "Sold %": "90%"
+    "Sold Beds #": "434.7",
+    "Sold %": "92%"
   },
   {
     "City": "Bangalore",
@@ -4829,8 +4829,8 @@
     "Property": "Laramie House",
     "Category": "SCHOLAR",
     "Ops Beds #": "280.0",
-    "Sold Beds #": "102.0",
-    "Sold %": "36%"
+    "Sold Beds #": "96.5",
+    "Sold %": "34%"
   },
   {
     "City": "Indore",
@@ -5045,8 +5045,8 @@
     "Property": "Rijeka House",
     "Category": "SCHOLAR",
     "Ops Beds #": "134.0",
-    "Sold Beds #": "95.5",
-    "Sold %": "71%"
+    "Sold Beds #": "96.0",
+    "Sold %": "72%"
   },
   {
     "City": "Bangalore",
@@ -5072,7 +5072,7 @@
     "Property": "Marseille House",
     "Category": "SUITS",
     "Ops Beds #": "639.0",
-    "Sold Beds #": "544.0",
+    "Sold Beds #": "546.0",
     "Sold %": "85%"
   },
   {
@@ -5099,8 +5099,8 @@
     "Property": "Cardiff House",
     "Category": "SCHOLAR",
     "Ops Beds #": "72.0",
-    "Sold Beds #": "68.0",
-    "Sold %": "94%"
+    "Sold Beds #": "69.0",
+    "Sold %": "96%"
   },
   {
     "City": "Bangalore",
@@ -5108,8 +5108,8 @@
     "Property": "Modena House",
     "Category": "SUITS",
     "Ops Beds #": "36.0",
-    "Sold Beds #": "39.0",
-    "Sold %": "108%"
+    "Sold Beds #": "37.0",
+    "Sold %": "103%"
   },
   {
     "City": "Kochi",
@@ -5117,8 +5117,8 @@
     "Property": "Maseru House",
     "Category": "SCHOLAR",
     "Ops Beds #": "67.0",
-    "Sold Beds #": "54.0",
-    "Sold %": "81%"
+    "Sold Beds #": "56.0",
+    "Sold %": "84%"
   },
   {
     "City": "Chennai",
@@ -5135,8 +5135,8 @@
     "Property": "Tallinn House",
     "Category": "SUITS",
     "Ops Beds #": "177.0",
-    "Sold Beds #": "153.0",
-    "Sold %": "86%"
+    "Sold Beds #": "155.0",
+    "Sold %": "88%"
   },
   {
     "City": "Coimbatore",
@@ -5288,8 +5288,8 @@
     "Property": "Reno House",
     "Category": "SUITS",
     "Ops Beds #": "127.0",
-    "Sold Beds #": "24.0",
-    "Sold %": "19%"
+    "Sold Beds #": "8.0",
+    "Sold %": "6%"
   },
   {
     "City": "Delhi",
@@ -5306,8 +5306,8 @@
     "Property": "Pisa House",
     "Category": "SUITS",
     "Ops Beds #": "43.0",
-    "Sold Beds #": "31.0",
-    "Sold %": "72%"
+    "Sold Beds #": "30.0",
+    "Sold %": "70%"
   },
   {
     "City": "Bangalore",
@@ -5315,8 +5315,8 @@
     "Property": "Incheon House",
     "Category": "SCHOLAR",
     "Ops Beds #": "147.0",
-    "Sold Beds #": "117.2",
-    "Sold %": "80%"
+    "Sold Beds #": "120.2",
+    "Sold %": "82%"
   },
   {
     "City": "Indore",
@@ -5567,8 +5567,8 @@
     "Property": "Conway House",
     "Category": "SUITS",
     "Ops Beds #": "173.0",
-    "Sold Beds #": "117.0",
-    "Sold %": "68%"
+    "Sold Beds #": "116.0",
+    "Sold %": "67%"
   },
   {
     "City": "Indore",
@@ -5576,8 +5576,8 @@
     "Property": "Trafford House",
     "Category": "SCHOLAR",
     "Ops Beds #": "88.0",
-    "Sold Beds #": "70.5",
-    "Sold %": "80%"
+    "Sold Beds #": "72.0",
+    "Sold %": "82%"
   },
   {
     "City": "Hyderabad",
@@ -5585,8 +5585,8 @@
     "Property": "Belgrade House",
     "Category": "SCHOLAR",
     "Ops Beds #": "606.0",
-    "Sold Beds #": "400.0",
-    "Sold %": "66%"
+    "Sold Beds #": "393.5",
+    "Sold %": "65%"
   },
   {
     "City": "Bangalore",
@@ -5594,7 +5594,7 @@
     "Property": "Manchester House",
     "Category": "SUITS",
     "Ops Beds #": "371.0",
-    "Sold Beds #": "306.0",
+    "Sold Beds #": "303.0",
     "Sold %": "82%"
   },
   {
@@ -5810,8 +5810,8 @@
     "Property": "Odessa House",
     "Category": "SCHOLAR",
     "Ops Beds #": "112.0",
-    "Sold Beds #": "86.7",
-    "Sold %": "77%"
+    "Sold Beds #": "84.7",
+    "Sold %": "76%"
   },
   {
     "City": "Bangalore",
@@ -5828,8 +5828,8 @@
     "Property": "Fernley House",
     "Category": "SCHOLAR",
     "Ops Beds #": "94.0",
-    "Sold Beds #": "77.0",
-    "Sold %": "82%"
+    "Sold Beds #": "76.0",
+    "Sold %": "81%"
   },
   {
     "City": "Bangalore",
@@ -6017,8 +6017,8 @@
     "Property": "Mckinney House",
     "Category": "SCHOLAR",
     "Ops Beds #": "86.0",
-    "Sold Beds #": "76.0",
-    "Sold %": "88%"
+    "Sold Beds #": "77.0",
+    "Sold %": "90%"
   },
   {
     "City": "Bangalore",
@@ -6026,8 +6026,8 @@
     "Property": "Medan House",
     "Category": "SUITS",
     "Ops Beds #": "110.0",
-    "Sold Beds #": "76.0",
-    "Sold %": "69%"
+    "Sold Beds #": "77.0",
+    "Sold %": "70%"
   },
   {
     "City": "Gurgaon",
@@ -6044,8 +6044,8 @@
     "Property": "Weymouth House",
     "Category": "SCHOLAR",
     "Ops Beds #": "62.0",
-    "Sold Beds #": "57.0",
-    "Sold %": "92%"
+    "Sold Beds #": "58.0",
+    "Sold %": "94%"
   },
   {
     "City": "Indore",
@@ -6053,8 +6053,8 @@
     "Property": "Beira House",
     "Category": "SCHOLAR",
     "Ops Beds #": "114.0",
-    "Sold Beds #": "84.5",
-    "Sold %": "74%"
+    "Sold Beds #": "83.5",
+    "Sold %": "73%"
   },
   {
     "City": "Pune",
@@ -6071,8 +6071,8 @@
     "Property": "Monterrey House",
     "Category": "SCHOLAR",
     "Ops Beds #": "148.0",
-    "Sold Beds #": "130.0",
-    "Sold %": "88%"
+    "Sold Beds #": "129.0",
+    "Sold %": "87%"
   },
   {
     "City": "Chennai",
@@ -6089,8 +6089,8 @@
     "Property": "Cologne House",
     "Category": "SCHOLAR",
     "Ops Beds #": "62.0",
-    "Sold Beds #": "56.0",
-    "Sold %": "90%"
+    "Sold Beds #": "55.0",
+    "Sold %": "89%"
   },
   {
     "City": "Bangalore",
@@ -6260,8 +6260,8 @@
     "Property": "Crotone House",
     "Category": "SCHOLAR",
     "Ops Beds #": "52.0",
-    "Sold Beds #": "49.0",
-    "Sold %": "94%"
+    "Sold Beds #": "48.0",
+    "Sold %": "92%"
   },
   {
     "City": "Bangalore",
@@ -6269,8 +6269,8 @@
     "Property": "Durham House",
     "Category": "SUITS",
     "Ops Beds #": "424.0",
-    "Sold Beds #": "231.0",
-    "Sold %": "54%"
+    "Sold Beds #": "232.0",
+    "Sold %": "55%"
   },
   {
     "City": "Pune",
@@ -6278,8 +6278,8 @@
     "Property": "Syzran House",
     "Category": "SCHOLAR",
     "Ops Beds #": "44.0",
-    "Sold Beds #": "37.0",
-    "Sold %": "84%"
+    "Sold Beds #": "38.0",
+    "Sold %": "86%"
   },
   {
     "City": "Bangalore",
@@ -6485,8 +6485,8 @@
     "Property": "Marianna House",
     "Category": "SUITS",
     "Ops Beds #": "88.0",
-    "Sold Beds #": "49.5",
-    "Sold %": "56%"
+    "Sold Beds #": "51.5",
+    "Sold %": "59%"
   },
   {
     "City": "Bangalore",
@@ -6503,7 +6503,7 @@
     "Property": "Adelaide House",
     "Category": "SCHOLAR",
     "Ops Beds #": "558.0",
-    "Sold Beds #": "431.0",
+    "Sold Beds #": "432.0",
     "Sold %": "77%"
   },
   {
@@ -6521,7 +6521,7 @@
     "Property": "Lincoln House",
     "Category": "SUITS",
     "Ops Beds #": "162.0",
-    "Sold Beds #": "92.0",
+    "Sold Beds #": "93.0",
     "Sold %": "57%"
   },
   {
@@ -6737,8 +6737,8 @@
     "Property": "Amiens House",
     "Category": "SUITS",
     "Ops Beds #": "40.0",
-    "Sold Beds #": "27.0",
-    "Sold %": "68%"
+    "Sold Beds #": "28.0",
+    "Sold %": "70%"
   },
   {
     "City": "Delhi",
@@ -6755,8 +6755,8 @@
     "Property": "Barnsley House",
     "Category": "SCHOLAR",
     "Ops Beds #": "106.0",
-    "Sold Beds #": "95.0",
-    "Sold %": "90%"
+    "Sold Beds #": "96.0",
+    "Sold %": "91%"
   },
   {
     "City": "Chennai",
@@ -6773,8 +6773,8 @@
     "Property": "Essen House",
     "Category": "SCHOLAR",
     "Ops Beds #": "94.0",
-    "Sold Beds #": "84.0",
-    "Sold %": "89%"
+    "Sold Beds #": "85.0",
+    "Sold %": "90%"
   },
   {
     "City": "Hyderabad",
@@ -7007,8 +7007,8 @@
     "Property": "Chatham House",
     "Category": "SUITS",
     "Ops Beds #": "157.0",
-    "Sold Beds #": "70.0",
-    "Sold %": "45%"
+    "Sold Beds #": "72.0",
+    "Sold %": "46%"
   },
   {
     "City": "Bangalore",
@@ -7025,8 +7025,8 @@
     "Property": "Sunderland House",
     "Category": "SUITS",
     "Ops Beds #": "119.0",
-    "Sold Beds #": "58.0",
-    "Sold %": "49%"
+    "Sold Beds #": "60.0",
+    "Sold %": "50%"
   },
   {
     "City": "Jaipur",
@@ -7070,7 +7070,7 @@
     "Property": "Cayenne House",
     "Category": "SUITS",
     "Ops Beds #": "120.0",
-    "Sold Beds #": "105.0",
+    "Sold Beds #": "106.0",
     "Sold %": "88%"
   },
   {
@@ -7079,7 +7079,7 @@
     "Property": "Tel Aviv House",
     "Category": "SUITS",
     "Ops Beds #": "593.0",
-    "Sold Beds #": "387.0",
+    "Sold Beds #": "388.0",
     "Sold %": "65%"
   },
   {
@@ -7304,8 +7304,8 @@
     "Property": "Podolsk House",
     "Category": "SUITS",
     "Ops Beds #": "88.0",
-    "Sold Beds #": "92.0",
-    "Sold %": "105%"
+    "Sold Beds #": "94.0",
+    "Sold %": "107%"
   },
   {
     "City": "Hyderabad",
@@ -7556,8 +7556,8 @@
     "Property": "Tobruk House",
     "Category": "SCHOLAR",
     "Ops Beds #": "48.0",
-    "Sold Beds #": "32.0",
-    "Sold %": "67%"
+    "Sold Beds #": "34.0",
+    "Sold %": "71%"
   },
   {
     "City": "Bangalore",
@@ -7745,8 +7745,8 @@
     "Property": "Jerez House",
     "Category": "SCHOLAR",
     "Ops Beds #": "96.0",
-    "Sold Beds #": "82.0",
-    "Sold %": "85%"
+    "Sold Beds #": "83.0",
+    "Sold %": "86%"
   },
   {
     "City": "Pune",
@@ -7754,8 +7754,8 @@
     "Property": "Ripon House",
     "Category": "SCHOLAR",
     "Ops Beds #": "89.0",
-    "Sold Beds #": "77.0",
-    "Sold %": "87%"
+    "Sold Beds #": "79.0",
+    "Sold %": "89%"
   },
   {
     "City": "Indore",
@@ -7763,8 +7763,8 @@
     "Property": "Boden House",
     "Category": "SCHOLAR",
     "Ops Beds #": "45.0",
-    "Sold Beds #": "29.0",
-    "Sold %": "64%"
+    "Sold Beds #": "28.0",
+    "Sold %": "62%"
   },
   {
     "City": "Pune",
@@ -7772,8 +7772,8 @@
     "Property": "Kingston House",
     "Category": "SCHOLAR",
     "Ops Beds #": "80.0",
-    "Sold Beds #": "78.0",
-    "Sold %": "98%"
+    "Sold Beds #": "77.0",
+    "Sold %": "96%"
   },
   {
     "City": "Delhi",
@@ -8051,8 +8051,8 @@
     "Property": "Smolensk House",
     "Category": "SCHOLAR",
     "Ops Beds #": "48.0",
-    "Sold Beds #": "49.0",
-    "Sold %": "102%"
+    "Sold Beds #": "48.0",
+    "Sold %": "100%"
   },
   {
     "City": "Bangalore",
@@ -8060,8 +8060,8 @@
     "Property": "Spielberg House",
     "Category": "SCHOLAR",
     "Ops Beds #": "72.0",
-    "Sold Beds #": "58.5",
-    "Sold %": "81%"
+    "Sold Beds #": "62.5",
+    "Sold %": "87%"
   },
   {
     "City": "Bangalore",
@@ -8078,7 +8078,7 @@
     "Property": "Portland House",
     "Category": "SCHOLAR",
     "Ops Beds #": "244.0",
-    "Sold Beds #": "139.0",
+    "Sold Beds #": "140.0",
     "Sold %": "57%"
   },
   {
@@ -8240,8 +8240,8 @@
     "Property": "Heidelberg House",
     "Category": "SUITS",
     "Ops Beds #": "111.0",
-    "Sold Beds #": "70.0",
-    "Sold %": "63%"
+    "Sold Beds #": "71.0",
+    "Sold %": "64%"
   },
   {
     "City": "Hyderabad",
@@ -8249,8 +8249,8 @@
     "Property": "Gateshead House",
     "Category": "SCHOLAR",
     "Ops Beds #": "174.0",
-    "Sold Beds #": "130.0",
-    "Sold %": "75%"
+    "Sold Beds #": "129.0",
+    "Sold %": "74%"
   },
   {
     "City": "Bangalore",
@@ -8276,8 +8276,8 @@
     "Property": "Chicago House",
     "Category": "SCHOLAR",
     "Ops Beds #": "674.0",
-    "Sold Beds #": "410.5",
-    "Sold %": "61%"
+    "Sold Beds #": "415.5",
+    "Sold %": "62%"
   },
   {
     "City": "Bangalore",
@@ -8294,8 +8294,8 @@
     "Property": "Kolding House",
     "Category": "SCHOLAR",
     "Ops Beds #": "44.0",
-    "Sold Beds #": "42.0",
-    "Sold %": "95%"
+    "Sold Beds #": "41.0",
+    "Sold %": "93%"
   },
   {
     "City": "Bangalore",
@@ -8591,8 +8591,8 @@
     "Property": "Saratov House",
     "Category": "SCHOLAR",
     "Ops Beds #": "38.0",
-    "Sold Beds #": "30.0",
-    "Sold %": "79%"
+    "Sold Beds #": "31.0",
+    "Sold %": "82%"
   },
   {
     "City": "Delhi",
