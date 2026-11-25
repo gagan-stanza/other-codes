@@ -1,7 +1,8 @@
 param(
-    [Parameter(Mandatory = $true)]
-    [string]$Message
+    [string]$Message = "update"
 )
+
+Set-Location "C:\Users\Gagan Rajput\Documents\codes_scripts\other-codes"
 
 git add .
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
