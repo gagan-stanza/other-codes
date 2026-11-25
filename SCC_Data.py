@@ -4,6 +4,9 @@ from google.oauth2.service_account import Credentials
 from dotenv import load_dotenv
 import os
 import json
+import math
+from datetime import date, datetime
+from decimal import Decimal
 
 # ===== LOAD CONFIG =====
 load_dotenv()
@@ -21,48 +24,46 @@ KEY_FILE = os.getenv("KEY_FILE")
 
 # ===== SQL QUERY =====
 QUERY = """
-select 
-  id as "uuid",
-  name as "scc_Name",
-  scholardistributionpercentage as "scholar%",
-  professionaldistributionpercentage as "wp%",
-  hydradistributionpercentage as "hydra%",
-  coachingdistributionpercentage as "coaching%",
-  locationtype [0].label::text as "location_type",
-  location as "location_name",
-  bookingtype as "booking_type"
-from (
-  select
-    id,
-    name,
-    professionaldistributionpercentage,
-    scholardistributionpercentage,
-    coachingdistributionpercentage,
-    hydradistributionpercentage,
-    locationtype,
-    location,
-    bookingtype,
-    updatedat,
-    row_number() over (partition by name order by updatedat desc) as rn_name
-  from (
-    select
-      id,
-      name,
-      professionaldistributionpercentage,
-      scholardistributionpercentage,
-      coachingdistributionpercentage,
-      hydradistributionpercentage,
-      locationtype,
-      location,
-      bookingtype,
-      updatedat,
-      row_number() over (partition by location order by updatedat desc) as rn_location
-    from bifrost.sales_command_center
-    where entitytypeenum = 'ACTIVE'
-  ) location_dedup
-  where rn_location = 1
-) name_dedup
-where rn_name = 1
+WITH active_scc AS (
+    SELECT
+        id,
+        name,
+        scholardistributionpercentage,
+        professionaldistributionpercentage,
+        hydradistributionpercentage,
+        coachingdistributionpercentage,
+        locationtype,
+        location,
+        bookingtype,
+        updatedat
+    FROM bifrost.sales_command_center
+    WHERE entitytypeenum = 'ACTIVE'
+),
+location_dedup AS (
+    SELECT
+        *,
+        ROW_NUMBER() OVER (PARTITION BY location ORDER BY updatedat DESC) AS rn_location
+    FROM active_scc
+),
+name_dedup AS (
+    SELECT
+        *,
+        ROW_NUMBER() OVER (PARTITION BY name ORDER BY updatedat DESC) AS rn_name
+    FROM location_dedup
+    WHERE rn_location = 1
+)
+SELECT
+    id AS "uuid",
+    name AS "scc_name",
+    scholardistributionpercentage AS "scholar%",
+    professionaldistributionpercentage AS "wp%",
+    hydradistributionpercentage AS "hydra%",
+    coachingdistributionpercentage AS "coaching%",
+    locationtype[0].label::text AS "location_type",
+    location AS "location_name",
+    bookingtype AS "booking_type"
+FROM name_dedup
+WHERE rn_name = 1;
 """
 
 # ===== CONNECT TO REDSHIFT =====
@@ -77,6 +78,10 @@ cursor = conn.cursor()
 cursor.execute(QUERY)
 rows = cursor.fetchall()
 headers = [desc[0] for desc in cursor.description]
+
+cursor.close()
+conn.close()
+
 
 def extract_label_list(value):
     """Extract label values from JSON/list structures."""
@@ -110,6 +115,24 @@ def extract_label_list(value):
 
 def extract_labels_from_json(value):
     return ', '.join(extract_label_list(value))
+
+
+def serialize_value(value):
+    if value is None:
+        return ""
+    if isinstance(value, datetime):
+        return value.isoformat(sep=" ")
+    if isinstance(value, date):
+        return value.isoformat()
+    if isinstance(value, Decimal):
+        val = float(value)
+        return "" if (math.isnan(val) or math.isinf(val)) else val
+    if isinstance(value, float):
+        return "" if (math.isnan(value) or math.isinf(value)) else value
+    if isinstance(value, (dict, list)):
+        return json.dumps(value)
+    return value
+
 
 location_name_index = headers.index('location_name')
 booking_type_index = headers.index('booking_type')
@@ -199,20 +222,17 @@ for row in rows:
         expanded_row = list(row_list)
         expanded_row[location_name_index] = location_value
         expanded_row.extend(final_values)
-        processed_rows.append(tuple(expanded_row))
+        processed_rows.append(tuple(serialize_value(v) for v in expanded_row))
 
 rows = processed_rows
 headers.extend(['S21', 'Scholar', 'Working Professional', 'Hydra', 'Coaching'])
-
-cursor.close()
-conn.close()
 
 # ===== CONNECT TO GOOGLE SHEET =====
 scopes = ["https://www.googleapis.com/auth/spreadsheets",
           "https://www.googleapis.com/auth/drive"]
 creds = Credentials.from_service_account_file(KEY_FILE, scopes=scopes)
 client = gspread.authorize(creds)
-sheet = client.open_by_key(SHEET_ID).worksheet(TAB_NAME_A) # SCC_RealTime_JOB
+sheet = client.open_by_key(SHEET_ID).worksheet(TAB_NAME_A)  # SCC_RealTime_JOB
 
 # ===== WRITE TO SHEET =====
 sheet.clear()

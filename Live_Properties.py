@@ -4,6 +4,7 @@ from google.oauth2.service_account import Credentials
 from dotenv import load_dotenv
 import os
 import json
+import math
 from datetime import date, datetime
 from decimal import Decimal
 
@@ -23,23 +24,25 @@ KEY_FILE = os.getenv("KEY_FILE")
 
 # ===== SQL QUERY =====
 QUERY = """
+WITH enabled_res AS (
+    SELECT residence_uuid
+    FROM stanza.ims_venta_aggregation_service_residences
+    WHERE residence_status = 'Booking Enabled'
+      AND "__hevo__marked_deleted" IS NOT TRUE
+    GROUP BY residence_uuid
+)
 SELECT
     etmr.*,
     etmm.micromarket_name,
     etmc.city_name
 FROM stanza.erp_transformation_master_residences etmr
+INNER JOIN enabled_res
+    ON enabled_res.residence_uuid = etmr.uuid
 LEFT JOIN stanza.erp_transformation_master_micromarket etmm
     ON etmm.uuid = etmr.micromarket_id
 LEFT JOIN stanza.erp_transformation_master_cities etmc
     ON etmc.uuid = etmm.city_id
 WHERE etmr."__hevo__marked_deleted" IS NOT TRUE
-  AND EXISTS (
-      SELECT 1
-      FROM stanza.ims_venta_aggregation_service_residences op
-      WHERE op.residence_uuid = etmr.uuid
-        AND op.residence_status = 'Booking Enabled'
-        AND op."__hevo__marked_deleted" IS NOT TRUE
-  )
 ORDER BY
     etmc.city_name,
     etmm.micromarket_name,
@@ -60,12 +63,19 @@ rows = cursor.fetchall()
 headers = [desc[0] for desc in cursor.description]
 
 def serialize_value(value):
+    if value is None:
+        return ""
     if isinstance(value, datetime):
         return value.isoformat(sep=" ")
     if isinstance(value, date):
         return value.isoformat()
     if isinstance(value, Decimal):
-        return float(value)
+        val = float(value)
+        return "" if (math.isnan(val) or math.isinf(val)) else val
+    if isinstance(value, float):
+        return "" if (math.isnan(value) or math.isinf(value)) else value
+    if isinstance(value, (dict, list)):
+        return json.dumps(value)
     return value
 
 rows = [tuple(serialize_value(value) for value in row) for row in rows]
@@ -78,7 +88,7 @@ scopes = ["https://www.googleapis.com/auth/spreadsheets",
           "https://www.googleapis.com/auth/drive"]
 creds = Credentials.from_service_account_file(KEY_FILE, scopes=scopes)
 client = gspread.authorize(creds)
-sheet = client.open_by_key(SHEET_ID).worksheet(TAB_NAME_B) # ResidenceList_RealTime_JOB
+sheet = client.open_by_key(SHEET_ID).worksheet(TAB_NAME_B)  # ResidenceList_RealTime_JOB
 
 # ===== WRITE TO SHEET =====
 sheet.clear()

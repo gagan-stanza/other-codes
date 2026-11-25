@@ -4,7 +4,9 @@ from google.oauth2.service_account import Credentials
 from dotenv import load_dotenv
 import os
 import json
+import math
 from datetime import date, datetime
+from decimal import Decimal
 
 # ===== LOAD CONFIG =====
 load_dotenv()
@@ -37,11 +39,12 @@ WITH current_inventory AS (
 
 circle_mapping AS (
     SELECT
-        city,
+        LOWER(TRIM(city)) AS city_key,
         MAX(circle) AS circle_name
     FROM stanza.derived_lead_data
+    WHERE city IS NOT NULL
     GROUP BY
-        city
+        LOWER(TRIM(city))
 )
 
 SELECT
@@ -104,15 +107,12 @@ LEFT JOIN stanza.erp_transformation_master_micromarket AS mm
 
 /* City lookup */
 LEFT JOIN stanza.erp_transformation_master_cities AS mc
-    ON (
-        mc.uuid = mm.city_id
-        OR mc.id = mm.city_id
-    )
+    ON mc.uuid = mm.city_id
    AND COALESCE(mc."__hevo__marked_deleted", false) = false
 
 /* Circle lookup */
 LEFT JOIN circle_mapping AS cm
-    ON LOWER(cm.city) = LOWER(mc.city_name)
+    ON cm.city_key = LOWER(TRIM(mc.city_name))
 
 WHERE COALESCE(b."__hevo__marked_deleted", false) = false
   AND b.status = 1
@@ -140,6 +140,9 @@ cursor.execute(QUERY)
 rows = cursor.fetchall()
 headers = [desc[0] for desc in cursor.description]
 
+cursor.close()
+conn.close()
+
 excluded_headers = {
     'move_out_date',
     'personal_details_filled',
@@ -166,24 +169,32 @@ included_indexes = [
 headers = [headers[index] for index in included_indexes]
 rows = [tuple(row[index] for index in included_indexes) for row in rows]
 
+
 def serialize_value(value):
-  if isinstance(value, datetime):
-    return value.isoformat(sep=' ')
-  if isinstance(value, date):
-    return value.isoformat()
-  return value
+    if value is None:
+        return ""
+    if isinstance(value, datetime):
+        return value.isoformat(sep=' ')
+    if isinstance(value, date):
+        return value.isoformat()
+    if isinstance(value, Decimal):
+        val = float(value)
+        return "" if (math.isnan(val) or math.isinf(val)) else val
+    if isinstance(value, float):
+        return "" if (math.isnan(value) or math.isinf(value)) else value
+    if isinstance(value, (dict, list)):
+        return json.dumps(value)
+    return value
+
 
 rows = [tuple(serialize_value(value) for value in row) for row in rows]
-
-cursor.close()
-conn.close()
 
 # ===== CONNECT TO GOOGLE SHEET =====
 scopes = ["https://www.googleapis.com/auth/spreadsheets",
           "https://www.googleapis.com/auth/drive"]
 creds = Credentials.from_service_account_file(KEY_FILE, scopes=scopes)
 client = gspread.authorize(creds)
-sheet = client.open_by_key(SHEET_ID).worksheet(TAB_NAME_C) # LiveBookings_RealTime_JOB
+sheet = client.open_by_key(SHEET_ID).worksheet(TAB_NAME_C)  # LiveBookings_RealTime_JOB
 
 # ===== WRITE TO SHEET =====
 sheet.clear()
